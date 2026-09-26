@@ -626,6 +626,56 @@
       display: flex; align-items: baseline; gap: 4px;
     }
 
+    
+    /* Action Buttons in Room Cards (Dual: Call + WhatsApp) */
+    .card-action-btns {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .btn-room-call {
+      background: #FFFFFF;
+      color: var(--text-charcoal);
+      border: 1.5px solid var(--text-charcoal);
+      font-weight: 600;
+      font-size: 0.88rem;
+      padding: 11px 8px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .btn-room-call:hover {
+      background: var(--text-charcoal);
+      color: #FFFFFF;
+      transform: translateY(-1px);
+    }
+    .btn-room-whatsapp {
+      background: #25D366;
+      color: #FFFFFF;
+      border: none;
+      font-weight: 600;
+      font-size: 0.88rem;
+      padding: 11px 8px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+    }
+    .btn-room-whatsapp:hover {
+      background: #20BD5A;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+    }
+
     /* Direct WhatsApp Booking Button */
     .btn-direct-booking {
       width: 100%;
@@ -704,7 +754,7 @@
         </ul>
 
         <div class="header-actions">
-          <a href="tel:+966539980290" class="btn-header-call" title="اتصال مباشر بالفندق">
+          <a href="tel:0539980290" class="btn-header-call" title="اتصال مباشر بالفندق">
             <svg class="icon" style="width:16px;height:16px;"><use href="#icon-phone"></use></svg>
             <span>اتصال مباشر</span>
           </a>
@@ -878,10 +928,16 @@
               </div>
             </div>
 
-            <a id="btnBook-1" href="https://wa.me/966539980290?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%88%D9%81%D8%B1%20(%D8%BA%D8%B1%D9%81%D8%A9%20%D9%85%D8%B2%D8%AF%D9%88%D8%AC%D8%A9%20%D9%81%D8%A7%D8%AE%D8%B1%D8%A9)%20%D8%A8%D8%B3%D8%B9%D8%B1%20245%20%D8%B1%D9%8A%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="btn-direct-booking">
-              <svg class="icon" style="width:18px;height:18px;"><use href="#icon-whatsapp"></use></svg>
-              <span>حجز مباشر عبر واتساب</span>
-            </a>
+            <div class="card-action-btns">
+              <a href="tel:0539980290" class="btn-room-call" title="اتصال هاتفي مباشر">
+                <svg class="icon" style="width:16px;height:16px;"><use href="#icon-phone"></use></svg>
+                <span>اتصال هاتفي</span>
+              </a>
+              <a id="btnBook-1" href="https://wa.me/966539980290?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%88%D9%81%D8%B1%20(غرفة مزدوجة فاخرة)%20%D8%A8%D8%B3%D8%B9%D8%B1%20245%20%D8%B1%D9%8A%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="btn-room-whatsapp" title="حجز مباشر عبر واتساب">
+                <svg class="icon" style="width:16px;height:16px;"><use href="#icon-whatsapp"></use></svg>
+                <span>حجز واتساب</span>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -941,10 +997,16 @@
               </div>
             </div>
 
-            <a id="btnBook-2" href="https://wa.me/966539980290?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%88%D9%81%D8%B1%20(%D8%AC%D9%86%D8%A7%D8%AD%20%D8%AF%D9%8A%D9%84%D9%88%D9%83%D8%B3%20%D9%81%D8%A7%D8%AE%D8%B1)%20%D8%A8%D8%B3%D8%B9%D8%B1%20265%20%D8%B1%D9%8A%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="btn-direct-booking">
-              <svg class="icon" style="width:18px;height:18px;"><use href="#icon-whatsapp"></use></svg>
-              <span>حجز مباشر عبر واتساب</span>
-            </a>
+            <div class="card-action-btns">
+              <a href="tel:0539980290" class="btn-room-call" title="اتصال هاتفي مباشر">
+                <svg class="icon" style="width:16px;height:16px;"><use href="#icon-phone"></use></svg>
+                <span>اتصال هاتفي</span>
+              </a>
+              <a id="btnBook-2" href="https://wa.me/966539980290?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%88%D9%81%D8%B1%20(جناح ديلوكس فاخر)%20%D8%A8%D8%B3%D8%B9%D8%B1%20265%20%D8%B1%D9%8A%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="btn-room-whatsapp" title="حجز مباشر عبر واتساب">
+                <svg class="icon" style="width:16px;height:16px;"><use href="#icon-whatsapp"></use></svg>
+                <span>حجز واتساب</span>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -957,9 +1019,9 @@
               <span>استعراض كافة الصور (3)</span>
             </button>
             <div class="carousel-track" onclick="openLightboxFromCarousel(3)" title="انقر لتكبير الصورة">
-              <div class="carousel-slide active"><img src="images/0D9C36E8-017A-43D7-AA25-4BABE94F6558.png" alt="غرفة السريرين المنفصلين والتسريحة المضيئة"></div>
+              <div class="carousel-slide active"><img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="غرفة النوم الماستر بسرير مزدوج والتسريحة المضاءة"></div>
+              <div class="carousel-slide"><img src="images/0D9C36E8-017A-43D7-AA25-4BABE94F6558.png" alt="غرفة النوم الثانية بسريرين منفصلين والتسريحة والدولاب"></div>
               <div class="carousel-slide"><img src="images/2862E02E-6748-44FA-B320-F906437C8C67.png" alt="المطبخ التحضيري المتكامل مع طاولة الجزيرة والثلاجة"></div>
-              <div class="carousel-slide"><img src="images/D89278AE-FCAD-4939-98B1-DB233793F867.png" alt="صالة المعيشة العائلية المستقلة"></div>
             </div>
             <button class="carousel-btn prev" onclick="moveCarousel(3, -1)" title="الصورة السابقة"><svg class="icon"><use href="#icon-chevron-right"></use></svg></button>
             <button class="carousel-btn next" onclick="moveCarousel(3, 1)" title="الصورة التالية"><svg class="icon"><use href="#icon-chevron-left"></use></svg></button>
@@ -972,14 +1034,14 @@
 
           <!-- 3 Interactive Thumbnails Strip -->
           <div class="carousel-thumbs" id="thumbs-3">
-            <div class="carousel-thumb active" onclick="setCarousel(3, 0)" title="غرفة السريرين والتسريحة المضيئة">
-              <img src="images/0D9C36E8-017A-43D7-AA25-4BABE94F6558.png" alt="غرفة السريرين">
+            <div class="carousel-thumb active" onclick="setCarousel(3, 0)" title="غرفة بسرير مزدوج">
+              <img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="غرفة سرير مزدوج">
             </div>
-            <div class="carousel-thumb" onclick="setCarousel(3, 1)" title="المطبخ التحضيري المتكامل">
-              <img src="images/2862E02E-6748-44FA-B320-F906437C8C67.png" alt="المطبخ التحضيري">
+            <div class="carousel-thumb" onclick="setCarousel(3, 1)" title="غرفة بسريرين">
+              <img src="images/0D9C36E8-017A-43D7-AA25-4BABE94F6558.png" alt="غرفة سريرين">
             </div>
-            <div class="carousel-thumb" onclick="setCarousel(3, 2)" title="صالة المعيشة العائلية">
-              <img src="images/D89278AE-FCAD-4939-98B1-DB233793F867.png" alt="صالة عائلية">
+            <div class="carousel-thumb" onclick="setCarousel(3, 2)" title="المطبخ التحضيري">
+              <img src="images/2862E02E-6748-44FA-B320-F906437C8C67.png" alt="مطبخ تحضيري">
             </div>
           </div>
 
@@ -1027,10 +1089,16 @@
               </div>
             </div>
 
-            <a id="btnBook-3" href="https://wa.me/966539980290?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%88%D9%81%D8%B1%20(%D8%B4%D9%82%D8%A9%20%D8%BA%D8%B1%D9%81%D8%AA%D9%8A%20%D9%86%D9%88%D9%85%20%D9%88%D8%B5%D8%A7%D9%84%D8%A9%20%D9%88%D9%85%D8%B7%D8%A8%D8%AE)%20%D8%A8%D8%B3%D8%B9%D8%B1%20465%20%D8%B1%D9%8A%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="btn-direct-booking">
-              <svg class="icon" style="width:18px;height:18px;"><use href="#icon-whatsapp"></use></svg>
-              <span>حجز مباشر عبر واتساب</span>
-            </a>
+            <div class="card-action-btns">
+              <a href="tel:0539980290" class="btn-room-call" title="اتصال هاتفي مباشر">
+                <svg class="icon" style="width:16px;height:16px;"><use href="#icon-phone"></use></svg>
+                <span>اتصال هاتفي</span>
+              </a>
+              <a id="btnBook-3" href="https://wa.me/966539980290?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%88%D9%81%D8%B1%20(شقة غرفتي نوم وصالة ومطبخ)%20%D8%A8%D8%B3%D8%B9%D8%B1%20465%20%D8%B1%D9%8A%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="btn-room-whatsapp" title="حجز مباشر عبر واتساب">
+                <svg class="icon" style="width:16px;height:16px;"><use href="#icon-whatsapp"></use></svg>
+                <span>حجز واتساب</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -1257,7 +1325,7 @@
 
   <!-- 5. Fixed Floating Phone & WhatsApp Stack -->
   <div class="floating-stack">
-    <a href="tel:+966539980290" class="float-btn call" title="اتصال مباشر بالفندق">
+    <a href="tel:0539980290" class="float-btn call" title="اتصال مباشر بالفندق">
       <svg class="icon" style="width:22px;height:22px;"><use href="#icon-phone"></use></svg>
     </a>
     <a href="https://wa.me/966539980290" target="_blank" rel="noopener noreferrer" class="float-btn chat" title="تواصل عبر واتساب">
@@ -1300,7 +1368,7 @@
           <p style="font-size:0.86rem; margin-bottom:8px;">الهفوف - حي الحمراء الأول، شارع متعب بن عبدالله</p>
           <p style="font-size:0.86rem; margin-bottom:8px;">
             <svg class="icon" style="width:14px;height:14px;margin-left:4px;"><use href="#icon-phone"></use></svg>
-            هاتف: <a href="tel:+966539980290" style="color:var(--text-charcoal); font-weight:600;" dir="ltr">+966 53 998 0290</a>
+            هاتف: <a href="tel:0539980290" style="color:var(--text-charcoal); font-weight:600;" dir="ltr">053 998 0290</a>
           </p>
           <p style="font-size:0.84rem; color:var(--gold-dark); font-weight:600;">خدمة الاستقبال على مدار 24 ساعة</p>
         </div>
