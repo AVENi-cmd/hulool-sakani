@@ -82,31 +82,33 @@
     }
     .btn-header-call:hover { background: var(--gold-dark); transform: translateY(-1px); }
 
-    /* 1. Fullscreen Panoramic Hero Section (100vh) */
+    /* 1. Fullscreen Luxury Hero Section */
     .hero-fullscreen {
-      min-height: 100vh;
+      min-height: 92vh;
       display: flex; flex-direction: column; justify-content: center;
-      position: relative; padding: 100px 0 120px;
+      position: relative; padding: 120px 0 100px;
       background: #111417;
       overflow: hidden;
     }
-    .hero-bg-media {
-      position: absolute; inset: 0;
-      background-image: url('images/29DBE026-B3AA-4465-8C8F-91A0FEDF92CA.png');
-      background-size: cover; background-position: center;
-      transform: scale(1.02);
-      transition: transform 10s ease;
-      z-index: 0;
+    .hero-bg-wrap {
+      position: absolute; inset: 0; z-index: 0; overflow: hidden;
+    }
+    .hero-bg-img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center 35%;
+      filter: brightness(0.68) contrast(1.08);
+      display: block;
     }
     .hero-dark-overlay {
       position: absolute; inset: 0;
-      background: linear-gradient(180deg, rgba(20,23,26,0.65) 0%, rgba(20,23,26,0.78) 60%, rgba(20,23,26,0.92) 100%);
+      background: linear-gradient(180deg, rgba(17,20,23,0.68) 0%, rgba(17,20,23,0.76) 50%, rgba(17,20,23,0.92) 100%);
       z-index: 1;
     }
     .hero-content {
       position: relative; z-index: 2;
       max-width: 860px; margin: 0 auto; text-align: center; color: #FFFFFF;
-      padding-top: 40px;
+      padding-top: 30px;
     }
     .hero-rating-pill {
       display: inline-flex; align-items: center; gap: 8px; padding: 7px 18px;
@@ -708,9 +710,11 @@
     </div>
   </header>
 
-  <!-- 1. Fullscreen Panoramic Hero Section (100vh) -->
+  <!-- 1. Fullscreen Luxury Hero Section -->
   <section class="hero-fullscreen" id="hero">
-    <div class="hero-bg-media"></div>
+    <div class="hero-bg-wrap">
+      <img src="images/0D22EB03-C62B-42E6-BC72-2F5173980AC9.png" alt="بهو الضيافة الفاخر في حلول سكني" class="hero-bg-img">
+    </div>
     <div class="hero-dark-overlay"></div>
     <div class="container">
       <div class="hero-content">
