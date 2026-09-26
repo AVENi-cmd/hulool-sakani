@@ -186,11 +186,12 @@
     .room-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: var(--border-subtle); }
     
     /* Bulletproof Fade Carousel Container */
-    .carousel-container {
+        .carousel-container {
       position: relative; height: 260px; overflow: hidden; background: #EAE6DF;
+      border-radius: 14px 14px 0 0;
     }
     .carousel-track {
-      position: relative; width: 100%; height: 100%;
+      position: relative; width: 100%; height: 100%; cursor: zoom-in;
     }
     .carousel-slide {
       position: absolute; inset: 0; opacity: 0; visibility: hidden;
@@ -200,21 +201,29 @@
       opacity: 1; visibility: visible; z-index: 1;
     }
     .carousel-slide img {
-      width: 100%; height: 100%; object-fit: cover;
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .carousel-counter {
+      position: absolute; top: 12px; right: 12px;
+      background: rgba(17, 20, 23, 0.75); backdrop-filter: blur(6px);
+      color: #FFFFFF; font-size: 0.75rem; font-weight: 700;
+      padding: 4px 10px; border-radius: 20px; z-index: 5;
+      border: 1px solid rgba(255,255,255,0.2);
     }
     .carousel-btn {
       position: absolute; top: 50%; transform: translateY(-50%);
-      width: 34px; height: 34px; border-radius: 50%;
-      background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(0,0,0,0.08);
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255, 255, 255, 0.92); border: 1px solid rgba(0,0,0,0.08);
       color: var(--text-charcoal); cursor: pointer; display: flex;
       align-items: center; justify-content: center; z-index: 5;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
       transition: var(--transition);
     }
     .carousel-btn:hover { background: #FFFFFF; transform: translateY(-50%) scale(1.08); }
     .carousel-btn.prev { right: 12px; }
     .carousel-btn.next { left: 12px; }
     .carousel-dots {
-      position: absolute; bottom: 12px; left: 0; right: 0;
+      position: absolute; bottom: 8px; left: 0; right: 0;
       display: flex; justify-content: center; gap: 6px; z-index: 5;
     }
     .carousel-dot {
@@ -223,6 +232,44 @@
       cursor: pointer;
     }
     .carousel-dot.active { background: #FFFFFF; width: 18px; border-radius: 4px; }
+    
+    /* Thumbnails Row directly below the main slide */
+    .carousel-thumbs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      padding: 8px 12px 6px 12px;
+      background: #FDFBF8;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .carousel-thumbs.grid-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .carousel-thumb {
+      height: 52px;
+      border-radius: 6px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 2px solid transparent;
+      opacity: 0.6;
+      transition: all 0.25s ease;
+      background: #EAE6DF;
+    }
+    .carousel-thumb:hover {
+      opacity: 0.95;
+      transform: translateY(-1px);
+    }
+    .carousel-thumb.active {
+      border-color: var(--accent-gold);
+      opacity: 1;
+      box-shadow: 0 2px 8px rgba(184, 138, 59, 0.3);
+    }
+    .carousel-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
     
     .room-space-tag {
       position: absolute; top: 14px; right: 14px; z-index: 4;
@@ -347,14 +394,53 @@
     .map-frame-box iframe { width: 100%; height: 100%; border: 0; }
 
     /* Lightbox Modal */
-    .lightbox-modal {
+        .lightbox-modal {
       position: fixed; inset: 0; background: rgba(17, 20, 23, 0.96);
       z-index: 3000; display: none; align-items: center; justify-content: center; padding: 20px;
+      backdrop-filter: blur(8px);
     }
     .lightbox-modal.active { display: flex; }
-    .lightbox-box { max-width: 90vw; max-height: 88vh; position: relative; text-align: center; }
-    .lightbox-box img { max-width: 90vw; max-height: 82vh; border-radius: 10px; }
-    .lightbox-close { position: absolute; top: -34px; left: 0; color: #FFFFFF; background: none; border: none; cursor: pointer; font-size: 1.8rem; }
+    .lightbox-box {
+      max-width: 92vw; max-height: 90vh; position: relative; text-align: center;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+    }
+    .lightbox-img-wrap {
+      position: relative; max-width: 90vw; max-height: 78vh; display: flex; align-items: center; justify-content: center;
+    }
+    .lightbox-box img {
+      max-width: 100%; max-height: 76vh; border-radius: 12px; object-fit: contain;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+    .lightbox-close {
+      position: absolute; top: -38px; left: 0; color: #FFFFFF; background: rgba(255,255,255,0.15);
+      border: none; cursor: pointer; font-size: 1.8rem; width: 36px; height: 36px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; transition: var(--transition);
+    }
+    .lightbox-close:hover { background: rgba(255,255,255,0.3); transform: scale(1.1); }
+    .lightbox-arrow {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255,255,255,0.3);
+      color: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center;
+      z-index: 10; transition: var(--transition);
+    }
+    .lightbox-arrow:hover { background: rgba(255, 255, 255, 0.95); color: var(--text-charcoal); transform: translateY(-50%) scale(1.1); }
+    .lightbox-arrow.lb-prev { right: -24px; }
+    .lightbox-arrow.lb-next { left: -24px; }
+    @media (max-width: 768px) {
+      .lightbox-arrow.lb-prev { right: 8px; background: rgba(0,0,0,0.6); }
+      .lightbox-arrow.lb-next { left: 8px; background: rgba(0,0,0,0.6); }
+    }
+    .lightbox-footer {
+      margin-top: 12px; display: flex; flex-direction: column; align-items: center; gap: 6px;
+    }
+    .lightbox-counter {
+      display: inline-block; background: rgba(255,255,255,0.15); color: var(--accent-gold);
+      padding: 3px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 700;
+    }
+    .lightbox-caption {
+      color: #FFFFFF; text-align: center; font-weight: 600; font-size: 0.95rem; max-width: 600px;
+    }
 
     /* Floating WhatsApp & Call Buttons */
     .floating-stack {
@@ -608,11 +694,12 @@
         <!-- Room 1: Double Room -->
         <div class="room-card">
           <div class="carousel-container" id="carousel-1">
+            <span class="carousel-counter" id="counter-1">1 / 3</span>
             <button class="btn-view-photos" onclick="openLightboxFromCarousel(1)" title="استعراض كافة الصور">
               <svg class="icon" style="width:13px;height:13px;"><use href="#icon-camera"></use></svg>
               <span>استعراض كافة الصور (3)</span>
             </button>
-            <div class="carousel-track">
+            <div class="carousel-track" onclick="openLightboxFromCarousel(1)" title="انقر لتكبير الصورة">
               <div class="carousel-slide active"><img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="السرير الماستر كينغ والتسريحة المضاءة"></div>
               <div class="carousel-slide"><img src="images/505F178C-6DD2-45F8-9AFB-9D60C2C8A90C.png" alt="شاشة 4K وجلسة الغرفة"></div>
               <div class="carousel-slide"><img src="images/0D22EB03-C62B-42E6-BC72-2F5173980AC9.png" alt="بهو الاستقبال والضيافة"></div>
@@ -623,6 +710,19 @@
               <span class="carousel-dot active" onclick="setCarousel(1, 0)"></span>
               <span class="carousel-dot" onclick="setCarousel(1, 1)"></span>
               <span class="carousel-dot" onclick="setCarousel(1, 2)"></span>
+            </div>
+          </div>
+
+          <!-- 3 Interactive Thumbnails Strip -->
+          <div class="carousel-thumbs" id="thumbs-1">
+            <div class="carousel-thumb active" onclick="setCarousel(1, 0)" title="السرير كينغ والتسريحة">
+              <img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="سرير كينغ">
+            </div>
+            <div class="carousel-thumb" onclick="setCarousel(1, 1)" title="الشاشة وجلسة الغرفة">
+              <img src="images/505F178C-6DD2-45F8-9AFB-9D60C2C8A90C.png" alt="جلسة الغرفة">
+            </div>
+            <div class="carousel-thumb" onclick="setCarousel(1, 2)" title="بهو الاستقبال">
+              <img src="images/0D22EB03-C62B-42E6-BC72-2F5173980AC9.png" alt="بهو الاستقبال">
             </div>
           </div>
 
@@ -667,11 +767,12 @@
         <!-- Room 2: Junior Suite -->
         <div class="room-card">
           <div class="carousel-container" id="carousel-2">
+            <span class="carousel-counter" id="counter-2">1 / 3</span>
             <button class="btn-view-photos" onclick="openLightboxFromCarousel(2)" title="استعراض كافة الصور">
               <svg class="icon" style="width:13px;height:13px;"><use href="#icon-camera"></use></svg>
               <span>استعراض كافة الصور (3)</span>
             </button>
-            <div class="carousel-track">
+            <div class="carousel-track" onclick="openLightboxFromCarousel(2)" title="انقر لتكبير الصورة">
               <div class="carousel-slide active"><img src="images/42CAA853-472D-4804-9B7B-72DCA76923E1.png" alt="جناح ديلوكس المتكامل"></div>
               <div class="carousel-slide"><img src="images/505F178C-6DD2-45F8-9AFB-9D60C2C8A90C.png" alt="صالة الجلوس وشاشة 4K"></div>
               <div class="carousel-slide"><img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="غرفة النوم الماستر كينغ"></div>
@@ -682,6 +783,19 @@
               <span class="carousel-dot active" onclick="setCarousel(2, 0)"></span>
               <span class="carousel-dot" onclick="setCarousel(2, 1)"></span>
               <span class="carousel-dot" onclick="setCarousel(2, 2)"></span>
+            </div>
+          </div>
+
+          <!-- 3 Interactive Thumbnails Strip -->
+          <div class="carousel-thumbs" id="thumbs-2">
+            <div class="carousel-thumb active" onclick="setCarousel(2, 0)" title="جناح ديلوكس المتكامل">
+              <img src="images/42CAA853-472D-4804-9B7B-72DCA76923E1.png" alt="جناح ديلوكس">
+            </div>
+            <div class="carousel-thumb" onclick="setCarousel(2, 1)" title="صالة الجلوس والشاشة">
+              <img src="images/505F178C-6DD2-45F8-9AFB-9D60C2C8A90C.png" alt="صالة الجلوس">
+            </div>
+            <div class="carousel-thumb" onclick="setCarousel(2, 2)" title="غرفة النوم الماستر كينغ">
+              <img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="غرفة النوم كينغ">
             </div>
           </div>
 
@@ -726,11 +840,12 @@
         <!-- Room 3: Family Apartment -->
         <div class="room-card">
           <div class="carousel-container" id="carousel-3">
+            <span class="carousel-counter" id="counter-3">1 / 4</span>
             <button class="btn-view-photos" onclick="openLightboxFromCarousel(3)" title="استعراض كافة الصور">
               <svg class="icon" style="width:13px;height:13px;"><use href="#icon-camera"></use></svg>
               <span>استعراض كافة الصور (4)</span>
             </button>
-            <div class="carousel-track">
+            <div class="carousel-track" onclick="openLightboxFromCarousel(3)" title="انقر لتكبير الصورة">
               <div class="carousel-slide active"><img src="images/0D9C36E8-017A-43D7-AA25-4BABE94F6558.png" alt="غرفة السريرين المنفصلين والتسريحة المضيئة"></div>
               <div class="carousel-slide"><img src="images/2862E02E-6748-44FA-B320-F906437C8C67.png" alt="المطبخ التحضيري الحقيقي مع طاولة الجزيرة والثلاجة"></div>
               <div class="carousel-slide"><img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="الغرفة الماستر كينغ"></div>
@@ -745,6 +860,23 @@
               <span class="carousel-dot" onclick="setCarousel(3, 3)"></span>
             </div>
           </div>
+
+          <!-- 4 Interactive Thumbnails Strip -->
+          <div class="carousel-thumbs grid-4" id="thumbs-3">
+            <div class="carousel-thumb active" onclick="setCarousel(3, 0)" title="غرفة السريرين والتسريحة المضيئة">
+              <img src="images/0D9C36E8-017A-43D7-AA25-4BABE94F6558.png" alt="غرفة السريرين">
+            </div>
+            <div class="carousel-thumb" onclick="setCarousel(3, 1)" title="المطبخ التحضيري المتكامل">
+              <img src="images/2862E02E-6748-44FA-B320-F906437C8C67.png" alt="المطبخ التحضيري">
+            </div>
+            <div class="carousel-thumb" onclick="setCarousel(3, 2)" title="الغرفة الماستر كينغ">
+              <img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="الغرفة الماستر">
+            </div>
+            <div class="carousel-thumb" onclick="setCarousel(3, 3)" title="الصالة العائلية">
+              <img src="images/D89278AE-FCAD-4939-98B1-DB233793F867.png" alt="صالة عائلية">
+            </div>
+          </div>
+
           <div class="room-info">
             <h3 class="room-name">شقة غرفتي نوم وصالة ومطبخ</h3>
             <div class="room-sub latin">Two-Bedroom Family Apartment</div>
@@ -984,12 +1116,24 @@
   </section>
 
   <!-- Lightbox Modal -->
-  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
     <div class="lightbox-box" onclick="event.stopPropagation()">
-      <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-      <img id="lightboxImage" src="" alt="عرض مكبر">
-      <div id="lightboxCaption" style="color:#FFFFFF; text-align:center; margin-top:10px; font-weight:600; font-size:0.95rem;"></div>
+      <button class="lightbox-close" onclick="closeLightbox(event)" title="إغلاق">&times;</button>
+      <button class="lightbox-arrow lb-prev" onclick="prevLightbox(event)" title="السابق">
+        <svg class="icon" style="width:20px;height:20px;"><use href="#icon-chevron-right"></use></svg>
+      </button>
+      <button class="lightbox-arrow lb-next" onclick="nextLightbox(event)" title="التالي">
+        <svg class="icon" style="width:20px;height:20px;"><use href="#icon-chevron-left"></use></svg>
+      </button>
+      <div class="lightbox-img-wrap">
+        <img id="lightboxImage" src="" alt="عرض مكبر">
+      </div>
+      <div class="lightbox-footer">
+        <span id="lightboxCounter" class="lightbox-counter">1 / 3</span>
+        <div id="lightboxCaption" class="lightbox-caption"></div>
+      </div>
     </div>
+  </div>
   </div>
 
   <!-- 5. Fixed Floating Phone & WhatsApp Stack -->
@@ -1097,21 +1241,39 @@
       window.open(`https://wa.me/966539980290?text=${encodeURIComponent(message)}`, '_blank');
     }
 
-    // Mini Carousels Controller
+        // Mini Carousels Controller
     const carouselStates = { 1: 0, 2: 0, 3: 0 };
     const carouselMax = { 1: 3, 2: 3, 3: 4 };
 
     function updateCarouselView(id) {
       const container = document.getElementById(`carousel-${id}`);
-      const track = container.querySelector('.carousel-track');
+      if (!container) return;
+      const slides = container.querySelectorAll('.carousel-slide');
       const dots = container.querySelectorAll('.carousel-dot');
+      const thumbs = document.querySelectorAll(`#thumbs-${id} .carousel-thumb`);
+      const counter = document.getElementById(`counter-${id}`);
       const index = carouselStates[id];
+      const max = carouselMax[id];
 
-      track.style.transform = `translateX(${index * 100}%)`;
+      // Fix: toggle active class so CSS transitions between slides
+      slides.forEach((slide, idx) => {
+        slide.classList.toggle('active', idx === index);
+      });
 
+      // Update dots
       dots.forEach((dot, idx) => {
         dot.classList.toggle('active', idx === index);
       });
+
+      // Update thumbnail borders
+      thumbs.forEach((thumb, idx) => {
+        thumb.classList.toggle('active', idx === index);
+      });
+
+      // Update counter badge
+      if (counter) {
+        counter.textContent = `${index + 1} / ${max}`;
+      }
     }
 
     function moveCarousel(id, step) {
@@ -1125,26 +1287,124 @@
       updateCarouselView(id);
     }
 
+    // Touch Swipe support for suite carousels
+    document.addEventListener('DOMContentLoaded', () => {
+      [1, 2, 3].forEach(id => {
+        const container = document.getElementById(`carousel-${id}`);
+        if (!container) return;
+        let startX = 0;
+        let endX = 0;
+        container.addEventListener('touchstart', e => {
+          startX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        container.addEventListener('touchend', e => {
+          endX = e.changedTouches[0].screenX;
+          const diff = endX - startX;
+          if (Math.abs(diff) > 40) {
+            // In RTL: swipe left (diff < 0) means next, swipe right (diff > 0) means prev
+            if (diff < 0) moveCarousel(id, 1);
+            else moveCarousel(id, -1);
+          }
+        }, { passive: true });
+      });
+    });
+
+    // Gallery Lightbox Controller with Next/Prev and Counter
+    let currentGalleryItems = [];
+    let currentGalleryIdx = 0;
+
+    function openGalleryLightbox(items, startIndex = 0) {
+      currentGalleryItems = items;
+      currentGalleryIdx = startIndex;
+      updateLightboxDisplay();
+      document.getElementById('lightboxModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function updateLightboxDisplay() {
+      if (!currentGalleryItems || currentGalleryItems.length === 0) return;
+      const current = currentGalleryItems[currentGalleryIdx];
+      const img = document.getElementById('lightboxImage');
+      const caption = document.getElementById('lightboxCaption');
+      const counter = document.getElementById('lightboxCounter');
+      const prevBtn = document.querySelector('.lightbox-arrow.lb-prev');
+      const nextBtn = document.querySelector('.lightbox-arrow.lb-next');
+
+      img.src = current.src;
+      img.alt = current.caption || 'صورة مكبرة';
+      caption.textContent = current.caption || '';
+
+      if (currentGalleryItems.length > 1) {
+        counter.style.display = 'inline-block';
+        counter.textContent = `${currentGalleryIdx + 1} / ${currentGalleryItems.length}`;
+        if (prevBtn) prevBtn.style.display = 'flex';
+        if (nextBtn) nextBtn.style.display = 'flex';
+      } else {
+        counter.style.display = 'none';
+        if (prevBtn) prevBtn.style.display = 'none';
+        if (nextBtn) nextBtn.style.display = 'none';
+      }
+    }
+
+    function prevLightbox(e) {
+      if (e) e.stopPropagation();
+      if (currentGalleryItems.length <= 1) return;
+      currentGalleryIdx = (currentGalleryIdx - 1 + currentGalleryItems.length) % currentGalleryItems.length;
+      updateLightboxDisplay();
+    }
+
+    function nextLightbox(e) {
+      if (e) e.stopPropagation();
+      if (currentGalleryItems.length <= 1) return;
+      currentGalleryIdx = (currentGalleryIdx + 1) % currentGalleryItems.length;
+      updateLightboxDisplay();
+    }
+
+    function closeLightbox(e) {
+      if (e) e.stopPropagation();
+      document.getElementById('lightboxModal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
 
     function openLightboxFromCarousel(carouselId) {
       const container = document.getElementById(`carousel-${carouselId}`);
-      const activeSlide = container.querySelector('.carousel-slide.active');
-      const img = activeSlide ? activeSlide.querySelector('img') : container.querySelector('img');
+      if (!container) return;
+      const slides = container.querySelectorAll('.carousel-slide img');
       const roomTitle = container.closest('.room-card').querySelector('.room-name').textContent;
-      openLightbox(img.src, `${roomTitle} - تفاصيل الوحدة الحقيقية`);
+      const items = Array.from(slides).map((img, i) => ({
+        src: img.getAttribute('src'),
+        caption: `${roomTitle} - ${img.getAttribute('alt') || 'تفاصيل الوحدة'}`
+      }));
+      const currentIdx = carouselStates[carouselId] || 0;
+      openGalleryLightbox(items, currentIdx);
     }
 
-    // Lightbox Controller
     function openLightbox(src, caption) {
-      const modal = document.getElementById('lightboxModal');
-      document.getElementById('lightboxImage').src = src;
-      document.getElementById('lightboxCaption').textContent = caption || '';
-      modal.classList.add('active');
+      const galleryThumbs = document.querySelectorAll('.gallery-thumb');
+      const items = Array.from(galleryThumbs).map(thumb => {
+        const img = thumb.querySelector('img');
+        const h5 = thumb.querySelector('h5');
+        return {
+          src: img.getAttribute('src'),
+          caption: h5 ? h5.textContent : (img.getAttribute('alt') || '')
+        };
+      });
+      const startIdx = items.findIndex(item => item.src.includes(src) || src.includes(item.src));
+      if (startIdx !== -1) {
+        openGalleryLightbox(items, startIdx);
+      } else {
+        openGalleryLightbox([{ src, caption }], 0);
+      }
     }
 
-    function closeLightbox() {
-      document.getElementById('lightboxModal').classList.remove('active');
-    }
+    // Keyboard support for Lightbox
+    document.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('lightboxModal');
+      if (!modal || !modal.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') nextLightbox();
+      if (e.key === 'ArrowRight') prevLightbox();
+    });
   </script>
 </body>
 </html>
