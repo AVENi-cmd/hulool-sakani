@@ -244,6 +244,9 @@
       background: #FDFBF8;
       border-bottom: 1px solid var(--border-light);
     }
+    .carousel-thumbs.grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
     .carousel-thumbs.grid-4 {
       grid-template-columns: repeat(4, 1fr);
     }
@@ -804,35 +807,30 @@
         <!-- Room 1: Double Room -->
         <div class="room-card">
           <div class="carousel-container" id="carousel-1">
-            <span class="carousel-counter" id="counter-1">1 / 3</span>
-            <button class="btn-view-photos" onclick="openLightboxFromCarousel(1)" title="استعراض كافة الصور">
+            <span class="carousel-counter" id="counter-1">1 / 2</span>
+            <button class="btn-view-photos" onclick="openLightboxFromCarousel(1)" title="استعراض صور الغرفة">
               <svg class="icon" style="width:13px;height:13px;"><use href="#icon-camera"></use></svg>
-              <span>استعراض كافة الصور (3)</span>
+              <span>استعراض الصور (2)</span>
             </button>
             <div class="carousel-track" onclick="openLightboxFromCarousel(1)" title="انقر لتكبير الصورة">
               <div class="carousel-slide active"><img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="السرير الماستر كينغ والتسريحة المضاءة"></div>
               <div class="carousel-slide"><img src="images/505F178C-6DD2-45F8-9AFB-9D60C2C8A90C.png" alt="شاشة 4K وجلسة الغرفة"></div>
-              <div class="carousel-slide"><img src="images/0D22EB03-C62B-42E6-BC72-2F5173980AC9.png" alt="بهو الاستقبال والضيافة"></div>
             </div>
             <button class="carousel-btn prev" onclick="moveCarousel(1, -1)" title="الصورة السابقة"><svg class="icon"><use href="#icon-chevron-right"></use></svg></button>
             <button class="carousel-btn next" onclick="moveCarousel(1, 1)" title="الصورة التالية"><svg class="icon"><use href="#icon-chevron-left"></use></svg></button>
             <div class="carousel-dots">
               <span class="carousel-dot active" onclick="setCarousel(1, 0)"></span>
               <span class="carousel-dot" onclick="setCarousel(1, 1)"></span>
-              <span class="carousel-dot" onclick="setCarousel(1, 2)"></span>
             </div>
           </div>
 
-          <!-- 3 Interactive Thumbnails Strip -->
-          <div class="carousel-thumbs" id="thumbs-1">
+          <!-- 2 Interactive Thumbnails Strip -->
+          <div class="carousel-thumbs grid-2" id="thumbs-1">
             <div class="carousel-thumb active" onclick="setCarousel(1, 0)" title="السرير كينغ والتسريحة">
               <img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="سرير كينغ">
             </div>
             <div class="carousel-thumb" onclick="setCarousel(1, 1)" title="الشاشة وجلسة الغرفة">
               <img src="images/505F178C-6DD2-45F8-9AFB-9D60C2C8A90C.png" alt="جلسة الغرفة">
-            </div>
-            <div class="carousel-thumb" onclick="setCarousel(1, 2)" title="بهو الاستقبال">
-              <img src="images/0D22EB03-C62B-42E6-BC72-2F5173980AC9.png" alt="بهو الاستقبال">
             </div>
           </div>
 
@@ -890,35 +888,12 @@
         <!-- Room 2: Junior Suite -->
         <div class="room-card">
           <div class="carousel-container" id="carousel-2">
-            <span class="carousel-counter" id="counter-2">1 / 3</span>
-            <button class="btn-view-photos" onclick="openLightboxFromCarousel(2)" title="استعراض كافة الصور">
+            <button class="btn-view-photos" onclick="openLightboxFromCarousel(2)" title="استعراض صورة الجناح">
               <svg class="icon" style="width:13px;height:13px;"><use href="#icon-camera"></use></svg>
-              <span>استعراض كافة الصور (3)</span>
+              <span>تكبير الصورة</span>
             </button>
             <div class="carousel-track" onclick="openLightboxFromCarousel(2)" title="انقر لتكبير الصورة">
-              <div class="carousel-slide active"><img src="images/42CAA853-472D-4804-9B7B-72DCA76923E1.png" alt="جناح ديلوكس المتكامل"></div>
-              <div class="carousel-slide"><img src="images/505F178C-6DD2-45F8-9AFB-9D60C2C8A90C.png" alt="صالة الجلوس وشاشة 4K"></div>
-              <div class="carousel-slide"><img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="غرفة النوم الماستر كينغ"></div>
-            </div>
-            <button class="carousel-btn prev" onclick="moveCarousel(2, -1)" title="الصورة السابقة"><svg class="icon"><use href="#icon-chevron-right"></use></svg></button>
-            <button class="carousel-btn next" onclick="moveCarousel(2, 1)" title="الصورة التالية"><svg class="icon"><use href="#icon-chevron-left"></use></svg></button>
-            <div class="carousel-dots">
-              <span class="carousel-dot active" onclick="setCarousel(2, 0)"></span>
-              <span class="carousel-dot" onclick="setCarousel(2, 1)"></span>
-              <span class="carousel-dot" onclick="setCarousel(2, 2)"></span>
-            </div>
-          </div>
-
-          <!-- 3 Interactive Thumbnails Strip -->
-          <div class="carousel-thumbs" id="thumbs-2">
-            <div class="carousel-thumb active" onclick="setCarousel(2, 0)" title="جناح ديلوكس المتكامل">
-              <img src="images/42CAA853-472D-4804-9B7B-72DCA76923E1.png" alt="جناح ديلوكس">
-            </div>
-            <div class="carousel-thumb" onclick="setCarousel(2, 1)" title="صالة الجلوس والشاشة">
-              <img src="images/505F178C-6DD2-45F8-9AFB-9D60C2C8A90C.png" alt="صالة الجلوس">
-            </div>
-            <div class="carousel-thumb" onclick="setCarousel(2, 2)" title="غرفة النوم الماستر كينغ">
-              <img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="غرفة النوم كينغ">
+              <div class="carousel-slide active"><img src="images/42CAA853-472D-4804-9B7B-72DCA76923E1.png" alt="صالة جناح ديلوكس المتكاملة الفسيحة"></div>
             </div>
           </div>
 
@@ -976,16 +951,15 @@
         <!-- Room 3: Family Apartment -->
         <div class="room-card">
           <div class="carousel-container" id="carousel-3">
-            <span class="carousel-counter" id="counter-3">1 / 4</span>
+            <span class="carousel-counter" id="counter-3">1 / 3</span>
             <button class="btn-view-photos" onclick="openLightboxFromCarousel(3)" title="استعراض كافة الصور">
               <svg class="icon" style="width:13px;height:13px;"><use href="#icon-camera"></use></svg>
-              <span>استعراض كافة الصور (4)</span>
+              <span>استعراض كافة الصور (3)</span>
             </button>
             <div class="carousel-track" onclick="openLightboxFromCarousel(3)" title="انقر لتكبير الصورة">
               <div class="carousel-slide active"><img src="images/0D9C36E8-017A-43D7-AA25-4BABE94F6558.png" alt="غرفة السريرين المنفصلين والتسريحة المضيئة"></div>
-              <div class="carousel-slide"><img src="images/2862E02E-6748-44FA-B320-F906437C8C67.png" alt="المطبخ التحضيري الحقيقي مع طاولة الجزيرة والثلاجة"></div>
-              <div class="carousel-slide"><img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="الغرفة الماستر كينغ"></div>
-              <div class="carousel-slide"><img src="images/D89278AE-FCAD-4939-98B1-DB233793F867.png" alt="صالة المعيشة العائلية"></div>
+              <div class="carousel-slide"><img src="images/2862E02E-6748-44FA-B320-F906437C8C67.png" alt="المطبخ التحضيري المتكامل مع طاولة الجزيرة والثلاجة"></div>
+              <div class="carousel-slide"><img src="images/D89278AE-FCAD-4939-98B1-DB233793F867.png" alt="صالة المعيشة العائلية المستقلة"></div>
             </div>
             <button class="carousel-btn prev" onclick="moveCarousel(3, -1)" title="الصورة السابقة"><svg class="icon"><use href="#icon-chevron-right"></use></svg></button>
             <button class="carousel-btn next" onclick="moveCarousel(3, 1)" title="الصورة التالية"><svg class="icon"><use href="#icon-chevron-left"></use></svg></button>
@@ -993,22 +967,18 @@
               <span class="carousel-dot active" onclick="setCarousel(3, 0)"></span>
               <span class="carousel-dot" onclick="setCarousel(3, 1)"></span>
               <span class="carousel-dot" onclick="setCarousel(3, 2)"></span>
-              <span class="carousel-dot" onclick="setCarousel(3, 3)"></span>
             </div>
           </div>
 
-          <!-- 4 Interactive Thumbnails Strip -->
-          <div class="carousel-thumbs grid-4" id="thumbs-3">
+          <!-- 3 Interactive Thumbnails Strip -->
+          <div class="carousel-thumbs" id="thumbs-3">
             <div class="carousel-thumb active" onclick="setCarousel(3, 0)" title="غرفة السريرين والتسريحة المضيئة">
               <img src="images/0D9C36E8-017A-43D7-AA25-4BABE94F6558.png" alt="غرفة السريرين">
             </div>
             <div class="carousel-thumb" onclick="setCarousel(3, 1)" title="المطبخ التحضيري المتكامل">
               <img src="images/2862E02E-6748-44FA-B320-F906437C8C67.png" alt="المطبخ التحضيري">
             </div>
-            <div class="carousel-thumb" onclick="setCarousel(3, 2)" title="الغرفة الماستر كينغ">
-              <img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="الغرفة الماستر">
-            </div>
-            <div class="carousel-thumb" onclick="setCarousel(3, 3)" title="الصالة العائلية">
+            <div class="carousel-thumb" onclick="setCarousel(3, 2)" title="صالة المعيشة العائلية">
               <img src="images/D89278AE-FCAD-4939-98B1-DB233793F867.png" alt="صالة عائلية">
             </div>
           </div>
@@ -1517,36 +1487,50 @@
 
     // Mini Carousels Controller
     const carouselStates = { 1: 0, 2: 0, 3: 0 };
-    const carouselMax = { 1: 3, 2: 3, 3: 4 };
+    const carouselMax = { 1: 2, 2: 1, 3: 3 };
 
     function updateCarouselView(id) {
       const container = document.getElementById(`carousel-${id}`);
       if (!container) return;
+      const max = carouselMax[id] || 1;
+      const index = carouselStates[id] || 0;
       const slides = container.querySelectorAll('.carousel-slide');
       const dots = container.querySelectorAll('.carousel-dot');
       const thumbs = document.querySelectorAll(`#thumbs-${id} .carousel-thumb`);
       const counter = document.getElementById(`counter-${id}`);
-      const index = carouselStates[id];
-      const max = carouselMax[id];
+      const prevBtn = container.querySelector('.carousel-btn.prev');
+      const nextBtn = container.querySelector('.carousel-btn.next');
+      const dotsWrap = container.querySelector('.carousel-dots');
 
-      // Fix: toggle active class so CSS transitions between slides
+      if (max <= 1) {
+        if (prevBtn) prevBtn.style.display = 'none';
+        if (nextBtn) nextBtn.style.display = 'none';
+        if (dotsWrap) dotsWrap.style.display = 'none';
+      } else {
+        if (prevBtn) prevBtn.style.display = 'flex';
+        if (nextBtn) nextBtn.style.display = 'flex';
+        if (dotsWrap) dotsWrap.style.display = 'flex';
+      }
+
       slides.forEach((slide, idx) => {
         slide.classList.toggle('active', idx === index);
       });
 
-      // Update dots
       dots.forEach((dot, idx) => {
         dot.classList.toggle('active', idx === index);
       });
 
-      // Update thumbnail borders
       thumbs.forEach((thumb, idx) => {
         thumb.classList.toggle('active', idx === index);
       });
 
-      // Update counter badge
       if (counter) {
-        counter.textContent = `${index + 1} / ${max}`;
+        if (max > 1) {
+          counter.style.display = 'inline-block';
+          counter.textContent = `${index + 1} / ${max}`;
+        } else {
+          counter.style.display = 'none';
+        }
       }
     }
 
