@@ -524,6 +524,85 @@
       width: 14px; height: 14px; color: var(--gold-dark); flex-shrink: 0;
     }
 
+    
+    /* Interactive Promo & Coupon Box */
+    .promo-box-container {
+      max-width: 680px; margin: -20px auto 45px auto; position: relative; z-index: 2;
+    }
+    .promo-box {
+      background: #FFFFFF; border: 1.5px dashed var(--accent-gold); border-radius: 12px;
+      padding: 16px 22px; display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; box-shadow: 0 4px 16px rgba(184, 138, 59, 0.08); transition: var(--transition);
+    }
+    .promo-box:hover { border-color: var(--gold-dark); box-shadow: 0 6px 20px rgba(184, 138, 59, 0.12); }
+    .promo-box-icon {
+      width: 44px; height: 44px; border-radius: 50%; background: var(--gold-glow);
+      color: var(--gold-dark); display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .promo-box-content { flex-grow: 1; }
+    .promo-box-content h4 { font-size: 0.95rem; font-weight: 700; color: var(--text-charcoal); margin-bottom: 2px; }
+    .promo-box-content p { font-size: 0.8rem; color: var(--text-muted); margin: 0; }
+    .promo-input-row { display: flex; gap: 8px; align-items: center; }
+    .promo-field {
+      padding: 9px 14px; border: 1px solid var(--border-subtle); border-radius: 8px;
+      font-size: 0.88rem; font-family: inherit; color: var(--text-charcoal); width: 180px;
+      transition: var(--transition);
+    }
+    .promo-field:focus { outline: none; border-color: var(--accent-gold); box-shadow: 0 0 0 3px rgba(184, 138, 59, 0.15); }
+    .btn-promo-apply {
+      background: var(--text-charcoal); color: #FFFFFF; border: none; border-radius: 8px;
+      padding: 9px 18px; font-size: 0.86rem; font-weight: 600; cursor: pointer;
+      transition: var(--transition); white-space: nowrap;
+    }
+    .btn-promo-apply:hover { background: var(--gold-dark); transform: translateY(-1px); }
+    .promo-success-badge { display: flex; align-items: center; gap: 10px; }
+    .promo-badge-tag {
+      background: #DEF7EC; color: #03543F; border: 1px solid #BCF0DA; padding: 6px 14px;
+      border-radius: 20px; font-size: 0.82rem; font-weight: 700; display: inline-flex;
+      align-items: center; gap: 6px;
+    }
+    .btn-promo-reset {
+      background: transparent; border: none; color: var(--text-light); font-size: 0.78rem;
+      text-decoration: underline; cursor: pointer; padding: 4px;
+    }
+    .btn-promo-reset:hover { color: #DC2626; }
+    .promo-alert {
+      font-size: 0.82rem; margin-top: 10px; text-align: center; padding: 8px 14px;
+      border-radius: 8px; font-weight: 600; animation: fadeIn 0.3s ease;
+    }
+    .promo-alert.error { color: #991B1B; background: #FEE2E2; border: 1px solid #FCA5A5; }
+    .promo-alert.success { color: #065F46; background: #D1FAE5; border: 1px solid #A7F3D0; }
+
+    /* Card Promo Box */
+    .card-promo-section {
+      padding: 8px 12px; background: #FBF9F5; border-radius: 8px;
+      margin: 10px 0 14px 0; border: 1px dashed rgba(184, 138, 59, 0.35);
+    }
+    .card-promo-row { display: flex; gap: 8px; align-items: center; }
+    .card-promo-input {
+      flex-grow: 1; padding: 7px 10px; border: 1px solid var(--border-subtle);
+      border-radius: 6px; font-size: 0.8rem; font-family: inherit; color: var(--text-charcoal);
+      background: #FFFFFF;
+    }
+    .card-promo-input:focus { outline: none; border-color: var(--accent-gold); }
+    .btn-card-apply {
+      background: var(--text-charcoal); color: #FFFFFF; border: none;
+      border-radius: 6px; padding: 7px 12px; font-size: 0.78rem; font-weight: 600;
+      cursor: pointer; transition: var(--transition); white-space: nowrap;
+    }
+    .btn-card-apply:hover { background: var(--gold-dark); }
+    .card-promo-active {
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 0.78rem; font-weight: 700; color: #03543F;
+    }
+    .card-promo-err-msg { font-size: 0.75rem; color: #DC2626; margin-top: 4px; font-weight: 600; }
+    
+    @media (max-width: 640px) {
+      .promo-box { flex-direction: column; text-align: center; }
+      .promo-input-row { width: 100%; }
+      .promo-field { flex-grow: 1; width: auto; }
+    }
+
     /* Psychological Pricing with Strikethrough */
     .pricing-container {
       display: flex; flex-direction: column; gap: 2px;
@@ -668,9 +747,9 @@
       <div class="booking-bar-field">
         <span class="field-lbl"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-bed"></use></svg> نوع الوحدة والنزلاء</span>
         <select id="barUnit" class="field-input">
-          <option value="غرفة مزدوجة فاخرة (220 ر.س)">غرفة مزدوجة (22 م² - 220 ر.س)</option>
-          <option value="جناح ديلوكس فاخر (240 ر.س)">جناح ديلوكس فاخر (40 م² - 240 ر.س)</option>
-          <option value="شقة غرفتي نوم وصالة ومطبخ (420 ر.س)">شقة عائلية غرفتين وصالة (90 م² - 420 ر.س)</option>
+          <option value="غرفة مزدوجة فاخرة (245 ر.س)">غرفة مزدوجة (22 م² - 245 ر.س)</option>
+          <option value="جناح ديلوكس فاخر (265 ر.س)">جناح ديلوكس فاخر (40 م² - 265 ر.س)</option>
+          <option value="شقة غرفتي نوم وصالة ومطبخ (465 ر.س)">شقة عائلية غرفتين وصالة (90 م² - 465 ر.س)</option>
         </select>
       </div>
 
@@ -688,6 +767,33 @@
         <span class="section-eyebrow">أجنحة ووحدات الإقامة</span>
         <h2 class="section-title">اختر مساحتك المناسبة للإقامة</h2>
         <p class="section-desc">صور واقعية متعددة لكل وحدة، وميزات مفصلة وسعة واضحة مع ميزة الحجز المباشر بدون عمولات.</p>
+      </div>
+
+            <!-- Interactive Global Promo Code Box -->
+      <div class="promo-box-container">
+        <div class="promo-box">
+          <div class="promo-box-icon">
+            <svg class="icon" style="width:22px;height:22px;"><use href="#icon-tag"></use></svg>
+          </div>
+          <div class="promo-box-content">
+            <h4>كوبون خصم الحجز المباشر</h4>
+            <p>أدخل كود الخصم (SAKANI10) للحصول على خصم 10% فوري على كافة الوحدات</p>
+          </div>
+          <div class="promo-box-action">
+            <div class="promo-input-row" id="globalPromoRow">
+              <input type="text" id="globalPromoInput" placeholder="أدخل رمز الخصم (مثال: SAKANI10)" class="promo-field" autocomplete="off" onkeyup="if(event.key==='Enter') applyPromoCode(this.value)">
+              <button class="btn-promo-apply" onclick="applyPromoCode(document.getElementById('globalPromoInput').value)">تطبيق الخصم</button>
+            </div>
+            <div class="promo-success-badge" id="globalPromoSuccess" style="display:none;">
+              <span class="promo-badge-tag">
+                <svg class="icon" style="width:14px;height:14px;"><use href="#icon-check"></use></svg>
+                الكود مُفعّل: SAKANI10 (خصم 10%)
+              </span>
+              <button class="btn-promo-reset" onclick="removePromoCode()">إلغاء الخصم</button>
+            </div>
+          </div>
+        </div>
+        <div id="globalPromoAlert" class="promo-alert" style="display:none;"></div>
       </div>
 
       <div class="rooms-grid">
@@ -744,20 +850,33 @@
               <span class="feature-pill"><svg class="icon"><use href="#icon-wifi"></use></svg> واي فاي فائق مجاني</span>
             </div>
 
+            <!-- Card Promo Input -->
+            <div class="card-promo-section">
+              <div class="card-promo-row" id="cardPromoForm-1">
+                <input type="text" id="cardPromoInput-1" class="card-promo-input" placeholder="رمز الخصم (مثال: SAKANI10)" autocomplete="off" onkeyup="if(event.key==='Enter') applyPromoCode(this.value)">
+                <button class="btn-card-apply" onclick="applyPromoCode(document.getElementById('cardPromoInput-1').value)">تطبيق الخصم</button>
+              </div>
+              <div class="card-promo-active" id="cardPromoActive-1" style="display:none;">
+                <span>✓ كود SAKANI10 مُطبّق (خصم 10%)</span>
+                <button class="btn-promo-reset" onclick="removePromoCode()">إلغاء</button>
+              </div>
+              <div class="card-promo-err-msg" id="cardPromoErr-1" style="display:none;"></div>
+            </div>
+
             <div class="room-footer">
               <div class="pricing-container">
-                <div class="pricing-old-wrap">
+                <div class="pricing-old-wrap" id="pricingOld-1" style="display:none;">
                   <span class="price-strikethrough">245 ر.س</span>
-                  <span class="price-save-tag">وفر 10% بكود SAKANI10</span>
+                  <span class="price-save-tag">وفرت 25 ر.س (10%)</span>
                 </div>
                 <div class="pricing-current-wrap">
-                  <span class="room-price-val">220</span>
+                  <span class="room-price-val" id="priceVal-1">245</span>
                   <span class="room-price-unit">ر.س / ليلة</span>
                 </div>
               </div>
             </div>
 
-            <a href="https://wa.me/966539980290?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%88%D9%81%D8%B1%20(%D8%BA%D8%B1%D9%81%D8%A9%20%D9%85%D8%B2%D8%AF%D9%88%D8%AC%D8%A9%20%D9%81%D8%A7%D8%AE%D8%B1%D8%A9)%20%D8%A8%D8%B3%D8%B9%D8%B1%20220%20%D8%B1%D9%8A%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="btn-direct-booking">
+            <a id="btnBook-1" href="https://wa.me/966539980290?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%88%D9%81%D8%B1%20(%D8%BA%D8%B1%D9%81%D8%A9%20%D9%85%D8%B2%D8%AF%D9%88%D8%AC%D8%A9%20%D9%81%D8%A7%D8%AE%D8%B1%D8%A9)%20%D8%A8%D8%B3%D8%B9%D8%B1%20245%20%D8%B1%D9%8A%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="btn-direct-booking">
               <svg class="icon" style="width:18px;height:18px;"><use href="#icon-whatsapp"></use></svg>
               <span>حجز مباشر عبر واتساب</span>
             </a>
@@ -817,20 +936,33 @@
               <span class="feature-pill"><svg class="icon"><use href="#icon-car"></use></svg> موقف سيارة خاص</span>
             </div>
 
+            <!-- Card Promo Input -->
+            <div class="card-promo-section">
+              <div class="card-promo-row" id="cardPromoForm-2">
+                <input type="text" id="cardPromoInput-2" class="card-promo-input" placeholder="رمز الخصم (مثال: SAKANI10)" autocomplete="off" onkeyup="if(event.key==='Enter') applyPromoCode(this.value)">
+                <button class="btn-card-apply" onclick="applyPromoCode(document.getElementById('cardPromoInput-2').value)">تطبيق الخصم</button>
+              </div>
+              <div class="card-promo-active" id="cardPromoActive-2" style="display:none;">
+                <span>✓ كود SAKANI10 مُطبّق (خصم 10%)</span>
+                <button class="btn-promo-reset" onclick="removePromoCode()">إلغاء</button>
+              </div>
+              <div class="card-promo-err-msg" id="cardPromoErr-2" style="display:none;"></div>
+            </div>
+
             <div class="room-footer">
               <div class="pricing-container">
-                <div class="pricing-old-wrap">
+                <div class="pricing-old-wrap" id="pricingOld-2" style="display:none;">
                   <span class="price-strikethrough">265 ر.س</span>
-                  <span class="price-save-tag">وفر 10% بكود SAKANI10</span>
+                  <span class="price-save-tag">وفرت 25 ر.س (10%)</span>
                 </div>
                 <div class="pricing-current-wrap">
-                  <span class="room-price-val">240</span>
+                  <span class="room-price-val" id="priceVal-2">265</span>
                   <span class="room-price-unit">ر.س / ليلة</span>
                 </div>
               </div>
             </div>
 
-            <a href="https://wa.me/966539980290?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%88%D9%81%D8%B1%20(%D8%AC%D9%86%D8%A7%D8%AD%20%D8%AF%D9%8A%D9%84%D9%88%D9%83%D8%B3%20%D9%85%D8%B9%20%D8%AA%D8%B1%D8%A7%D8%B3)%20%D8%A8%D8%B3%D8%B9%D8%B1%20240%20%D8%B1%D9%8A%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="btn-direct-booking">
+            <a id="btnBook-2" href="https://wa.me/966539980290?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%88%D9%81%D8%B1%20(%D8%AC%D9%86%D8%A7%D8%AD%20%D8%AF%D9%8A%D9%84%D9%88%D9%83%D8%B3%20%D9%81%D8%A7%D8%AE%D8%B1)%20%D8%A8%D8%B3%D8%B9%D8%B1%20265%20%D8%B1%D9%8A%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="btn-direct-booking">
               <svg class="icon" style="width:18px;height:18px;"><use href="#icon-whatsapp"></use></svg>
               <span>حجز مباشر عبر واتساب</span>
             </a>
@@ -895,20 +1027,33 @@
               <span class="feature-pill"><svg class="icon"><use href="#icon-bath"></use></svg> حمام متكامل وتجهيزات</span>
             </div>
 
+            <!-- Card Promo Input -->
+            <div class="card-promo-section">
+              <div class="card-promo-row" id="cardPromoForm-3">
+                <input type="text" id="cardPromoInput-3" class="card-promo-input" placeholder="رمز الخصم (مثال: SAKANI10)" autocomplete="off" onkeyup="if(event.key==='Enter') applyPromoCode(this.value)">
+                <button class="btn-card-apply" onclick="applyPromoCode(document.getElementById('cardPromoInput-3').value)">تطبيق الخصم</button>
+              </div>
+              <div class="card-promo-active" id="cardPromoActive-3" style="display:none;">
+                <span>✓ كود SAKANI10 مُطبّق (خصم 10%)</span>
+                <button class="btn-promo-reset" onclick="removePromoCode()">إلغاء</button>
+              </div>
+              <div class="card-promo-err-msg" id="cardPromoErr-3" style="display:none;"></div>
+            </div>
+
             <div class="room-footer">
               <div class="pricing-container">
-                <div class="pricing-old-wrap">
+                <div class="pricing-old-wrap" id="pricingOld-3" style="display:none;">
                   <span class="price-strikethrough">465 ر.س</span>
-                  <span class="price-save-tag">وفر 10% بكود SAKANI10</span>
+                  <span class="price-save-tag">وفرت 45 ر.س (10%)</span>
                 </div>
                 <div class="pricing-current-wrap">
-                  <span class="room-price-val">420</span>
+                  <span class="room-price-val" id="priceVal-3">465</span>
                   <span class="room-price-unit">ر.س / ليلة</span>
                 </div>
               </div>
             </div>
 
-            <a href="https://wa.me/966539980290?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%88%D9%81%D8%B1%20(%D8%B4%D9%82%D8%A9%20%D8%BA%D8%B1%D9%81%D8%AA%D9%8A%20%D9%86%D9%88%D9%85%20%D9%88%D8%AA%D8%B1%D8%A7%D8%B3%20%D9%88%D9%85%D8%B7%D8%A8%D8%AE)%20%D8%A8%D8%B3%D8%B9%D8%B1%20420%20%D8%B1%D9%8A%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="btn-direct-booking">
+            <a id="btnBook-3" href="https://wa.me/966539980290?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%88%D9%81%D8%B1%20(%D8%B4%D9%82%D8%A9%20%D8%BA%D8%B1%D9%81%D8%AA%D9%8A%20%D9%86%D9%88%D9%85%20%D9%88%D8%B5%D8%A7%D9%84%D8%A9%20%D9%88%D9%85%D8%B7%D8%A8%D8%AE)%20%D8%A8%D8%B3%D8%B9%D8%B1%20465%20%D8%B1%D9%8A%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="btn-direct-booking">
               <svg class="icon" style="width:18px;height:18px;"><use href="#icon-whatsapp"></use></svg>
               <span>حجز مباشر عبر واتساب</span>
             </a>
@@ -1241,7 +1386,132 @@
       window.open(`https://wa.me/966539980290?text=${encodeURIComponent(message)}`, '_blank');
     }
 
-        // Mini Carousels Controller
+        
+    // Interactive Dynamic Promo Code System
+    let isPromoApplied = false;
+
+    const roomPricingData = {
+      1: {
+        name: "غرفة مزدوجة فاخرة",
+        basePrice: 245,
+        discountedPrice: 220,
+        saveAmount: 25
+      },
+      2: {
+        name: "جناح ديلوكس فاخر",
+        basePrice: 265,
+        discountedPrice: 240,
+        saveAmount: 25
+      },
+      3: {
+        name: "شقة غرفتي نوم وصالة ومطبخ",
+        basePrice: 465,
+        discountedPrice: 420,
+        saveAmount: 45
+      }
+    };
+
+    function applyPromoCode(codeAttempt) {
+      const code = (codeAttempt || '').trim().toUpperCase();
+      const alertBox = document.getElementById('globalPromoAlert');
+      
+      if (code === 'SAKANI10') {
+        isPromoApplied = true;
+        updateAllPricingUI(true);
+        if (alertBox) {
+          alertBox.className = 'promo-alert success';
+          alertBox.textContent = '🎉 مبروك! تم تطبيق كود الخصم (SAKANI10) بنجاح - تم تخفيض 10% على كافة الأجنحة!';
+          alertBox.style.display = 'block';
+        }
+      } else {
+        if (alertBox) {
+          alertBox.className = 'promo-alert error';
+          alertBox.textContent = 'عذراً، كود الخصم غير صحيح. تأكد من إدخال SAKANI10 للاستفادة من الخصم.';
+          alertBox.style.display = 'block';
+        }
+        [1, 2, 3].forEach(id => {
+          const err = document.getElementById(`cardPromoErr-${id}`);
+          if (err) {
+            err.textContent = 'رمز غير صحيح. جرب SAKANI10';
+            err.style.display = 'block';
+          }
+        });
+      }
+    }
+
+    function removePromoCode() {
+      isPromoApplied = false;
+      updateAllPricingUI(false);
+      const alertBox = document.getElementById('globalPromoAlert');
+      if (alertBox) alertBox.style.display = 'none';
+    }
+
+    function updateAllPricingUI(applied) {
+      // 1. Update Global Box
+      const globalRow = document.getElementById('globalPromoRow');
+      const globalSuccess = document.getElementById('globalPromoSuccess');
+      const globalInput = document.getElementById('globalPromoInput');
+      if (globalRow && globalSuccess) {
+        globalRow.style.display = applied ? 'none' : 'flex';
+        globalSuccess.style.display = applied ? 'flex' : 'none';
+        if (!applied && globalInput) globalInput.value = '';
+      }
+
+      // 2. Update Each Room Card
+      [1, 2, 3].forEach(id => {
+        const data = roomPricingData[id];
+        const oldWrap = document.getElementById(`pricingOld-${id}`);
+        const priceVal = document.getElementById(`priceVal-${id}`);
+        const bookBtn = document.getElementById(`btnBook-${id}`);
+        const cardForm = document.getElementById(`cardPromoForm-${id}`);
+        const cardActive = document.getElementById(`cardPromoActive-${id}`);
+        const cardErr = document.getElementById(`cardPromoErr-${id}`);
+        const cardInput = document.getElementById(`cardPromoInput-${id}`);
+
+        if (cardErr) cardErr.style.display = 'none';
+
+        if (applied) {
+          if (oldWrap) oldWrap.style.display = 'flex';
+          if (priceVal) priceVal.textContent = data.discountedPrice;
+          if (cardForm) cardForm.style.display = 'none';
+          if (cardActive) cardActive.style.display = 'flex';
+
+          const msg = `مرحباً، أود حجز (${data.name}) بتطبيق كود الخصم (SAKANI10) بسعر ${data.discountedPrice} ريال لليلة بعد خصم 10% (توفير ${data.saveAmount} ريال).`;
+          if (bookBtn) bookBtn.href = `https://wa.me/966539980290?text=${encodeURIComponent(msg)}`;
+        } else {
+          if (oldWrap) oldWrap.style.display = 'none';
+          if (priceVal) priceVal.textContent = data.basePrice;
+          if (cardForm) cardForm.style.display = 'flex';
+          if (cardActive) cardActive.style.display = 'none';
+          if (cardInput) cardInput.value = '';
+
+          const msg = `مرحباً، أود الاستفسار عن توفر (${data.name}) بسعر ${data.basePrice} ريال لليلة.`;
+          if (bookBtn) bookBtn.href = `https://wa.me/966539980290?text=${encodeURIComponent(msg)}`;
+        }
+      });
+
+      // 3. Update Booking Bar Select
+      const barUnit = document.getElementById('barUnit');
+      if (barUnit) {
+        if (applied) {
+          barUnit.options[0].text = "غرفة مزدوجة (22 م² - 220 ر.س - كود SAKANI10)";
+          barUnit.options[0].value = "غرفة مزدوجة فاخرة (220 ر.س بعد كود SAKANI10)";
+          barUnit.options[1].text = "جناح ديلوكس فاخر (40 م² - 240 ر.س - كود SAKANI10)";
+          barUnit.options[1].value = "جناح ديلوكس فاخر (240 ر.س بعد كود SAKANI10)";
+          barUnit.options[2].text = "شقة عائلية غرفتين وصالة (90 م² - 420 ر.س - كود SAKANI10)";
+          barUnit.options[2].value = "شقة غرفتي نوم وصالة ومطبخ (420 ر.س بعد كود SAKANI10)";
+        } else {
+          barUnit.options[0].text = "غرفة مزدوجة (22 م² - 245 ر.س)";
+          barUnit.options[0].value = "غرفة مزدوجة فاخرة (245 ر.س)";
+          barUnit.options[1].text = "جناح ديلوكس فاخر (40 م² - 265 ر.س)";
+          barUnit.options[1].value = "جناح ديلوكس فاخر (265 ر.س)";
+          barUnit.options[2].text = "شقة عائلية غرفتين وصالة (90 م² - 465 ر.س)";
+          barUnit.options[2].value = "شقة غرفتي نوم وصالة ومطبخ (465 ر.س)";
+        }
+      }
+    }
+
+    // Mini Carousels Controller
     const carouselStates = { 1: 0, 2: 0, 3: 0 };
     const carouselMax = { 1: 3, 2: 3, 3: 4 };
 
