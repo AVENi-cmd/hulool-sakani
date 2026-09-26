@@ -108,7 +108,7 @@
     }
     .hero-backdrop {
       position: absolute; inset: 0;
-      background-image: url('images/exterior.jpg'), url('images/exterior.png');
+      background-image: url('images/70B46A4F-FA11-4772-B68B-9DA437B54033.png');
       background-size: cover; background-position: center;
       filter: brightness(0.28) contrast(1.15); z-index: 0;
     }
@@ -599,12 +599,59 @@
       </div>
 
       <div class="units-grid">
-        <!-- Unit 1: Double Room -->
+        <!-- Unit 1: Double Room (22m² - 220 SAR) -->
+        <div class="unit-card">
+          <div class="unit-badge">الأنسب لرجال الأعمال والأفراد</div>
+          <div class="unit-img-wrapper">
+            <img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="غرفة مزدوجة فاخرة - حلول سكني">
+            <span class="unit-space-badge">المساحة: 22 متر مربع</span>
+          </div>
+          <div class="unit-details">
+            <h3 class="unit-title">غرفة مزدوجة فاخرة</h3>
+            <div class="unit-subtitle-en latin">DELUXE DOUBLE ROOM</div>
+            <ul class="unit-features-list">
+              <li class="unit-feature-item"><svg class="icon"><use href="#icon-bed"></use></svg> 1 سرير مزدوج كبير جداً (King Size)</li>
+              <li class="unit-feature-item"><svg class="icon"><use href="#icon-terrace"></use></svg> تراس خاص بإطلالة هادئة ومريحة</li>
+              <li class="unit-feature-item"><svg class="icon"><use href="#icon-bath"></use></svg> حمام خاص مع بيديت ومستلزمات عناية مجانية</li>
+              <li class="unit-feature-item"><svg class="icon"><use href="#icon-tv"></use></svg> شاشة مسطحة ومكيف سبليت هادئ</li>
+              <li class="unit-feature-item"><svg class="icon"><use href="#icon-wifi"></use></svg> واي فاي فائق السرعة مجاناً</li>
+            </ul>
+            <div class="unit-pricing-bar">
+              <div><span class="price-val">220</span> <span class="price-unit">ر.س / ليلة</span></div>
+              <button class="btn-book-unit" onclick="selectUnitAndBook('double', 220, 'غرفة مزدوجة فاخرة (220 ر.س)')">احجز الآن</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unit 2: Deluxe Junior Suite (40m² - 240 SAR) -->
+        <div class="unit-card">
+          <div class="unit-badge featured">الأكثر طلباً - قيمة استثنائية</div>
+          <div class="unit-img-wrapper">
+            <img src="images/42CAA853-472D-4804-9B7B-72DCA76923E1.png" alt="جناح ديلوكس مع تراس - حلول سكني">
+            <span class="unit-space-badge">المساحة: 40 متر مربع</span>
+          </div>
+          <div class="unit-details">
+            <h3 class="unit-title">جناح ديلوكس مع تراس</h3>
+            <div class="unit-subtitle-en latin">EXECUTIVE JUNIOR SUITE</div>
+            <ul class="unit-features-list">
+              <li class="unit-feature-item"><svg class="icon"><use href="#icon-bed"></use></svg> سرير كينغ كبير جداً + جلسة استرخاء متصلة</li>
+              <li class="unit-feature-item"><svg class="icon"><use href="#icon-terrace"></use></svg> تراس فسيح وجلسة استراحة خارجية</li>
+              <li class="unit-feature-item"><svg class="icon"><use href="#icon-bath"></use></svg> حمام خاص متكامل ومستلزمات فندقية</li>
+              <li class="unit-feature-item"><svg class="icon"><use href="#icon-tv"></use></svg> شاشة تلفزيون ذكية ومكيف سبليت ممتاز</li>
+              <li class="unit-feature-item"><svg class="icon"><use href="#icon-wifi"></use></svg> إنترنت ألياف سريع ومواقف خاصة مجانية</li>
+            </ul>
+            <div class="unit-pricing-bar">
+              <div><span class="price-val">240</span> <span class="price-unit">ر.س / ليلة</span></div>
+              <button class="btn-book-unit" onclick="selectUnitAndBook('suite', 240, 'جناح ديلوكس مع تراس (240 ر.س)')">احجز الآن</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unit 3: Two Bedroom Family Apartment (90m² - 420 SAR) -->
         <div class="unit-card">
           <div class="unit-badge">الخيار الأمثل للعائلات</div>
           <div class="unit-img-wrapper">
-            <img src="images/twin-beds.jpg" alt="شقة غرفتي نوم وتراس ومطبخ" onerror="if(this.src.indexOf('.png')===-1){this.src='images/twin-beds.png';}">
-            <span class="unit-space-badge">المساحة: 90 متر مربع</span>
+            <img src="images/6DE2E9DB-5ECB-458D-B988-6DCC6171E280.png" alt="شقة عائلية غرفتين وتراس - حلول سكني">
             <span class="unit-space-badge">المساحة: 90 متر مربع</span>
           </div>
           <div class="unit-details">
@@ -665,37 +712,48 @@
   <section class="gallery-section" id="gallery">
     <div class="container">
       <div class="section-header">
-        <div class="section-eyebrow"><svg class="icon"><use href="#icon-star"></use></svg> جولة مصورة</div>
-        <h2 class="section-heading">نظرة على مرافق وأرجاء حلول سكني</h2>
-        <p class="section-subtext">صور حقيقية توثق رحابة الأجنحة والتراسات ونظافة الغرف المتكاملة.</p>
+        <div class="section-eyebrow"><svg class="icon"><use href="#icon-star"></use></svg> جولة مصورة حقيقية</div>
+        <h2 class="section-heading">لقطات حية من أرجاء حلول سكني</h2>
+        <p class="section-subtext">صور واقعية توثق الواجهة الرسمية، بهو الاستقبال والضيافة، ورحابة الأجنحة والغرف الفندقية.</p>
       </div>
 
       <div class="gallery-grid">
         <!-- 1. Exterior (Span-2) -->
-        <div class="gallery-item span-2" onclick="openLightbox(this.querySelector('img').src, 'الواجهة المعمارية الرسمية لشقق حلول سكني المخدومة')">
-          <img src="images/exterior.jpg" alt="الواجهة المعمارية الرسمية" onerror="if(this.src.indexOf('.png')===-1){this.src='images/exterior.png';}">
+        <div class="gallery-item span-2" onclick="openLightbox(this.querySelector('img').src, 'الواجهة المعمارية واللوحة الرسمية لشقق حلول سكني المخدومة')">
+          <img src="images/70B46A4F-FA11-4772-B68B-9DA437B54033.png" alt="الواجهة المعمارية الرسمية">
           <div class="gallery-overlay">
             <div class="gallery-caption">
-              <h5>الواجهة المعمارية الرسمية</h5>
+              <h5>الواجهة المعمارية واللوحة الرسمية</h5>
               <span>شارع متعب بن عبدالله بن عبدالعزيز، حي الحمراء الأول</span>
             </div>
           </div>
         </div>
 
-        <!-- 2. Reception & Front Desk -->
-        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'بهو ومكتب الاستقبال الفندقي المضاء على مدار 24 ساعة')">
-          <img src="images/reception.jpg" alt="بهو الاستقبال الفندقي" onerror="if(this.src.indexOf('.png')===-1){this.src='images/reception.png';}">
+        <!-- 2. Reception Desk -->
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'كاونتر وبهو الاستقبال الفندقي المضاء على مدار 24 ساعة')">
+          <img src="images/9EE96980-172E-4E73-9510-2D33E048F9FF.png" alt="كاونتر الاستقبال الفندقي">
           <div class="gallery-overlay">
             <div class="gallery-caption">
-              <h5>بهو ومكتب الاستقبال الفندقي</h5>
-              <span>استقبال وضيافة وترحيب على مدار 24 ساعة</span>
+              <h5>كاونتر الاستقبال الفندقي</h5>
+              <span>ترحيب واستقبال على مدار 24 ساعة يومياً</span>
             </div>
           </div>
         </div>
 
-        <!-- 3. Master King Bedroom -->
+        <!-- 3. Luxury Lobby Lounge -->
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'بهو الضيافة الفاخر وأرقى جلسات الاستراحة المضاءة')">
+          <img src="images/0D22EB03-C62B-42E6-BC72-2F5173980AC9.png" alt="بهو الضيافة والاستراحة الفاخر">
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              <h5>بهو الضيافة والاستراحة الفاخر</h5>
+              <span>جلسات كنب عصرية وأرفف تحف مضيئة لأرقى استقبال</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Master King Bedroom -->
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'غرفة النوم الماستر كينغ والتسريحة المضيئة والدولاب الزجاجي')">
-          <img src="images/master-bedroom.jpg" alt="غرفة النوم الماستر كينغ" onerror="if(this.src.indexOf('.png')===-1){this.src='images/master-bedroom.png';}">
+          <img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="غرفة النوم الماستر كينغ">
           <div class="gallery-overlay">
             <div class="gallery-caption">
               <h5>غرفة النوم الماستر كينغ</h5>
@@ -704,20 +762,20 @@
           </div>
         </div>
 
-        <!-- 4. Suite Living Room & 4K TV -->
-        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'صالة الجلوس الفاخرة وشاشة 4K الذكية')">
-          <img src="images/suite-living.jpg" alt="صالة الجلوس والشاشة الذكية" onerror="if(this.src.indexOf('.png')===-1){this.src='images/suite-living.png';}">
+        <!-- 5. Connected Deluxe Suite -->
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'أجنحة الديلوكس الفسيحة بسرير كينغ وجلسة صالة متصلة')">
+          <img src="images/42CAA853-472D-4804-9B7B-72DCA76923E1.png" alt="جناح ديلوكس متكامل">
           <div class="gallery-overlay">
             <div class="gallery-caption">
-              <h5>صالة الاستراحة والشاشة الذكية 4K</h5>
-              <span>جلسة كنب وثير وإضاءة دافئة مريحة للاسترخاء</span>
+              <h5>جناح ديلوكس متكامل (40 م²)</h5>
+              <span>سرير كينغ طبي مريح وجلسة كنب متصلة وطاولة قهوة</span>
             </div>
           </div>
         </div>
 
-        <!-- 5. Twin Beds Family Room -->
-        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'الغرفة العائلية المزدوجة بسريرين مفردين')">
-          <img src="images/twin-beds.jpg" alt="الغرفة العائلية المزدوجة" onerror="if(this.src.indexOf('.png')===-1){this.src='images/twin-beds.png';}">
+        <!-- 6. Twin Beds Family Room -->
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'الغرفة العائلية المزدوجة بسريرين مفردين وتكييف سبليت')">
+          <img src="images/6DE2E9DB-5ECB-458D-B988-6DCC6171E280.png" alt="الغرفة العائلية المزدوجة">
           <div class="gallery-overlay">
             <div class="gallery-caption">
               <h5>الغرفة العائلية المزدوجة</h5>
@@ -726,35 +784,35 @@
           </div>
         </div>
 
-        <!-- 6. Marble Kitchenette -->
-        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'المطبخ التحضيري الرخامي الفاخر وركن القهوة')">
-          <img src="images/kitchenette.jpg" alt="المطبخ التحضيري الرخامي" onerror="if(this.src.indexOf('.png')===-1){this.src='images/kitchenette.png';}">
+        <!-- 7. Suite Living Room & 4K TV -->
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'صالة الجلوس الفاخرة وشاشة 4K الذكية والإنارة المخفية')">
+          <img src="images/505F178C-6DD2-45F8-9AFB-9D60C2C8A90C.png" alt="صالة الجلوس والشاشة الذكية">
           <div class="gallery-overlay">
             <div class="gallery-caption">
-              <h5>المطبخ التحضيري الرخامي</h5>
+              <h5>صالة الاستراحة والشاشة الذكية 4K</h5>
+              <span>جلسة كنب وثير وإضاءة دافئة مريحة للاسترخاء</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Marble Kitchenette -->
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'المطبخ التحضيري الرخامي الفاخر وثلاجة العرض وركن القهوة')">
+          <img src="images/2F68E139-902A-45B3-807F-A756E4AAA295.png" alt="المطبخ التحضيري الرخامي">
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              <h5>المطبخ التحضيري الرخامي الفاخر</h5>
               <span>رخام فاخر، ثلاجة عرض، مايكرويف، وركن إعداد القهوة</span>
             </div>
           </div>
         </div>
 
-        <!-- 7. Family Living Room -->
-        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'صالة المعيشة العائلية الواسعة وجلسة الاسترخاء')">
-          <img src="images/family-living.jpg" alt="صالة المعيشة العائلية" onerror="if(this.src.indexOf('.png')===-1){this.src='images/family-living.png';}">
+        <!-- 9. Family Living Room -->
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'صالة المعيشة العائلية الواسعة والكنب المزدوج')">
+          <img src="images/D89278AE-FCAD-4939-98B1-DB233793F867.png" alt="صالة المعيشة العائلية">
           <div class="gallery-overlay">
             <div class="gallery-caption">
-              <h5>صالة المعيشة العائلية الرحبة</h5>
-              <span>مساحة فسيحة تتسع للعائلات بأجواء منزلية دافئة</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 8. Luxury Lobby & Hospitality Lounge -->
-        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'بهو الضيافة الفاخر وجلسات الاستراحة المضاءة')">
-          <img src="images/lobby-lounge.jpg" alt="بهو الضيافة والاستراحة الفاخر" onerror="if(this.src.indexOf('.png')===-1){this.src='images/lobby-lounge.png';} else if(this.src.indexOf('reception-night')===-1){this.src='images/reception-night.jpg';}">
-          <div class="gallery-overlay">
-            <div class="gallery-caption">
-              <h5>بهو الضيافة الفاخر</h5>
-              <span>أرقى جلسات الكنب العصرية واستراحة الضيافة المتكاملة</span>
+              <h5>صالة المعيشة العائلية الفسيحة</h5>
+              <span>مساحة رحبة تتسع للعائلات بأجواء دافئة وعزل صوتي تام</span>
             </div>
           </div>
         </div>
