@@ -4,474 +4,456 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>حلول سكني للشقق المخدومة | HULOOL SAKANI Serviced Apartments</title>
-  <meta name="description" content="حلول سكني للشقق المخدومة في الأحساء، الهفوف - حي الحمراء الأول. إقامة فندقية فاخرة بالقرب من شارع الملك عبدالله والأحساء مول.">
+  <meta name="description" content="حلول سكني للشقق المخدومة في الأحساء، الهفوف - حي الحمراء الأول. إقامة فندقية فاخرة ومريحة بالقرب من شارع الملك عبدالله والأحساء مول.">
   <meta property="og:title" content="حلول سكني للشقق المخدومة | فخامة الإقامة في الهفوف">
-  <meta property="og:description" content="أجنحة وغرف عائلية مخدومة بتقييم 4.7 نجوم في الأحساء. احجز إقامتك المباشرة بأفضل الأسعار وبدون عمولات.">
-  
-  <!-- Google Fonts: Cairo for Arabic + Cinzel for Luxury Latin -->
+  <meta property="og:description" content="أجنحة وغرف عائلية مخدومة بتقييم 4.7 نجوم في الأحساء. احجز إقامتك المباشرة بأفضل الأسعار.">
+  <meta property="og:image" content="images/70B46A4F-FA11-4772-B68B-9DA437B54033.png">
+
+  <!-- Google Fonts: IBM Plex Sans Arabic for Modern Clean Arabic UI + Plus Jakarta Sans for Latin -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-midnight: #070A12;
-      --bg-surface: #0E1322;
-      --bg-card: #141B30;
-      --bg-card-hover: #1A233D;
-      --gold-primary: #C9A97C;
-      --gold-light: #E4CCA6;
-      --gold-dark: #9A7B4F;
-      --gold-glow: rgba(201, 169, 124, 0.25);
+      --bg-main: #F8FAFC;
+      --bg-white: #FFFFFF;
+      --bg-subtle: #F1F5F9;
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --text-light: #64748B;
+      --gold-primary: #B88E4F;
+      --gold-dark: #8F6932;
+      --gold-light: #FBF6EE;
+      --gold-border: rgba(184, 142, 79, 0.28);
+      --accent-navy: #0F172A;
       --accent-blue: #2563EB;
-      --accent-emerald: #10B981;
-      --text-white: #FFFFFF;
-      --text-primary: #F1F5F9;
-      --text-secondary: #94A3B8;
-      --text-muted: #64748B;
-      --border-subtle: rgba(201, 169, 124, 0.22);
-      --border-card: rgba(255, 255, 255, 0.07);
-      --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      --accent-green: #059669;
+      --border-color: #E2E8F0;
+      --card-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.06), 0 4px 12px -2px rgba(15, 23, 42, 0.03);
+      --card-shadow-hover: 0 20px 40px -8px rgba(15, 23, 42, 0.12), 0 6px 16px -3px rgba(15, 23, 42, 0.05);
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Cairo', system-ui, sans-serif;
-      background-color: var(--bg-midnight);
-      color: var(--text-primary);
+      font-family: 'IBM Plex Sans Arabic', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
       line-height: 1.7;
       direction: rtl;
-      overflow-x: hidden;
     }
-    .latin { font-family: 'Cinzel', serif; letter-spacing: 1.8px; }
+    .latin { font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: 0.5px; }
     a { text-decoration: none; color: inherit; }
     img { max-width: 100%; height: auto; display: block; }
     .container { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; }
     .icon { width: 20px; height: 20px; fill: currentColor; display: inline-block; vertical-align: middle; flex-shrink: 0; }
 
-    /* Custom Header */
+    /* Clean White Header */
     .site-header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      background: rgba(7, 10, 18, 0.92);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border-subtle);
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: 0 2px 15px rgba(15, 23, 42, 0.04);
       transition: var(--transition);
     }
-    .nav-wrapper { display: flex; justify-content: space-between; align-items: center; height: 84px; }
-    .brand-logo { display: flex; align-items: center; gap: 14px; }
+    .nav-wrapper { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+    .brand-logo { display: flex; align-items: center; gap: 12px; }
     .logo-emblem {
-      width: 48px; height: 48px;
-      background: linear-gradient(135deg, #141B30, #0E1322);
-      border: 1.5px solid var(--gold-primary);
-      border-radius: 12px;
+      width: 44px; height: 44px;
+      background: var(--text-main);
+      border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
-      color: var(--gold-primary);
-      box-shadow: 0 0 16px var(--gold-glow);
+      color: #FFFFFF;
     }
-    .brand-title { font-size: 1.35rem; font-weight: 900; color: var(--text-white); letter-spacing: -0.5px; }
+    .brand-title { font-size: 1.3rem; font-weight: 700; color: var(--text-main); line-height: 1.2; }
     .brand-title .gold { color: var(--gold-primary); }
-    .brand-subtitle { font-size: 0.72rem; color: var(--gold-light); font-weight: 700; margin-top: -2px; }
-    
-    .nav-links { display: flex; gap: 32px; list-style: none; }
-    .nav-links a { font-weight: 600; font-size: 0.95rem; color: var(--text-secondary); transition: var(--transition); position: relative; }
-    .nav-links a:hover { color: var(--gold-primary); }
-    .nav-links a::after {
-      content: ''; position: absolute; bottom: -6px; left: 0; right: 0; height: 2px;
-      background: var(--gold-primary); transform: scaleX(0); transition: var(--transition);
-    }
-    .nav-links a:hover::after { transform: scaleX(1); }
+    .brand-subtitle { font-size: 0.72rem; color: var(--text-light); font-weight: 600; text-transform: uppercase; }
 
-    .header-actions { display: flex; align-items: center; gap: 12px; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { font-weight: 500; font-size: 0.95rem; color: var(--text-muted); transition: var(--transition); position: relative; }
+    .nav-links a:hover { color: var(--gold-primary); }
+
+    .header-actions { display: flex; align-items: center; gap: 10px; }
     .btn-header-call {
-      background: rgba(201, 169, 124, 0.12); color: var(--gold-primary);
-      border: 1px solid var(--border-subtle); font-weight: 700; font-size: 0.88rem;
-      padding: 10px 18px; border-radius: 8px; display: inline-flex; align-items: center; gap: 8px;
+      background: var(--bg-subtle); color: var(--text-main);
+      border: 1px solid var(--border-color); font-weight: 600; font-size: 0.88rem;
+      padding: 9px 16px; border-radius: 8px; display: inline-flex; align-items: center; gap: 6px;
       transition: var(--transition);
     }
-    .btn-header-call:hover { background: var(--gold-primary); color: #070A12; transform: translateY(-2px); }
+    .btn-header-call:hover { background: var(--text-main); color: #FFFFFF; border-color: var(--text-main); }
     .btn-header-book {
       background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
-      color: #070A12; font-weight: 800; font-size: 0.92rem;
-      padding: 10px 22px; border-radius: 8px; border: 1px solid var(--gold-light);
+      color: #FFFFFF; font-weight: 600; font-size: 0.9rem;
+      padding: 9px 20px; border-radius: 8px; border: none;
       cursor: pointer; transition: var(--transition); display: inline-flex; align-items: center; gap: 8px;
-      box-shadow: 0 4px 14px var(--gold-glow);
+      box-shadow: 0 4px 12px rgba(184, 142, 79, 0.25);
     }
-    .btn-header-book:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(201, 169, 124, 0.4); }
+    .btn-header-book:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(184, 142, 79, 0.35); }
 
-    /* Hero Section */
+    /* Modern Light Hero */
     .hero-section {
-      min-height: 94vh; display: flex; align-items: center; position: relative;
-      padding: 140px 0 80px; text-align: center;
-      background: radial-gradient(circle at 50% 20%, #162038 0%, #070A12 85%);
-      overflow: hidden;
+      padding: 140px 0 90px;
+      background: linear-gradient(180deg, #FFFFFF 0%, var(--bg-main) 100%);
+      position: relative;
     }
-    .hero-backdrop {
-      position: absolute; inset: 0;
-      background-image: url('images/70B46A4F-FA11-4772-B68B-9DA437B54033.png');
-      background-size: cover; background-position: center;
-      filter: brightness(0.28) contrast(1.15); z-index: 0;
-    }
-    .hero-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(180deg, rgba(7,10,18,0.7) 0%, rgba(7,10,18,0.92) 80%, #070A12 100%);
-      z-index: 1;
-    }
-    .hero-content { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center; }
     
-    .rating-badge-pill {
-      display: inline-flex; align-items: center; gap: 10px; padding: 8px 22px;
-      background: rgba(20, 27, 48, 0.85); border: 1.5px solid var(--gold-primary);
-      border-radius: 50px; margin-bottom: 26px; font-size: 0.9rem; font-weight: 700; color: var(--gold-light);
-      box-shadow: 0 4px 18px var(--gold-glow);
+    .rating-badge {
+      display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px;
+      background: var(--gold-light); border: 1px solid var(--gold-border);
+      border-radius: 30px; margin-bottom: 20px; font-size: 0.88rem; font-weight: 600; color: var(--gold-dark);
     }
-    .rating-badge-pill .star-score { color: #F59E0B; font-weight: 900; }
+    .rating-badge .stars { color: #F59E0B; }
     
-    .hero-title { font-size: 3.4rem; font-weight: 900; line-height: 1.22; margin-bottom: 18px; color: #FFFFFF; }
-    .hero-title .gold {
-      background: linear-gradient(135deg, #FFFFFF 20%, var(--gold-light) 60%, var(--gold-primary) 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
-    .hero-subtitle-en { font-size: 1.15rem; color: var(--gold-light); margin-bottom: 20px; letter-spacing: 2px; font-weight: 600; }
-    .hero-desc { font-size: 1.18rem; color: var(--text-secondary); margin-bottom: 36px; max-width: 780px; margin-inline: auto; }
+    .hero-title { font-size: 2.9rem; font-weight: 700; line-height: 1.25; margin-bottom: 16px; color: var(--text-main); letter-spacing: -0.5px; }
+    .hero-title .gold { color: var(--gold-primary); }
+    .hero-subtitle-en { font-size: 1rem; color: var(--text-light); margin-bottom: 18px; font-weight: 600; text-transform: uppercase; }
+    .hero-desc { font-size: 1.08rem; color: var(--text-muted); margin-bottom: 30px; line-height: 1.8; }
     
-    .hero-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
-    .btn-hero-primary {
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 24px; }
+    .btn-primary {
       background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
-      color: #070A12; font-weight: 800; font-size: 1.08rem;
-      padding: 15px 36px; border-radius: 10px; border: 1px solid var(--gold-light);
+      color: #FFFFFF; font-weight: 600; font-size: 1rem;
+      padding: 13px 30px; border-radius: 8px; border: none;
       cursor: pointer; transition: var(--transition); display: inline-flex; align-items: center; gap: 10px;
-      box-shadow: 0 8px 25px var(--gold-glow);
+      box-shadow: 0 4px 14px rgba(184, 142, 79, 0.25);
     }
-    .btn-hero-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(201, 169, 124, 0.45); }
-    .btn-hero-secondary {
-      background: rgba(20, 27, 48, 0.75); color: var(--text-white);
-      font-weight: 700; font-size: 1.05rem; padding: 15px 30px;
-      border-radius: 10px; border: 1px solid var(--border-subtle);
-      transition: var(--transition); display: inline-flex; align-items: center; gap: 10px;
-      backdrop-filter: blur(8px);
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(184, 142, 79, 0.35); }
+    
+    .btn-secondary {
+      background: #FFFFFF; color: var(--text-main);
+      font-weight: 600; font-size: 1rem; padding: 13px 26px;
+      border-radius: 8px; border: 1px solid var(--border-color);
+      transition: var(--transition); display: inline-flex; align-items: center; gap: 8px;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
     }
-    .btn-hero-secondary:hover { border-color: var(--gold-primary); color: var(--gold-primary); transform: translateY(-2px); }
+    .btn-secondary:hover { border-color: var(--gold-primary); color: var(--gold-primary); transform: translateY(-2px); }
 
-    /* Trust Grid Bar */
-    .trust-bar { position: relative; z-index: 10; margin-top: -55px; margin-bottom: 70px; }
-    .trust-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
-      background: var(--bg-card); border: 1px solid var(--border-subtle);
-      border-radius: 16px; padding: 26px; box-shadow: 0 20px 40px rgba(0,0,0,0.65);
+    .hero-photo-card {
+      position: relative; border-radius: 20px; overflow: hidden;
+      box-shadow: var(--card-shadow-hover); border: 1px solid var(--border-color);
+      height: 440px; background: #E2E8F0;
     }
-    .trust-card { display: flex; align-items: center; gap: 16px; padding: 8px 14px; border-right: 1px solid rgba(255,255,255,0.06); }
-    .trust-card:last-child { border-right: none; }
-    .trust-icon-box {
-      width: 52px; height: 52px; background: rgba(201, 169, 124, 0.1);
-      border: 1px solid var(--border-subtle); border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--gold-primary); flex-shrink: 0;
+    .hero-photo-card img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-photo-tag {
+      position: absolute; bottom: 20px; right: 20px;
+      background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px);
+      color: #FFFFFF; padding: 8px 18px; border-radius: 30px;
+      font-size: 0.85rem; font-weight: 600;
     }
-    .trust-info h4 { font-size: 1.12rem; font-weight: 800; color: var(--text-white); }
-    .trust-info p { font-size: 0.82rem; color: var(--text-secondary); margin-top: 2px; }
 
-    /* Sections Shared */
+    /* Trust Highlights Bar */
+    .trust-strip {
+      background: #FFFFFF; border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color); padding: 26px 0;
+    }
+    .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .trust-item { display: flex; align-items: center; gap: 16px; padding: 0 10px; border-left: 1px solid var(--border-color); }
+    .trust-item:last-child { border-left: none; }
+    .trust-icon {
+      width: 48px; height: 48px; border-radius: 10px;
+      background: var(--gold-light); color: var(--gold-primary);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .trust-item h4 { font-size: 1.05rem; font-weight: 700; color: var(--text-main); }
+    .trust-item p { font-size: 0.82rem; color: var(--text-light); margin-top: 2px; }
+
+    /* Sections Common */
     section { padding: 90px 0; }
-    .section-header { text-align: center; max-width: 680px; margin: 0 auto 55px; }
-    .section-eyebrow {
+    .section-head { text-align: center; max-width: 660px; margin: 0 auto 55px; }
+    .section-tag {
       display: inline-flex; align-items: center; gap: 6px;
-      color: var(--gold-primary); font-size: 0.88rem; font-weight: 700;
-      letter-spacing: 2px; margin-bottom: 12px; text-transform: uppercase;
+      color: var(--gold-primary); font-size: 0.85rem; font-weight: 600;
+      letter-spacing: 1.5px; margin-bottom: 10px; text-transform: uppercase;
     }
-    .section-heading { font-size: 2.35rem; font-weight: 900; color: var(--text-white); margin-bottom: 14px; line-height: 1.3; }
-    .section-subtext { font-size: 1.02rem; color: var(--text-secondary); line-height: 1.7; }
+    .section-title { font-size: 2.3rem; font-weight: 700; color: var(--text-main); margin-bottom: 14px; letter-spacing: -0.5px; }
+    .section-subtitle { font-size: 1rem; color: var(--text-muted); line-height: 1.7; }
 
-    /* Units & Pricing */
-    .units-section { background: var(--bg-surface); }
+    /* Units & Rooms (Clean White Cards) */
+    .units-section { background: var(--bg-main); }
     .units-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
     .unit-card {
-      background: var(--bg-card); border: 1px solid var(--border-card);
-      border-radius: 18px; overflow: hidden; display: flex; flex-direction: column;
-      transition: var(--transition); position: relative;
+      background: #FFFFFF; border: 1px solid var(--border-color);
+      border-radius: 16px; overflow: hidden; display: flex; flex-direction: column;
+      box-shadow: var(--card-shadow); transition: var(--transition); position: relative;
     }
-    .unit-card:hover {
-      transform: translateY(-8px);
-      border-color: var(--gold-primary);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.55), 0 0 20px var(--gold-glow);
-    }
+    .unit-card:hover { transform: translateY(-6px); box-shadow: var(--card-shadow-hover); border-color: var(--gold-border); }
     .unit-badge {
       position: absolute; top: 16px; right: 16px;
-      background: rgba(7, 10, 18, 0.88); border: 1px solid var(--gold-primary);
-      color: var(--gold-light); font-size: 0.78rem; font-weight: 700;
-      padding: 5px 14px; border-radius: 30px; z-index: 5; backdrop-filter: blur(8px);
+      background: #FFFFFF; color: var(--text-main); font-size: 0.78rem; font-weight: 600;
+      padding: 5px 12px; border-radius: 20px; z-index: 5;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1); border: 1px solid var(--border-color);
     }
-    .unit-badge.featured { background: var(--accent-blue); border-color: var(--accent-blue); color: #fff; }
-    .unit-img-wrapper {
-      height: 250px; overflow: hidden; position: relative; background: #0A0E1A;
-    }
-    .unit-img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
-    .unit-card:hover .unit-img-wrapper img { transform: scale(1.07); }
-    .unit-space-badge {
-      position: absolute; bottom: 14px; left: 14px;
-      background: rgba(0,0,0,0.75); color: #fff; font-size: 0.78rem; font-weight: 700;
-      padding: 4px 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.15);
+    .unit-badge.featured { background: var(--text-main); color: #FFFFFF; border-color: var(--text-main); }
+    .unit-img-box { height: 250px; overflow: hidden; position: relative; background: #F1F5F9; }
+    .unit-img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .unit-card:hover .unit-img-box img { transform: scale(1.05); }
+    .unit-area-pill {
+      position: absolute; bottom: 12px; left: 12px;
+      background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(4px);
+      color: #FFFFFF; font-size: 0.75rem; font-weight: 600;
+      padding: 4px 10px; border-radius: 6px;
     }
     
-    .unit-details { padding: 24px; display: flex; flex-direction: column; flex-grow: 1; }
-    .unit-title { font-size: 1.35rem; font-weight: 800; color: var(--text-white); }
-    .unit-subtitle-en { font-size: 0.82rem; color: var(--gold-light); margin-bottom: 16px; }
-    
-    .unit-features-list { list-style: none; margin-bottom: 22px; display: flex; flex-direction: column; gap: 10px; }
-    .unit-feature-item { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--text-secondary); }
-    .unit-feature-item svg { color: var(--gold-primary); width: 18px; height: 18px; }
-    
-    .unit-pricing-bar {
-      margin-top: auto; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.08);
+    .unit-content { padding: 24px; display: flex; flex-direction: column; flex-grow: 1; }
+    .unit-title { font-size: 1.3rem; font-weight: 700; color: var(--text-main); }
+    .unit-title-en { font-size: 0.8rem; color: var(--text-light); margin-bottom: 16px; font-weight: 600; text-transform: uppercase; }
+    .unit-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; }
+    .unit-feat { display: flex; align-items: center; gap: 10px; font-size: 0.88rem; color: var(--text-muted); }
+    .unit-feat svg { color: var(--gold-primary); }
+
+    .unit-price-row {
+      margin-top: auto; padding-top: 18px; border-top: 1px solid var(--border-color);
       display: flex; justify-content: space-between; align-items: center;
     }
-    .price-val { font-size: 1.7rem; font-weight: 900; color: var(--gold-primary); }
-    .price-unit { font-size: 0.85rem; color: var(--text-muted); }
-    .btn-book-unit {
+    .price-num { font-size: 1.6rem; font-weight: 700; color: var(--text-main); }
+    .price-sub { font-size: 0.82rem; color: var(--text-light); }
+    .btn-select-room {
       background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
-      color: #070A12; font-weight: 800; font-size: 0.92rem;
-      padding: 10px 22px; border-radius: 8px; border: 1px solid var(--gold-light);
+      color: #FFFFFF; font-weight: 600; font-size: 0.9rem;
+      padding: 9px 20px; border-radius: 8px; border: none;
       cursor: pointer; transition: var(--transition);
     }
-    .btn-book-unit:hover { transform: scale(1.04); box-shadow: 0 4px 15px var(--gold-glow); }
+    .btn-select-room:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(184, 142, 79, 0.3); }
 
-    /* Area Highlights / Landmarks */
-    .landmarks-section { background: var(--bg-midnight); position: relative; }
-    .landmarks-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-    .landmark-card {
-      background: var(--bg-card); border: 1px solid var(--border-card);
+    /* Strategic Landmarks Section */
+    .landmarks-section { background: #FFFFFF; border-top: 1px solid var(--border-color); }
+    .landmarks-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+    .landmark-box {
+      background: var(--bg-main); border: 1px solid var(--border-color);
       border-radius: 14px; padding: 24px; transition: var(--transition);
       display: flex; flex-direction: column;
     }
-    .landmark-card:hover { border-color: var(--gold-primary); transform: translateY(-4px); }
-    .landmark-tag {
-      font-size: 0.75rem; font-weight: 700; color: var(--accent-emerald);
-      background: rgba(16, 185, 129, 0.12); padding: 4px 10px; border-radius: 20px;
-      align-self: flex-start; margin-bottom: 14px;
+    .landmark-box:hover { border-color: var(--gold-primary); background: #FFFFFF; box-shadow: var(--card-shadow); transform: translateY(-4px); }
+    .landmark-status {
+      align-self: flex-start; font-size: 0.75rem; font-weight: 600;
+      color: var(--accent-green); background: #DEF7EC; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px;
     }
-    .landmark-card h4 { font-size: 1.15rem; font-weight: 800; color: var(--text-white); margin-bottom: 8px; }
-    .landmark-card p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+    .landmark-box h4 { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 8px; }
+    .landmark-box p { font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; }
 
-    /* Gallery */
-    .gallery-section { background: var(--bg-surface); }
+    /* Gallery (Clean White Grid) */
+    .gallery-section { background: var(--bg-main); }
     .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .gallery-item {
-      height: 290px; border-radius: 14px; overflow: hidden; position: relative;
-      cursor: pointer; border: 1px solid var(--border-card); background: #0A0E1A;
+    .gallery-card {
+      height: 280px; border-radius: 14px; overflow: hidden; position: relative;
+      cursor: pointer; box-shadow: var(--card-shadow); border: 1px solid var(--border-color); background: #F1F5F9;
     }
-    .gallery-item.span-2 { grid-column: span 2; }
-    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
-    .gallery-item:hover img { transform: scale(1.06); }
-    .gallery-overlay {
+    .gallery-card.span-2 { grid-column: span 2; }
+    .gallery-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .gallery-card:hover img { transform: scale(1.05); }
+    .gallery-caption-overlay {
       position: absolute; inset: 0;
-      background: linear-gradient(180deg, transparent 40%, rgba(7,10,18,0.92) 100%);
+      background: linear-gradient(180deg, transparent 40%, rgba(15, 23, 42, 0.88) 100%);
       display: flex; align-items: flex-end; padding: 20px;
     }
-    .gallery-caption h5 { font-size: 1.05rem; font-weight: 800; color: var(--text-white); }
-    .gallery-caption span { font-size: 0.78rem; color: var(--gold-light); }
+    .gallery-caption-overlay h5 { font-size: 1.05rem; font-weight: 600; color: #FFFFFF; }
+    .gallery-caption-overlay span { font-size: 0.78rem; color: #E2E8F0; }
 
     /* Amenities */
-    .amenities-section { background: var(--bg-midnight); }
-    .amenities-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
-    .amenity-card {
-      background: var(--bg-card); border: 1px solid var(--border-card);
-      border-radius: 14px; padding: 26px 20px; text-align: center;
-      transition: var(--transition);
+    .amenities-section { background: #FFFFFF; border-top: 1px solid var(--border-color); }
+    .amenities-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .amenity-item {
+      background: var(--bg-main); border: 1px solid var(--border-color);
+      border-radius: 14px; padding: 26px 20px; text-align: center; transition: var(--transition);
     }
-    .amenity-card:hover { border-color: var(--gold-primary); transform: translateY(-4px); }
-    .amenity-icon {
-      width: 56px; height: 56px; margin: 0 auto 16px;
-      background: rgba(201, 169, 124, 0.1); border: 1px solid var(--border-subtle);
+    .amenity-item:hover { border-color: var(--gold-border); background: #FFFFFF; box-shadow: var(--card-shadow); transform: translateY(-4px); }
+    .amenity-icon-box {
+      width: 52px; height: 52px; margin: 0 auto 16px;
+      background: var(--gold-light); color: var(--gold-primary);
       border-radius: 12px; display: flex; align-items: center; justify-content: center;
-      color: var(--gold-primary);
     }
-    .amenity-card h4 { font-size: 1.1rem; font-weight: 800; color: var(--text-white); margin-bottom: 8px; }
-    .amenity-card p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+    .amenity-item h4 { font-size: 1.05rem; font-weight: 700; color: var(--text-main); margin-bottom: 6px; }
+    .amenity-item p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
 
-    /* Verified Reviews */
-    .reviews-section { background: var(--bg-surface); }
+    /* Real Guest Reviews */
+    .reviews-section { background: var(--bg-main); }
     .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .review-card {
-      background: var(--bg-card); border: 1px solid var(--border-card);
-      border-radius: 16px; padding: 26px; display: flex; flex-direction: column;
-      position: relative;
+    .review-bubble {
+      background: #FFFFFF; border: 1px solid var(--border-color);
+      border-radius: 14px; padding: 24px; box-shadow: var(--card-shadow);
+      display: flex; flex-direction: column;
     }
-    .review-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
-    .reviewer-avatar {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: linear-gradient(135deg, #1E293B, #0F172A);
-      border: 1.5px solid var(--gold-primary);
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 800; color: var(--gold-primary); font-size: 1rem;
+    .review-user-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .user-avatar-circle {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: var(--bg-subtle); color: var(--text-main); font-weight: 700;
+      display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-color);
     }
-    .reviewer-info h5 { font-size: 1rem; font-weight: 800; color: var(--text-white); }
-    .reviewer-info span { font-size: 0.78rem; color: var(--gold-light); display: block; }
-    .review-stars { color: #F59E0B; margin-bottom: 12px; font-size: 0.95rem; }
-    .review-text { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px; flex-grow: 1; }
-    .review-badge {
+    .user-meta h5 { font-size: 0.95rem; font-weight: 700; color: var(--text-main); }
+    .user-meta span { font-size: 0.78rem; color: var(--text-light); }
+    .review-stars-strip { color: #F59E0B; margin-bottom: 10px; font-size: 0.95rem; }
+    .review-quote { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 16px; flex-grow: 1; }
+    .review-verified {
       display: flex; align-items: center; gap: 6px;
-      font-size: 0.78rem; color: var(--accent-emerald); padding-top: 12px;
-      border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.78rem; color: var(--accent-green); padding-top: 10px; border-top: 1px solid var(--border-color);
     }
 
     /* Location & Map */
-    .location-section { background: var(--bg-midnight); }
-    .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center; }
-    .location-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 18px; padding: 34px; }
-    .location-title { font-size: 1.6rem; font-weight: 900; color: var(--text-white); margin-bottom: 12px; }
-    .location-address { font-size: 0.95rem; color: var(--gold-light); margin-bottom: 24px; line-height: 1.7; }
-    .location-features-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
-    .location-feature-item {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 10px 14px; background: rgba(255, 255, 255, 0.03); border-radius: 8px; font-size: 0.9rem;
+    .location-section { background: #FFFFFF; border-top: 1px solid var(--border-color); }
+    .location-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center; }
+    .location-info-card {
+      background: var(--bg-main); border: 1px solid var(--border-color);
+      border-radius: 16px; padding: 32px;
     }
-    .location-dist { color: var(--accent-emerald); font-weight: 700; font-size: 0.85rem; }
-    .btn-maps {
-      background: rgba(201, 169, 124, 0.12); color: var(--gold-primary);
-      border: 1px solid var(--gold-primary); font-weight: 800; font-size: 0.95rem;
-      padding: 12px 24px; border-radius: 8px; display: inline-flex; align-items: center; gap: 10px;
+    .location-info-card h3 { font-size: 1.55rem; font-weight: 700; color: var(--text-main); margin-bottom: 12px; }
+    .location-address-txt { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 22px; line-height: 1.7; }
+    .location-points { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 26px; }
+    .location-point-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 10px 14px; background: #FFFFFF; border: 1px solid var(--border-color);
+      border-radius: 8px; font-size: 0.9rem;
+    }
+    .location-point-row .badge { color: var(--accent-green); font-weight: 600; font-size: 0.82rem; }
+    
+    .btn-maps-action {
+      background: var(--text-main); color: #FFFFFF;
+      font-weight: 600; font-size: 0.95rem;
+      padding: 12px 24px; border-radius: 8px; display: inline-flex; align-items: center; gap: 8px;
       transition: var(--transition);
     }
-    .btn-maps:hover { background: var(--gold-primary); color: #070A12; transform: translateY(-2px); }
-    
-    .map-frame-box {
-      height: 420px; border-radius: 18px; overflow: hidden;
-      border: 1px solid var(--border-subtle); background: #0A0E1A;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    .btn-maps-action:hover { background: var(--gold-primary); transform: translateY(-2px); }
+
+    .map-frame-holder {
+      height: 400px; border-radius: 16px; overflow: hidden;
+      border: 1px solid var(--border-color); box-shadow: var(--card-shadow);
+      background: #E2E8F0;
     }
-    .map-frame-box iframe {
-      width: 100%; height: 100%; border: 0;
-      filter: invert(90%) hue-rotate(180deg) brightness(88%) contrast(120%);
-    }
+    .map-frame-holder iframe { width: 100%; height: 100%; border: 0; }
 
     /* Interactive Booking Engine Modal */
     .modal-backdrop {
-      position: fixed; inset: 0; background: rgba(4, 6, 12, 0.88);
-      backdrop-filter: blur(12px); z-index: 2000;
+      position: fixed; inset: 0; background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(8px); z-index: 2000;
       display: none; align-items: center; justify-content: center; padding: 20px;
     }
     .modal-backdrop.active { display: flex; }
-    .modal-dialog {
-      background: var(--bg-card); border: 1.5px solid var(--gold-primary);
-      border-radius: 18px; width: 100%; max-width: 540px; max-height: 92vh;
-      overflow-y: auto; padding: 34px; position: relative; box-shadow: 0 25px 50px rgba(0,0,0,0.8);
+    .modal-window {
+      background: #FFFFFF; border-radius: 18px;
+      width: 100%; max-width: 520px; max-height: 90vh;
+      overflow-y: auto; padding: 32px; position: relative;
+      box-shadow: 0 25px 60px rgba(15, 23, 42, 0.2);
     }
-    .modal-close {
+    .modal-close-btn {
       position: absolute; top: 18px; left: 18px; background: none; border: none;
-      color: var(--text-secondary); cursor: pointer; font-size: 1.6rem; line-height: 1;
+      color: var(--text-light); cursor: pointer; font-size: 1.6rem; line-height: 1;
     }
-    .modal-header { margin-bottom: 22px; text-align: right; }
-    .modal-header h3 { font-size: 1.45rem; font-weight: 900; color: var(--text-white); }
-    .modal-header p { font-size: 0.86rem; color: var(--gold-light); }
-    .booking-form { display: flex; flex-direction: column; gap: 16px; text-align: right; }
-    .form-group { display: flex; flex-direction: column; gap: 6px; }
-    .form-label { font-size: 0.85rem; font-weight: 700; color: var(--text-primary); }
-    .form-control {
-      background: #0A0E1A; border: 1px solid var(--border-subtle);
-      border-radius: 8px; padding: 11px 14px; font-family: 'Cairo', sans-serif;
-      font-size: 0.92rem; color: var(--text-white); outline: none; transition: var(--transition);
+    .modal-head { margin-bottom: 20px; text-align: right; }
+    .modal-head h3 { font-size: 1.4rem; font-weight: 700; color: var(--text-main); }
+    .modal-head p { font-size: 0.85rem; color: var(--text-muted); }
+    .booking-inputs-form { display: flex; flex-direction: column; gap: 14px; text-align: right; }
+    .input-group { display: flex; flex-direction: column; gap: 5px; }
+    .input-label { font-size: 0.85rem; font-weight: 600; color: var(--text-main); }
+    .input-field {
+      background: var(--bg-main); border: 1px solid var(--border-color);
+      border-radius: 8px; padding: 11px 14px; font-family: inherit;
+      font-size: 0.92rem; color: var(--text-main); outline: none; transition: var(--transition);
     }
-    .form-control:focus { border-color: var(--gold-primary); box-shadow: 0 0 10px var(--gold-glow); }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .promo-group { display: flex; gap: 8px; }
-    .btn-apply {
-      background: var(--gold-primary); color: #070A12; border: none;
-      border-radius: 8px; padding: 0 18px; font-weight: 800; cursor: pointer;
+    .input-field:focus { border-color: var(--gold-primary); background: #FFFFFF; }
+    .input-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .promo-wrapper { display: flex; gap: 8px; }
+    .btn-apply-coupon {
+      background: var(--text-main); color: #FFFFFF; border: none;
+      border-radius: 8px; padding: 0 16px; font-weight: 600; cursor: pointer;
     }
-    .calc-card {
-      background: rgba(7, 10, 18, 0.65); border: 1px solid var(--border-subtle);
-      border-radius: 12px; padding: 16px; margin-top: 6px;
+    .calc-summary-box {
+      background: var(--bg-main); border: 1px solid var(--border-color);
+      border-radius: 10px; padding: 14px; margin-top: 4px;
     }
-    .calc-row { display: flex; justify-content: space-between; font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 8px; }
-    .calc-row.total {
-      border-top: 1px solid rgba(255,255,255,0.12); padding-top: 10px;
-      font-size: 1.18rem; font-weight: 900; color: var(--gold-primary); margin-bottom: 0;
+    .calc-line { display: flex; justify-content: space-between; font-size: 0.86rem; color: var(--text-muted); margin-bottom: 6px; }
+    .calc-line.total-line {
+      border-top: 1px solid var(--border-color); padding-top: 8px;
+      font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0;
     }
-    .btn-submit-booking {
-      background: linear-gradient(135deg, #25D366, #128C7E);
-      color: #FFFFFF; border: none; border-radius: 10px; padding: 14px;
-      font-size: 1.05rem; font-weight: 800; cursor: pointer;
-      display: flex; align-items: center; justify-content: center; gap: 10px;
-      margin-top: 8px; box-shadow: 0 6px 20px rgba(37,211,102,0.35);
+    .btn-send-whatsapp {
+      background: linear-gradient(135deg, #10B981, #059669);
+      color: #FFFFFF; border: none; border-radius: 10px; padding: 13px;
+      font-size: 1rem; font-weight: 700; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      margin-top: 8px; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
       transition: var(--transition);
     }
-    .btn-submit-booking:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(37,211,102,0.5); }
+    .btn-send-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4); }
 
-    /* Lightbox */
+    /* Lightbox Modal */
     .lightbox-modal {
-      position: fixed; inset: 0; background: rgba(0,0,0,0.94);
-      z-index: 3000; display: none; align-items: center; justify-content: center; padding: 24px;
+      position: fixed; inset: 0; background: rgba(15, 23, 42, 0.95);
+      z-index: 3000; display: none; align-items: center; justify-content: center; padding: 20px;
     }
     .lightbox-modal.active { display: flex; }
-    .lightbox-box { max-width: 90vw; max-height: 88vh; position: relative; text-align: center; }
-    .lightbox-box img { max-width: 90vw; max-height: 82vh; border-radius: 12px; border: 1px solid var(--border-subtle); }
-    .lightbox-close { position: absolute; top: -38px; left: 0; color: #fff; background: none; border: none; cursor: pointer; font-size: 2rem; }
+    .lightbox-holder { max-width: 90vw; max-height: 88vh; position: relative; text-align: center; }
+    .lightbox-holder img { max-width: 90vw; max-height: 82vh; border-radius: 12px; }
+    .lightbox-exit { position: absolute; top: -36px; left: 0; color: #FFFFFF; background: none; border: none; cursor: pointer; font-size: 2rem; }
 
     /* Floating Actions */
-    .floating-actions {
-      position: fixed; bottom: 28px; left: 28px; z-index: 999;
+    .floating-stack {
+      position: fixed; bottom: 26px; left: 26px; z-index: 999;
       display: flex; flex-direction: column; gap: 12px;
     }
-    .floating-btn {
-      width: 54px; height: 54px; border-radius: 50%;
+    .float-circle-btn {
+      width: 52px; height: 52px; border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      color: #fff; text-decoration: none;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+      color: #FFFFFF; box-shadow: 0 6px 20px rgba(15, 23, 42, 0.18);
       transition: var(--transition);
     }
-    .floating-btn:hover { transform: scale(1.1); }
-    .floating-btn.phone {
-      background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
-      color: #070A12; border: 1.5px solid var(--gold-light);
-      box-shadow: 0 8px 24px var(--gold-glow);
+    .float-circle-btn:hover { transform: scale(1.1); }
+    .float-circle-btn.call-btn {
+      background: var(--text-main);
     }
-    .floating-btn.whatsapp {
-      background: linear-gradient(135deg, #25D366, #128C7E);
-      box-shadow: 0 8px 24px rgba(37,211,102,0.45);
+    .float-circle-btn.chat-btn {
+      background: #10B981;
     }
 
     /* Footer */
     .site-footer {
-      background: #04060B; border-top: 1px solid var(--border-subtle);
-      padding: 70px 0 28px; color: var(--text-secondary);
+      background: #FFFFFF; border-top: 1px solid var(--border-color);
+      padding: 60px 0 24px; color: var(--text-muted);
     }
-    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 36px; margin-bottom: 45px; }
-    .footer-col h5 { font-size: 1.05rem; font-weight: 800; color: var(--text-white); margin-bottom: 18px; }
-    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem; }
-    .footer-links a:hover { color: var(--gold-primary); }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.06); padding-top: 24px;
-      display: flex; justify-content: space-between; font-size: 0.82rem; color: #64748B;
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 32px; margin-bottom: 40px; }
+    .footer-col h5 { font-size: 1rem; font-weight: 700; color: var(--text-main); margin-bottom: 16px; }
+    .footer-nav { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem; }
+    .footer-nav a:hover { color: var(--gold-primary); }
+    .footer-sub {
+      border-top: 1px solid var(--border-color); padding-top: 20px;
+      display: flex; justify-content: space-between; font-size: 0.82rem; color: var(--text-light);
     }
 
     /* Responsive */
     @media (max-width: 992px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero-ctas { justify-content: center; }
+      .hero-photo-card { height: 320px; }
       .trust-grid { grid-template-columns: repeat(2, 1fr); }
       .units-grid { grid-template-columns: repeat(2, 1fr); }
       .landmarks-grid { grid-template-columns: repeat(2, 1fr); }
       .amenities-grid { grid-template-columns: repeat(2, 1fr); }
-      .location-grid { grid-template-columns: 1fr; }
+      .location-layout { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 768px) {
       .nav-links { display: none; }
-      .hero-title { font-size: 2.3rem; }
+      .hero-title { font-size: 2.2rem; }
       .trust-grid { grid-template-columns: 1fr; }
+      .trust-item { border-left: none; border-bottom: 1px solid var(--border-color); padding-bottom: 14px; }
+      .trust-item:last-child { border-bottom: none; }
       .units-grid { grid-template-columns: 1fr; }
       .landmarks-grid { grid-template-columns: 1fr; }
       .gallery-grid { grid-template-columns: 1fr; }
-      .gallery-item.span-2 { grid-column: span 1; }
+      .gallery-card.span-2 { grid-column: span 1; }
       .reviews-grid { grid-template-columns: 1fr; }
       .amenities-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
-      .form-row { grid-template-columns: 1fr; }
+      .footer-sub { flex-direction: column; gap: 10px; text-align: center; }
+      .input-columns { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Reusable Inline SVG Vector Sprite -->
+  <!-- Reusable SVG Vector Sprite -->
   <svg style="display:none;" xmlns="http://www.w3.org/2000/svg">
     <symbol id="icon-star" viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L21.8 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.9-1.01L12 2z"/></symbol>
     <symbol id="icon-check-shield" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></symbol>
@@ -488,21 +470,19 @@
     <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></symbol>
     <symbol id="icon-whatsapp" viewBox="0 0 24 24"><path d="M16.75 13.96c.25.13.41.2.46.3.06.11.04.61-.21 1.18-.2.56-.67.93-1.15 1.02-.49.09-1.12.11-3.23-.74-2.1-1-3.6-3.05-3.7-3.19-.11-.14-.85-1.13-.85-2.15 0-1.03.54-1.53.73-1.74.19-.21.41-.26.55-.26.14 0 .28 0 .4.01.13.01.3-.05.47.36.17.41.6 1.46.65 1.57.05.11.09.24.01.39-.07.16-.11.25-.22.38-.11.13-.24.29-.34.39-.11.11-.23.23-.1.45.13.22.58.96 1.25 1.55.86.77 1.59 1.01 1.81 1.12.22.11.35.09.48-.06.13-.15.56-.65.71-.87.15-.22.3-.19.51-.11zm-4.75 8.04C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10c0 1.9-.53 3.68-1.46 5.2L22 22l-4.96-1.3C15.54 21.5 13.82 22 12 22z"/></symbol>
     <symbol id="icon-security" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm7 10c0 4.52-2.98 8.69-7 9.93-4.02-1.24-7-5.41-7-9.93V6.3l7-3.11 7 3.11V11z"/></symbol>
-    <symbol id="icon-tag" viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58s1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41s-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></symbol>
-    <symbol id="icon-compass" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm2.41-11.41L9.5 14.5l5.91-4.91zm-4.82 4.82l4.91-5.91-5.91 4.91z"/></symbol>
   </svg>
 
-  <!-- Site Header -->
+  <!-- Header -->
   <header class="site-header">
     <div class="container">
       <div class="nav-wrapper">
         <a href="#" class="brand-logo">
           <div class="logo-emblem">
-            <svg class="icon" style="width:24px;height:24px;"><use href="#icon-star"></use></svg>
+            <svg class="icon" style="width:22px;height:22px;fill:#FFFFFF;"><use href="#icon-star"></use></svg>
           </div>
           <div>
             <div class="brand-title">حلول <span class="gold">سكني</span></div>
-            <div class="brand-subtitle latin">HULOOL SAKANI APARTMENTS</div>
+            <div class="brand-subtitle latin">Hulool Sakani Apartments</div>
           </div>
         </a>
 
@@ -518,11 +498,11 @@
 
         <div class="header-actions">
           <a href="tel:0539980290" class="btn-header-call" title="اتصال مباشر بالاستقبال">
-            <svg class="icon"><use href="#icon-phone"></use></svg>
+            <svg class="icon" style="width:16px;height:16px;"><use href="#icon-phone"></use></svg>
             <span>اتصال</span>
           </a>
           <button class="btn-header-book" onclick="openBookingModal()">
-            <svg class="icon"><use href="#icon-calendar"></use></svg>
+            <svg class="icon" style="width:16px;height:16px;"><use href="#icon-calendar"></use></svg>
             <span>احجز إقامتك</span>
           </button>
         </div>
@@ -532,141 +512,149 @@
 
   <!-- Hero Section -->
   <section class="hero-section" id="hero">
-    <div class="hero-backdrop"></div>
-    <div class="hero-overlay"></div>
     <div class="container">
-      <div class="hero-content">
-        <div class="rating-badge-pill">
-          <svg class="icon" style="color:#F59E0B;"><use href="#icon-star"></use></svg>
-          <span>الأعلى تقييماً في الهفوف: <span class="star-score">4.7 / 5</span> (أكثر من 378 تقييم موثق)</span>
+      <div class="hero-grid">
+        <div>
+          <div class="rating-badge">
+            <span class="stars">★ ★ ★ ★ ★</span>
+            <span>الأعلى تقييماً في الهفوف: <strong>4.7 / 5</strong> (378+ نزيل موثق)</span>
+          </div>
+
+          <h1 class="hero-title">
+            إقامة فندقية تجمع بين الهدوء والفخامة في <span class="gold">الأحساء</span>
+          </h1>
+
+          <div class="hero-subtitle-en latin">Hulool Sakani Serviced Apartments — Al Hofuf</div>
+
+          <p class="hero-desc">
+            مرحباً بكم في شقق حلول سكني المخدومة بحي الحمراء الأول. تجربة إقامة راقية متكاملة بالخصوصية العائلية والخدمات الفندقية، على مقربة من شارع الملك عبدالله والأحساء مول.
+          </p>
+
+          <div class="hero-ctas">
+            <button class="btn-primary" onclick="openBookingModal()">احجز إقامتك بأفضل سعر مباشر</button>
+            <a href="tel:0539980290" class="btn-secondary">
+              <svg class="icon" style="width:18px;height:18px;"><use href="#icon-phone"></use></svg>
+              اتصال مباشر: 0539980290
+            </a>
+            <a href="https://wa.me/966539980290" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+              <svg class="icon" style="width:18px;height:18px;color:#10B981;"><use href="#icon-whatsapp"></use></svg>
+              مراسلة واتساب
+            </a>
+          </div>
         </div>
 
-        <h1 class="hero-title">
-          إقامة فندقية فاخرة في قلب الأحساء<br>
-          <span class="gold">حلول سكني</span> للشقق المخدومة
-        </h1>
-
-        <div class="hero-subtitle-en latin">HULOOL SAKANI SERVICED APARTMENTS — AL HOFUF</div>
-
-        <p class="hero-desc">
-          الخصوصية والراحة العائلية في أرقى أحياء الهفوف (حي الحمراء الأول). دقائق معدودة عن شارع الملك عبدالله والأحساء مول ومنتزه الملك عبدالله البيئي.
-        </p>
-
-        <div class="hero-actions">
-          <button class="btn-hero-primary" onclick="openBookingModal()">احجز إقامتك بأفضل سعر مباشر</button>
-          <a href="tel:0539980290" class="btn-hero-secondary">
-            <svg class="icon"><use href="#icon-phone"></use></svg>
-            اتصال: 0539980290
-          </a>
-          <a href="https://wa.me/966539980290" target="_blank" rel="noopener noreferrer" class="btn-hero-secondary">
-            <svg class="icon"><use href="#icon-whatsapp"></use></svg>
-            استفسار واتساب فوري
-          </a>
+        <div>
+          <div class="hero-photo-card">
+            <img src="images/70B46A4F-FA11-4772-B68B-9DA437B54033.png" alt="الواجهة الرسمية لحلول سكني">
+            <div class="hero-photo-tag">حي الحمراء الأول، شارع متعب بن عبدالله</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Trust Bar -->
-  <div class="container trust-bar">
-    <div class="trust-grid">
-      <div class="trust-card">
-        <div class="trust-icon-box"><svg class="icon"><use href="#icon-star"></use></svg></div>
-        <div class="trust-info"><h4>تقييم 4.7 نجوم استثنائي</h4><p>أكثر من 378 نزيل موثق</p></div>
-      </div>
-      <div class="trust-card">
-        <div class="trust-icon-box"><svg class="icon"><use href="#icon-map-pin"></use></svg></div>
-        <div class="trust-info"><h4>حي الحمراء الأول</h4><p>قريب من شارع الملك عبدالله</p></div>
-      </div>
-      <div class="trust-card">
-        <div class="trust-icon-box"><svg class="icon"><use href="#icon-tag"></use></svg></div>
-        <div class="trust-info"><h4>حجز مباشر بدون عمولات</h4><p>توفير 15% مقارنة بالمنصات</p></div>
-      </div>
-      <div class="trust-card">
-        <div class="trust-icon-box"><svg class="icon"><use href="#icon-clock"></use></svg></div>
-        <div class="trust-info"><h4>استقبال وضيافة 24/7</h4><p>دخول سريع وخدمة على مدار الساعة</p></div>
+  <!-- Trust Highlights Strip -->
+  <div class="trust-strip">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon"><svg class="icon"><use href="#icon-star"></use></svg></div>
+          <div><h4>تقييم 4.7 نجوم</h4><p>أكثر من 378 تقييم حقيقي</p></div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon"><svg class="icon"><use href="#icon-map-pin"></use></svg></div>
+          <div><h4>موقع متميز وحيوي</h4><p>قريب من شارع الملك عبدالله</p></div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon"><svg class="icon"><use href="#icon-check-shield"></use></svg></div>
+          <div><h4>حجز مباشر بدون عمولات</h4><p>توفير مباشر للنزلاء</p></div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon"><svg class="icon"><use href="#icon-clock"></use></svg></div>
+          <div><h4>استقبال 24/7</h4><p>خدمة مستمرة على مدار الساعة</p></div>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Units Section -->
+  <!-- Units & Rooms Section -->
   <section class="units-section" id="units">
     <div class="container">
-      <div class="section-header">
-        <div class="section-eyebrow"><svg class="icon"><use href="#icon-star"></use></svg> خيارات الإقامة الفندقية</div>
-        <h2 class="section-heading">أجنحة وشقق مجهزة بأعلى معايير الراحة</h2>
-        <p class="section-subtext">أسعار محدثة وموثقة بدون أي رسوم خفية مع خصم إضافي فوري بكود SAKANI10.</p>
+      <div class="section-head">
+        <div class="section-tag">خيارات الإقامة المتاحة</div>
+        <h2 class="section-title">أجنحة وغرف مفروشة بأعلى مقاييس الراحة</h2>
+        <p class="section-subtitle">أسعار واضحة ومباشرة مع إمكانية الاستفادة من خصم إضافي فوري بكود SAKANI10.</p>
       </div>
 
       <div class="units-grid">
-        <!-- Unit 1: Double Room (22m² - 220 SAR) -->
+        <!-- Room 1 -->
         <div class="unit-card">
-          <div class="unit-badge">الأنسب لرجال الأعمال والأفراد</div>
-          <div class="unit-img-wrapper">
-            <img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="غرفة مزدوجة فاخرة - حلول سكني">
-            <span class="unit-space-badge">المساحة: 22 متر مربع</span>
+          <div class="unit-badge">الأمثل للأفراد والأعمال</div>
+          <div class="unit-img-box">
+            <img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="غرفة مزدوجة فاخرة">
+            <span class="unit-area-pill">22 م²</span>
           </div>
-          <div class="unit-details">
+          <div class="unit-content">
             <h3 class="unit-title">غرفة مزدوجة فاخرة</h3>
-            <div class="unit-subtitle-en latin">DELUXE DOUBLE ROOM</div>
-            <ul class="unit-features-list">
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-bed"></use></svg> 1 سرير مزدوج كبير جداً (King Size)</li>
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-terrace"></use></svg> تراس خاص بإطلالة هادئة ومريحة</li>
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-bath"></use></svg> حمام خاص مع بيديت ومستلزمات عناية مجانية</li>
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-tv"></use></svg> شاشة مسطحة ومكيف سبليت هادئ</li>
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-wifi"></use></svg> واي فاي فائق السرعة مجاناً</li>
+            <div class="unit-title-en latin">Deluxe Double Room</div>
+            <ul class="unit-features">
+              <li class="unit-feat"><svg class="icon"><use href="#icon-bed"></use></svg> سرير مزدوج كبير جداً (King Size)</li>
+              <li class="unit-feat"><svg class="icon"><use href="#icon-terrace"></use></svg> تراس خاص بإطلالة هادئة</li>
+              <li class="unit-feat"><svg class="icon"><use href="#icon-bath"></use></svg> حمام خاص ومستلزمات عناية مجانية</li>
+              <li class="unit-feat"><svg class="icon"><use href="#icon-tv"></use></svg> شاشة مسطحة ومكيف سبليت هادئ</li>
+              <li class="unit-feat"><svg class="icon"><use href="#icon-wifi"></use></svg> واي فاي فائق السرعة مجاناً</li>
             </ul>
-            <div class="unit-pricing-bar">
-              <div><span class="price-val">220</span> <span class="price-unit">ر.س / ليلة</span></div>
-              <button class="btn-book-unit" onclick="selectUnitAndBook('double', 220, 'غرفة مزدوجة فاخرة (220 ر.س)')">احجز الآن</button>
+            <div class="unit-price-row">
+              <div><span class="price-num">220</span> <span class="price-sub">ر.س / ليلة</span></div>
+              <button class="btn-select-room" onclick="selectUnitAndBook('double', 220, 'غرفة مزدوجة فاخرة (220 ر.س)')">احجز الآن</button>
             </div>
           </div>
         </div>
 
-        <!-- Unit 2: Deluxe Junior Suite (40m² - 240 SAR) -->
+        <!-- Room 2 -->
         <div class="unit-card">
-          <div class="unit-badge featured">الأكثر طلباً - قيمة استثنائية</div>
-          <div class="unit-img-wrapper">
-            <img src="images/42CAA853-472D-4804-9B7B-72DCA76923E1.png" alt="جناح ديلوكس مع تراس - حلول سكني">
-            <span class="unit-space-badge">المساحة: 40 متر مربع</span>
+          <div class="unit-badge featured">الأكثر طلباً</div>
+          <div class="unit-img-box">
+            <img src="images/42CAA853-472D-4804-9B7B-72DCA76923E1.png" alt="جناح ديلوكس مع تراس">
+            <span class="unit-area-pill">40 م²</span>
           </div>
-          <div class="unit-details">
+          <div class="unit-content">
             <h3 class="unit-title">جناح ديلوكس مع تراس</h3>
-            <div class="unit-subtitle-en latin">EXECUTIVE JUNIOR SUITE</div>
-            <ul class="unit-features-list">
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-bed"></use></svg> سرير كينغ كبير جداً + جلسة استرخاء متصلة</li>
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-terrace"></use></svg> تراس فسيح وجلسة استراحة خارجية</li>
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-bath"></use></svg> حمام خاص متكامل ومستلزمات فندقية</li>
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-tv"></use></svg> شاشة تلفزيون ذكية ومكيف سبليت ممتاز</li>
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-wifi"></use></svg> إنترنت ألياف سريع ومواقف خاصة مجانية</li>
+            <div class="unit-title-en latin">Executive Junior Suite</div>
+            <ul class="unit-features">
+              <li class="unit-feat"><svg class="icon"><use href="#icon-bed"></use></svg> سرير كينغ مريح وجلسة كنب متصلة</li>
+              <li class="unit-feat"><svg class="icon"><use href="#icon-terrace"></use></svg> تراس فسيح وجلسة استراحة خارجية</li>
+              <li class="unit-feat"><svg class="icon"><use href="#icon-bath"></use></svg> حمام خاص متكامل وتجهيزات فندقية</li>
+              <li class="unit-feat"><svg class="icon"><use href="#icon-tv"></use></svg> شاشة تلفزيون ذكية ومكيف سبليت ممتاز</li>
+              <li class="unit-feat"><svg class="icon"><use href="#icon-wifi"></use></svg> إنترنت ألياف سريع ومواقف خاصة مجانية</li>
             </ul>
-            <div class="unit-pricing-bar">
-              <div><span class="price-val">240</span> <span class="price-unit">ر.س / ليلة</span></div>
-              <button class="btn-book-unit" onclick="selectUnitAndBook('suite', 240, 'جناح ديلوكس مع تراس (240 ر.س)')">احجز الآن</button>
+            <div class="unit-price-row">
+              <div><span class="price-num">240</span> <span class="price-sub">ر.س / ليلة</span></div>
+              <button class="btn-select-room" onclick="selectUnitAndBook('suite', 240, 'جناح ديلوكس مع تراس (240 ر.س)')">احجز الآن</button>
             </div>
           </div>
         </div>
 
-        <!-- Unit 3: Two Bedroom Family Apartment (90m² - 420 SAR) -->
+        <!-- Room 3 -->
         <div class="unit-card">
-          <div class="unit-badge">الخيار الأمثل للعائلات</div>
-          <div class="unit-img-wrapper">
-            <img src="images/6DE2E9DB-5ECB-458D-B988-6DCC6171E280.png" alt="شقة عائلية غرفتين وتراس - حلول سكني">
-            <span class="unit-space-badge">المساحة: 90 متر مربع</span>
+          <div class="unit-badge">الخيار العائلي الأوسع</div>
+          <div class="unit-img-box">
+            <img src="images/6DE2E9DB-5ECB-458D-B988-6DCC6171E280.png" alt="شقة عائلية غرفتين وتراس">
+            <span class="unit-area-pill">90 م²</span>
           </div>
-          <div class="unit-details">
+          <div class="unit-content">
             <h3 class="unit-title">شقة غرفتي نوم وتراس ومطبخ</h3>
-            <div class="unit-subtitle-en latin">TWO-BEDROOM FAMILY APARTMENT</div>
-            <ul class="unit-features-list">
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-bed"></use></svg> غرفتان (غرفة كينغ ماستر + غرفة سريرين فرديين)</li>
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-kitchen"></use></svg> مطبخ تحضيري متكامل مجهز</li>
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-terrace"></use></svg> تراس عائلي واسع وصالة معيشة فسيحة</li>
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-bath"></use></svg> حمام مجهز بكافة مستلزمات العناية والراحة</li>
-              <li class="unit-feature-item"><svg class="icon"><use href="#icon-security"></use></svg> عزل صوتي متقن وخصوصية عائلية تامة</li>
+            <div class="unit-title-en latin">Two-Bedroom Family Apartment</div>
+            <ul class="unit-features">
+              <li class="unit-feat"><svg class="icon"><use href="#icon-bed"></use></svg> غرفتان (غرفة ماستر كينغ + غرفة سريرين فرديين)</li>
+              <li class="unit-feat"><svg class="icon"><use href="#icon-kitchen"></use></svg> مطبخ تحضيري متكامل مجهز</li>
+              <li class="unit-feat"><svg class="icon"><use href="#icon-terrace"></use></svg> تراس عائلي واسع وصالة معيشة فسيحة</li>
+              <li class="unit-feat"><svg class="icon"><use href="#icon-bath"></use></svg> حمام مجهز بكافة مستلزمات الراحة</li>
+              <li class="unit-feat"><svg class="icon"><use href="#icon-security"></use></svg> عزل صوتي متقن وخصوصية عائلية تامة</li>
             </ul>
-            <div class="unit-pricing-bar">
-              <div><span class="price-val">420</span> <span class="price-unit">ر.س / ليلة</span></div>
-              <button class="btn-book-unit" onclick="selectUnitAndBook('family', 420, 'شقة غرفتي نوم وتراس ومطبخ (420 ر.س)')">احجز الآن</button>
+            <div class="unit-price-row">
+              <div><span class="price-num">420</span> <span class="price-sub">ر.س / ليلة</span></div>
+              <button class="btn-select-room" onclick="selectUnitAndBook('family', 420, 'شقة غرفتي نوم وتراس ومطبخ (420 ر.س)')">احجز الآن</button>
             </div>
           </div>
         </div>
@@ -674,146 +662,110 @@
     </div>
   </section>
 
-  <!-- Strategic Nearby Landmarks Section -->
+  <!-- Nearby Landmarks Section -->
   <section class="landmarks-section" id="landmarks">
     <div class="container">
-      <div class="section-header">
-        <div class="section-eyebrow"><svg class="icon"><use href="#icon-compass"></use></svg> موقع استراتيجي ينبض بالحياة</div>
-        <h2 class="section-heading">قريب من أهم وجهات الأحساء الحيوية</h2>
-        <p class="section-subtext">تتميز حلول سكني بموقع هادئ في حي الحمراء الأول مع سهولة وسرعة الوصول لأبرز معالم وخدمات المحافظة.</p>
+      <div class="section-head">
+        <div class="section-tag">موقع استراتيجي بالهفوف</div>
+        <h2 class="section-title">وجهات ومعالم حيوية على مقربة منك</h2>
+        <p class="section-subtitle">موقع هادئ في حي الحمراء الأول يضعك على بعد دقائق من أشهر وأهم مرافق الأحساء.</p>
       </div>
 
       <div class="landmarks-grid">
-        <div class="landmark-card">
-          <span class="landmark-tag">قريب جداً</span>
+        <div class="landmark-box">
+          <span class="landmark-status">قريب جداً</span>
           <h4>شارع الملك عبدالله</h4>
-          <p>أشهر وأهم شوارع الأحساء، وجهة أولى تضم كبرى سلاسل المطاعم والمقاهي العالمية والمحلية الفاخرة.</p>
+          <p>أشهر شوارع الأحساء ووجهة تضم نخبة من أرقى المطاعم والمقاهي العالمية والمحلية.</p>
         </div>
-        <div class="landmark-card">
-          <span class="landmark-tag">قريب</span>
+        <div class="landmark-box">
+          <span class="landmark-status">قريب</span>
           <h4>مجمع الأحساء مول</h4>
           <p>Cenomi Al Ahsa Mall، الوجهة الأبرز للتسوق والماركات العالمية والترفيه لجميع أفراد العائلة.</p>
         </div>
-        <div class="landmark-card">
-          <span class="landmark-tag">قريب</span>
+        <div class="landmark-box">
+          <span class="landmark-status">قريب</span>
           <h4>منتزه الملك عبدالله البيئي</h4>
-          <p>أكبر منتزهات المنطقة الشرقية، يتميز بالمسطحات الخضراء والبحيرة المائية والنافورة التفاعلية الشهيرة.</p>
+          <p>أكبر منتزهات المنطقة الشرقية، يتميز بالبحيرة المائية والنافورة التفاعلية والممشى الرياضي.</p>
         </div>
-        <div class="landmark-card">
-          <span class="landmark-tag">قريب</span>
+        <div class="landmark-box">
+          <span class="landmark-status">قريب</span>
           <h4>مطار الأحساء وجامعة الملك فيصل</h4>
-          <p>سهولة وسرعة وصول للمطار ومستشفى الملك فهد ومحطة قطار الهفوف وسوق القيصرية التاريخي.</p>
+          <p>سهولة وسرعة الوصول للمطار الدولي والمدينة الجامعية ومستشفى الملك فهد ومحطة القطار.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Photo Gallery -->
+  <!-- Clean Photo Gallery -->
   <section class="gallery-section" id="gallery">
     <div class="container">
-      <div class="section-header">
-        <div class="section-eyebrow"><svg class="icon"><use href="#icon-star"></use></svg> جولة مصورة حقيقية</div>
-        <h2 class="section-heading">لقطات حية من أرجاء حلول سكني</h2>
-        <p class="section-subtext">صور واقعية توثق الواجهة الرسمية، بهو الاستقبال والضيافة، ورحابة الأجنحة والغرف الفندقية.</p>
+      <div class="section-head">
+        <div class="section-tag">معرض الصور</div>
+        <h2 class="section-title">جولة بصرية في أرجاء حلول سكني</h2>
+        <p class="section-subtitle">صور حقيقية تنقل لك جودة الأثاث ورحابة المساحات وأجواء الضيافة الهادئة.</p>
       </div>
 
       <div class="gallery-grid">
-        <!-- 1. Exterior (Span-2) -->
-        <div class="gallery-item span-2" onclick="openLightbox(this.querySelector('img').src, 'الواجهة المعمارية واللوحة الرسمية لشقق حلول سكني المخدومة')">
-          <img src="images/70B46A4F-FA11-4772-B68B-9DA437B54033.png" alt="الواجهة المعمارية الرسمية">
-          <div class="gallery-overlay">
-            <div class="gallery-caption">
-              <h5>الواجهة المعمارية واللوحة الرسمية</h5>
-              <span>شارع متعب بن عبدالله بن عبدالعزيز، حي الحمراء الأول</span>
-            </div>
+        <div class="gallery-card span-2" onclick="openLightbox(this.querySelector('img').src, 'الواجهة المعمارية واللوحة الرسمية لشقق حلول سكني')">
+          <img src="images/70B46A4F-FA11-4772-B68B-9DA437B54033.png" alt="الواجهة المعمارية">
+          <div class="gallery-caption-overlay">
+            <div><h5>الواجهة المعمارية واللوحة الرسمية</h5><span>حي الحمراء الأول، شارع متعب بن عبدالله</span></div>
           </div>
         </div>
 
-        <!-- 2. Reception Desk -->
-        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'كاونتر وبهو الاستقبال الفندقي المضاء على مدار 24 ساعة')">
-          <img src="images/9EE96980-172E-4E73-9510-2D33E048F9FF.png" alt="كاونتر الاستقبال الفندقي">
-          <div class="gallery-overlay">
-            <div class="gallery-caption">
-              <h5>كاونتر الاستقبال الفندقي</h5>
-              <span>ترحيب واستقبال على مدار 24 ساعة يومياً</span>
-            </div>
+        <div class="gallery-card" onclick="openLightbox(this.querySelector('img').src, 'كاونتر ومكتب الاستقبال الفندقي')">
+          <img src="images/9EE96980-172E-4E73-9510-2D33E048F9FF.png" alt="كاونتر الاستقبال">
+          <div class="gallery-caption-overlay">
+            <div><h5>كاونتر الاستقبال</h5><span>خدمة وترحيب على مدار 24 ساعة</span></div>
           </div>
         </div>
 
-        <!-- 3. Luxury Lobby Lounge -->
-        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'بهو الضيافة الفاخر وأرقى جلسات الاستراحة المضاءة')">
-          <img src="images/0D22EB03-C62B-42E6-BC72-2F5173980AC9.png" alt="بهو الضيافة والاستراحة الفاخر">
-          <div class="gallery-overlay">
-            <div class="gallery-caption">
-              <h5>بهو الضيافة والاستراحة الفاخر</h5>
-              <span>جلسات كنب عصرية وأرفف تحف مضيئة لأرقى استقبال</span>
-            </div>
+        <div class="gallery-card" onclick="openLightbox(this.querySelector('img').src, 'بهو الضيافة الفاخر وأرقى جلسات الاستراحة')">
+          <img src="images/0D22EB03-C62B-42E6-BC72-2F5173980AC9.png" alt="بهو الضيافة">
+          <div class="gallery-caption-overlay">
+            <div><h5>بهو الضيافة الفاخر</h5><span>أثاث مريح وأرفف مضيئة تعكس الفخامة</span></div>
           </div>
         </div>
 
-        <!-- 4. Master King Bedroom -->
-        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'غرفة النوم الماستر كينغ والتسريحة المضيئة والدولاب الزجاجي')">
-          <img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="غرفة النوم الماستر كينغ">
-          <div class="gallery-overlay">
-            <div class="gallery-caption">
-              <h5>غرفة النوم الماستر كينغ</h5>
-              <span>تسريحة بإضاءة دائرية ودولاب ملابس زجاجي بإضاءة مخفية</span>
-            </div>
+        <div class="gallery-card" onclick="openLightbox(this.querySelector('img').src, 'غرفة النوم الماستر كينغ والتسريحة المضيئة والدولاب')">
+          <img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="غرفة النوم الماستر">
+          <div class="gallery-caption-overlay">
+            <div><h5>غرفة النوم الماستر</h5><span>مرآة دائرية بإضاءة LED ودولاب زجاجي</span></div>
           </div>
         </div>
 
-        <!-- 5. Connected Deluxe Suite -->
-        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'أجنحة الديلوكس الفسيحة بسرير كينغ وجلسة صالة متصلة')">
+        <div class="gallery-card" onclick="openLightbox(this.querySelector('img').src, 'أجنحة الديلوكس الفسيحة بسرير كينغ وجلسة صالة متصلة')">
           <img src="images/42CAA853-472D-4804-9B7B-72DCA76923E1.png" alt="جناح ديلوكس متكامل">
-          <div class="gallery-overlay">
-            <div class="gallery-caption">
-              <h5>جناح ديلوكس متكامل (40 م²)</h5>
-              <span>سرير كينغ طبي مريح وجلسة كنب متصلة وطاولة قهوة</span>
-            </div>
+          <div class="gallery-caption-overlay">
+            <div><h5>جناح ديلوكس متكامل</h5><span>مساحة 40 م² تضم السرير وجلسة الصالة</span></div>
           </div>
         </div>
 
-        <!-- 6. Twin Beds Family Room -->
-        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'الغرفة العائلية المزدوجة بسريرين مفردين وتكييف سبليت')">
-          <img src="images/6DE2E9DB-5ECB-458D-B988-6DCC6171E280.png" alt="الغرفة العائلية المزدوجة">
-          <div class="gallery-overlay">
-            <div class="gallery-caption">
-              <h5>الغرفة العائلية المزدوجة</h5>
-              <span>سريران مفردان بمفارش فندقية نقية وتكييف سبليت هادئ</span>
-            </div>
+        <div class="gallery-card" onclick="openLightbox(this.querySelector('img').src, 'الغرفة العائلية المزدوجة بسريرين مفردين')">
+          <img src="images/6DE2E9DB-5ECB-458D-B988-6DCC6171E280.png" alt="الغرفة العائلية">
+          <div class="gallery-caption-overlay">
+            <div><h5>الغرفة العائلية المزدوجة</h5><span>سريران مفردان بمفارش فندقية نقية</span></div>
           </div>
         </div>
 
-        <!-- 7. Suite Living Room & 4K TV -->
-        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'صالة الجلوس الفاخرة وشاشة 4K الذكية والإنارة المخفية')">
-          <img src="images/505F178C-6DD2-45F8-9AFB-9D60C2C8A90C.png" alt="صالة الجلوس والشاشة الذكية">
-          <div class="gallery-overlay">
-            <div class="gallery-caption">
-              <h5>صالة الاستراحة والشاشة الذكية 4K</h5>
-              <span>جلسة كنب وثير وإضاءة دافئة مريحة للاسترخاء</span>
-            </div>
+        <div class="gallery-card" onclick="openLightbox(this.querySelector('img').src, 'صالة الجلوس الفاخرة وشاشة 4K الذكية')">
+          <img src="images/505F178C-6DD2-45F8-9AFB-9D60C2C8A90C.png" alt="صالة الجلوس">
+          <div class="gallery-caption-overlay">
+            <div><h5>صالة الجلوس وشاشة 4K</h5><span>إضاءة مخفية مريحة وجلسات كنب وثيرة</span></div>
           </div>
         </div>
 
-        <!-- 8. Marble Kitchenette -->
-        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'المطبخ التحضيري الرخامي الفاخر وثلاجة العرض وركن القهوة')">
-          <img src="images/2F68E139-902A-45B3-807F-A756E4AAA295.png" alt="المطبخ التحضيري الرخامي">
-          <div class="gallery-overlay">
-            <div class="gallery-caption">
-              <h5>المطبخ التحضيري الرخامي الفاخر</h5>
-              <span>رخام فاخر، ثلاجة عرض، مايكرويف، وركن إعداد القهوة</span>
-            </div>
+        <div class="gallery-card" onclick="openLightbox(this.querySelector('img').src, 'المطبخ التحضيري الرخامي الفاخر وثلاجة العرض')">
+          <img src="images/2F68E139-902A-45B3-807F-A756E4AAA295.png" alt="المطبخ التحضيري">
+          <div class="gallery-caption-overlay">
+            <div><h5>المطبخ التحضيري الرخامي</h5><span>رخام فاخر، مايكرويف، وركن قهوة</span></div>
           </div>
         </div>
 
-        <!-- 9. Family Living Room -->
-        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src, 'صالة المعيشة العائلية الواسعة والكنب المزدوج')">
+        <div class="gallery-card" onclick="openLightbox(this.querySelector('img').src, 'صالة المعيشة العائلية الفسيحة والكنب المزدوج')">
           <img src="images/D89278AE-FCAD-4939-98B1-DB233793F867.png" alt="صالة المعيشة العائلية">
-          <div class="gallery-overlay">
-            <div class="gallery-caption">
-              <h5>صالة المعيشة العائلية الفسيحة</h5>
-              <span>مساحة رحبة تتسع للعائلات بأجواء دافئة وعزل صوتي تام</span>
-            </div>
+          <div class="gallery-caption-overlay">
+            <div><h5>صالة المعيشة العائلية</h5><span>مساحة فسيحة تتسع للعائلات بأجواء دافئة</span></div>
           </div>
         </div>
       </div>
@@ -823,222 +775,203 @@
   <!-- Amenities -->
   <section class="amenities-section" id="amenities">
     <div class="container">
-      <div class="section-header">
-        <div class="section-eyebrow"><svg class="icon"><use href="#icon-check-shield"></use></svg> خدمات متكاملة</div>
-        <h2 class="section-heading">مرافق صُممت لتمنحك الراحة التامة</h2>
+      <div class="section-head">
+        <div class="section-tag">الخدمات والمرافق</div>
+        <h2 class="section-title">تجربة إقامة متكاملة تلبي احتياجاتك</h2>
       </div>
 
       <div class="amenities-grid">
-        <div class="amenity-card">
-          <div class="amenity-icon"><svg class="icon"><use href="#icon-wifi"></use></svg></div>
+        <div class="amenity-item">
+          <div class="amenity-icon-box"><svg class="icon"><use href="#icon-wifi"></use></svg></div>
           <h4>واي فاي ألياف مجاني</h4>
-          <p>تغطية إنترنت سريعة وثابتة في كافة الغرف والشقق للعمل والترفيه.</p>
+          <p>إنترنت عالي السرعة وتغطية شاملة لكافة الغرف والأجنحة.</p>
         </div>
-        <div class="amenity-card">
-          <div class="amenity-icon"><svg class="icon"><use href="#icon-car"></use></svg></div>
+        <div class="amenity-item">
+          <div class="amenity-icon-box"><svg class="icon"><use href="#icon-car"></use></svg></div>
           <h4>مواقف سيارات خاصة</h4>
           <p>مواقف مجانية وآمنة مخصصة لضيوف الشقق أمام المبنى مباشرة.</p>
         </div>
-        <div class="amenity-card">
-          <div class="amenity-icon"><svg class="icon"><use href="#icon-clock"></use></svg></div>
-          <h4>استقبال على مدار 24 ساعة</h4>
-          <p>طاقم متعاون ومحترف في خدمتكم لتسهيل إجراءات الدخول والمغادرة بأي وقت.</p>
+        <div class="amenity-item">
+          <div class="amenity-icon-box"><svg class="icon"><use href="#icon-clock"></use></svg></div>
+          <h4>استقبال 24/7</h4>
+          <p>طاقم متعاون لتسهيل إجراءات الدخول والمغادرة بأي وقت بكل مرونة.</p>
         </div>
-        <div class="amenity-card">
-          <div class="amenity-icon"><svg class="icon"><use href="#icon-security"></use></svg></div>
+        <div class="amenity-item">
+          <div class="amenity-icon-box"><svg class="icon"><use href="#icon-security"></use></svg></div>
           <h4>هدوء وأمان وخصوصية</h4>
-          <p>عزل صوتي متقن وتكييف سبليت هادئ وأجواء عائلية مريحة للغاية.</p>
+          <p>عزل صوتي وتكييف سبليت هادئ وأجواء عائلية مريحة للغاية.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Real Guest Reviews Section -->
+  <!-- Real Guest Reviews -->
   <section class="reviews-section" id="reviews">
     <div class="container">
-      <div class="section-header">
-        <div class="section-eyebrow"><svg class="icon"><use href="#icon-star"></use></svg> تجارب النزلاء الموثقة</div>
-        <h2 class="section-heading">ماذا يقول ضيوف حلول سكني؟</h2>
-        <p class="section-subtext">تقييم 4.7 نجوم مبني على مئات التجارب الحقيقية لضيوف الفندق من المملكة والخليج.</p>
+      <div class="section-head">
+        <div class="section-tag">تجارب النزلاء الموثقة</div>
+        <h2 class="section-title">ماذا قال ضيوف حلول سكني؟</h2>
+        <p class="section-subtitle">تقييم 4.7 نجوم مبني على مئات التجارب الحقيقية لضيوف الفندق من المملكة والخليج.</p>
       </div>
 
       <div class="reviews-grid">
-        <div class="review-card">
-          <div class="review-header">
-            <div class="reviewer-avatar">ع</div>
-            <div class="reviewer-info">
-              <h5>Arif (مسافر منفرد)</h5>
-              <span>الإمارات العربية المتحدة</span>
-            </div>
+        <div class="review-bubble">
+          <div class="review-user-row">
+            <div class="user-avatar-circle">ع</div>
+            <div class="user-meta"><h5>Arif (مسافر منفرد)</h5><span>الإمارات العربية المتحدة</span></div>
           </div>
-          <div class="review-stars">★ ★ ★ ★ ★</div>
-          <p class="review-text">"المساحة ممتازة اخذت شقة غرفة وصالة وحمام، السرير مريح جدا ومساحة غرفة النوم ممتازة ونظيفة."</p>
-          <div class="review-badge"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> إقامة موثقة على بوكينج</div>
+          <div class="review-stars-strip">★ ★ ★ ★ ★</div>
+          <p class="review-quote">"المساحة ممتازة اخذت شقة غرفة وصالة وحمام، السرير مريح جدا ومساحة غرفة النوم ممتازة ونظيفة."</p>
+          <div class="review-verified"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> إقامة موثقة على بوكينج</div>
         </div>
 
-        <div class="review-card">
-          <div class="review-header">
-            <div class="reviewer-avatar">هـ</div>
-            <div class="reviewer-info">
-              <h5>Hend (عائلة)</h5>
-              <span>دولة قطر</span>
-            </div>
+        <div class="review-bubble">
+          <div class="review-user-row">
+            <div class="user-avatar-circle">هـ</div>
+            <div class="user-meta"><h5>Hend (عائلة)</h5><span>دولة قطر</span></div>
           </div>
-          <div class="review-stars">★ ★ ★ ★ ★</div>
-          <p class="review-text">"المساحة ممتازة اخذت شقة غرفة وصالة وحمام والسرير مريح جدا ومساحة غرفة النوم ممتازة والهدوء عالي."</p>
-          <div class="review-badge"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> إقامة موثقة على بوكينج</div>
+          <div class="review-stars-strip">★ ★ ★ ★ ★</div>
+          <p class="review-quote">"المساحة ممتازة اخذت شقة غرفة وصالة وحمام والسرير مريح جدا ومساحة غرفة النوم ممتازة والهدوء عالي."</p>
+          <div class="review-verified"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> إقامة موثقة على بوكينج</div>
         </div>
 
-        <div class="review-card">
-          <div class="review-header">
-            <div class="reviewer-avatar">خ</div>
-            <div class="reviewer-info">
-              <h5>أبو محمد (عائلة)</h5>
-              <span>المملكة العربية السعودية</span>
-            </div>
+        <div class="review-bubble">
+          <div class="review-user-row">
+            <div class="user-avatar-circle">خ</div>
+            <div class="user-meta"><h5>أبو محمد (عائلة)</h5><span>المملكة العربية السعودية</span></div>
           </div>
-          <div class="review-stars">★ ★ ★ ★ ★</div>
-          <p class="review-text">"من افضل الشقق الفندقية في الاحساء والسعر جدا ممتاز وقريب من الخدمات، والاستاذ خالد المطيري والاستاذ عبدالستار قمة في رقي التعامل."</p>
-          <div class="review-badge"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> تقييم موثق على Google Maps</div>
+          <div class="review-stars-strip">★ ★ ★ ★ ★</div>
+          <p class="review-quote">"من افضل الشقق الفندقية في الاحساء والسعر جدا ممتاز وقريب من الخدمات، والاستاذ خالد المطيري والاستاذ عبدالستار قمة في رقي التعامل."</p>
+          <div class="review-verified"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> تقييم موثق على Google Maps</div>
         </div>
 
-        <div class="review-card">
-          <div class="review-header">
-            <div class="reviewer-avatar">إ</div>
-            <div class="reviewer-info">
-              <h5>سلطان الشمري</h5>
-              <span>المملكة العربية السعودية</span>
-            </div>
+        <div class="review-bubble">
+          <div class="review-user-row">
+            <div class="user-avatar-circle">إ</div>
+            <div class="user-meta"><h5>سلطان الشمري</h5><span>المملكة العربية السعودية</span></div>
           </div>
-          <div class="review-stars">★ ★ ★ ★ ★</div>
-          <p class="review-text">"مكان جميل ورائع، الاستقبال محترم جداً، والمواقف متوفرة والأثاث نظيف والتكييف ممتاز وقريب من طريق الملك عبدالله."</p>
-          <div class="review-badge"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> تقييم موثق على Google Maps</div>
+          <div class="review-stars-strip">★ ★ ★ ★ ★</div>
+          <p class="review-quote">"مكان جميل ورائع، الاستقبال محترم جداً، والمواقف متوفرة والأثاث نظيف والتكييف ممتاز وقريب من طريق الملك عبدالله."</p>
+          <div class="review-verified"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> تقييم موثق على Google Maps</div>
         </div>
 
-        <div class="review-card">
-          <div class="review-header">
-            <div class="reviewer-avatar">M</div>
-            <div class="reviewer-info">
-              <h5>Mohammad (زوجان)</h5>
-              <span>المملكة العربية السعودية</span>
-            </div>
+        <div class="review-bubble">
+          <div class="review-user-row">
+            <div class="user-avatar-circle">M</div>
+            <div class="user-meta"><h5>Mohammad (زوجان)</h5><span>المملكة العربية السعودية</span></div>
           </div>
-          <div class="review-stars">★ ★ ★ ★ ★</div>
-          <p class="review-text">"مستوى العزل والهدوء ممتاز جداً، وتوفر المصعد والمواقف، والتعامل الراقي من موظفي الريسبشن يستحق الشكر."</p>
-          <div class="review-badge"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> تقييم موثق على Google Maps</div>
+          <div class="review-stars-strip">★ ★ ★ ★ ★</div>
+          <p class="review-quote">"مستوى العزل والهدوء ممتاز جداً، وتوفر المصعد والمواقف، والتعامل الراقي من موظفي الريسبشن يستحق الشكر."</p>
+          <div class="review-verified"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> تقييم موثق على Google Maps</div>
         </div>
 
-        <div class="review-card">
-          <div class="review-header">
-            <div class="reviewer-avatar">أ</div>
-            <div class="reviewer-info">
-              <h5>أم ماجد (إقامة عائلية)</h5>
-              <span>المملكة العربية السعودية</span>
-            </div>
+        <div class="review-bubble">
+          <div class="review-user-row">
+            <div class="user-avatar-circle">أ</div>
+            <div class="user-meta"><h5>أم ماجد (إقامة عائلية)</h5><span>المملكة العربية السعودية</span></div>
           </div>
-          <div class="review-stars">★ ★ ★ ★ ★</div>
-          <p class="review-text">"خدمة الغرف سريعة جداً وطاقم الاستقبال في غاية التعاون واللطف، الشقة غرفتين وصالة واسعة ومناسبة جداً للعوائل."</p>
-          <div class="review-badge"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> إقامة موثقة</div>
+          <div class="review-stars-strip">★ ★ ★ ★ ★</div>
+          <p class="review-quote">"خدمة الغرف سريعة جداً وطاقم الاستقبال في غاية التعاون واللطف، الشقة غرفتين وصالة واسعة ومناسبة جداً للعوائل."</p>
+          <div class="review-verified"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-check-shield"></use></svg> إقامة موثقة</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Location Section -->
+  <!-- Location & Google Maps -->
   <section class="location-section" id="location">
     <div class="container">
-      <div class="location-grid">
-        <div class="location-card">
-          <div class="section-eyebrow"><svg class="icon"><use href="#icon-map-pin"></use></svg> عنوان الوصول المباشر</div>
-          <h3 class="location-title">موقع حيوي هادئ في حي الحمراء الأول</h3>
-          <div class="location-address">
+      <div class="location-layout">
+        <div class="location-info-card">
+          <h3>موقع مميز في حي الحمراء الأول</h3>
+          <p class="location-address-txt">
             المملكة العربية السعودية، الأحساء، الهفوف - حي الحمراء الأول، شارع متعب بن عبدالله بن عبدالعزيز (الرمز البريدي 36442).
-          </div>
+          </p>
 
-          <ul class="location-features-list">
-            <li class="location-feature-item"><span>شارع الملك عبدالله (المطاعم والمقاهي الشهيرة)</span><span class="location-dist">قريب جداً</span></li>
-            <li class="location-feature-item"><span>مجمع الأحساء مول (Cenomi Al Ahsa Mall)</span><span class="location-dist">قريب</span></li>
-            <li class="location-feature-item"><span>منتزه الملك عبدالله البيئي والنافورة التفاعلية</span><span class="location-dist">قريب</span></li>
-            <li class="location-feature-item"><span>مطار الأحساء الدولي وجامعة الملك فيصل</span><span class="location-dist">قريب</span></li>
+          <ul class="location-points">
+            <li class="location-point-row"><span>شارع الملك عبدالله (المطاعم والكافيهات الشهيرة)</span><span class="badge">قريب جداً</span></li>
+            <li class="location-point-row"><span>مجمع الأحساء مول (Cenomi Al Ahsa Mall)</span><span class="badge">قريب</span></li>
+            <li class="location-point-row"><span>منتزه الملك عبدالله البيئي والنافورة التفاعلية</span><span class="badge">قريب</span></li>
+            <li class="location-point-row"><span>مطار الأحساء الدولي وجامعة الملك فيصل</span><span class="badge">قريب</span></li>
           </ul>
 
-          <a href="https://maps.app.goo.gl/v7kTZFwqtqx4XdmL9?g_st=ic" target="_blank" rel="noopener noreferrer" class="btn-maps">
-            <svg class="icon"><use href="#icon-map-pin"></use></svg>
-            فتح الموقع الرسمي على خرائط Google
+          <a href="https://maps.app.goo.gl/v7kTZFwqtqx4XdmL9?g_st=ic" target="_blank" rel="noopener noreferrer" class="btn-maps-action">
+            <svg class="icon" style="width:18px;height:18px;"><use href="#icon-map-pin"></use></svg>
+            فتح الموقع على خرائط Google
           </a>
         </div>
 
-        <div class="map-frame-box">
+        <div class="map-frame-holder">
           <iframe 
             src="https://maps.google.com/maps?q=حلول+سكني+للشقق+المخدومة+الهفوف&t=&z=15&ie=UTF8&iwloc=&output=embed" 
             loading="lazy" 
-            title="موقع حلول سكني للشقق المخدومة في خرائط Google">
+            title="موقع حلول سكني للشقق المخدومة">
           </iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Interactive Booking Modal Engine -->
+  <!-- Interactive Booking Engine Modal -->
   <div class="modal-backdrop" id="bookingModal">
-    <div class="modal-dialog">
-      <button class="modal-close" onclick="closeBookingModal()">&times;</button>
-      <div class="modal-header">
+    <div class="modal-window">
+      <button class="modal-close-btn" onclick="closeBookingModal()">&times;</button>
+      <div class="modal-head">
         <h3>حجز مباشر في حلول سكني</h3>
-        <p>احسب التكلفة الفورية واستفد من خصم كود SAKANI10 المباشر</p>
+        <p>احسب التكلفة واستفد من خصم كود SAKANI10 الفوري</p>
       </div>
 
-      <form class="booking-form" onsubmit="handleBookingSubmit(event)">
-        <div class="form-group">
-          <label class="form-label" for="unitSelect">نوع الوحدة السكنية</label>
-          <select id="unitSelect" class="form-control" onchange="calculateBooking()">
+      <form class="booking-inputs-form" onsubmit="handleBookingSubmit(event)">
+        <div class="input-group">
+          <label class="input-label" for="unitSelect">نوع الوحدة السكنية</label>
+          <select id="unitSelect" class="input-field" onchange="calculateBooking()">
             <option value="220" data-name="غرفة مزدوجة فاخرة (22 م²)">غرفة مزدوجة فاخرة (220 ر.س / ليلة)</option>
             <option value="240" data-name="جناح ديلوكس مع تراس (40 م²)">جناح ديلوكس مع تراس (240 ر.س / ليلة)</option>
             <option value="420" data-name="شقة غرفتي نوم وتراس ومطبخ (90 م²)">شقة غرفتي نوم وتراس ومطبخ (420 ر.س / ليلة)</option>
           </select>
         </div>
 
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="checkInDate">تاريخ الدخول</label>
-            <input type="date" id="checkInDate" class="form-control" required onchange="calculateBooking()">
+        <div class="input-columns">
+          <div class="input-group">
+            <label class="input-label" for="checkInDate">تاريخ الدخول</label>
+            <input type="date" id="checkInDate" class="input-field" required onchange="calculateBooking()">
           </div>
-          <div class="form-group">
-            <label class="form-label" for="checkOutDate">تاريخ الخروج</label>
-            <input type="date" id="checkOutDate" class="form-control" required onchange="calculateBooking()">
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="guestName">اسم النزيل الكريم</label>
-            <input type="text" id="guestName" class="form-control" placeholder="الاسم ثلاثي" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="guestPhone">رقم الجوال</label>
-            <input type="tel" id="guestPhone" class="form-control" placeholder="05xxxxxxxx" required>
+          <div class="input-group">
+            <label class="input-label" for="checkOutDate">تاريخ الخروج</label>
+            <input type="date" id="checkOutDate" class="input-field" required onchange="calculateBooking()">
           </div>
         </div>
 
-        <div class="form-group">
-          <label class="form-label" for="promoCode">الرمز الترويجي للخصم</label>
-          <div class="promo-group">
-            <input type="text" id="promoCode" class="form-control" placeholder="أدخل SAKANI10 لخصم 10%">
-            <button type="button" class="btn-apply" onclick="calculateBooking()">تطبيق</button>
+        <div class="input-columns">
+          <div class="input-group">
+            <label class="input-label" for="guestName">اسم النزيل الكريم</label>
+            <input type="text" id="guestName" class="input-field" placeholder="الاسم ثلاثي" required>
           </div>
-          <span id="promoFeedback" style="font-size:0.82rem; margin-top:3px; font-weight:700;"></span>
+          <div class="input-group">
+            <label class="input-label" for="guestPhone">رقم الجوال</label>
+            <input type="tel" id="guestPhone" class="input-field" placeholder="05xxxxxxxx" required>
+          </div>
         </div>
 
-        <div class="calc-card">
-          <div class="calc-row"><span>عدد الليالي:</span><span id="nightsCountDisplay">1 ليلة</span></div>
-          <div class="calc-row"><span>سعر الليلة المباشر:</span><span id="ratePerNightDisplay">220 ر.س</span></div>
-          <div class="calc-row" id="discountRow" style="display:none; color:var(--accent-emerald);">
+        <div class="input-group">
+          <label class="input-label" for="promoCode">الرمز الترويجي للخصم</label>
+          <div class="promo-wrapper">
+            <input type="text" id="promoCode" class="input-field" placeholder="أدخل SAKANI10 لخصم 10%">
+            <button type="button" class="btn-apply-coupon" onclick="calculateBooking()">تطبيق</button>
+          </div>
+          <span id="promoFeedback" style="font-size:0.8rem; margin-top:3px; font-weight:600;"></span>
+        </div>
+
+        <div class="calc-summary-box">
+          <div class="calc-line"><span>عدد الليالي:</span><span id="nightsCountDisplay">1 ليلة</span></div>
+          <div class="calc-line"><span>سعر الليلة:</span><span id="ratePerNightDisplay">220 ر.س</span></div>
+          <div class="calc-line" id="discountRow" style="display:none; color:var(--accent-green);">
             <span>خصم الحجز المباشر (SAKANI10):</span><span id="discountAmountDisplay">- 0 ر.س</span>
           </div>
-          <div class="calc-row total"><span>المبلغ الإجمالي التقريبي:</span><span id="totalPriceDisplay">220 ر.س</span></div>
+          <div class="calc-line total-line"><span>المبلغ الإجمالي التقريبي:</span><span id="totalPriceDisplay">220 ر.س</span></div>
         </div>
 
-        <button type="submit" class="btn-submit-booking">
+        <button type="submit" class="btn-send-whatsapp">
           <svg class="icon"><use href="#icon-whatsapp"></use></svg>
           تأكيد الحجز الفوري عبر واتساب حلول سكني
         </button>
@@ -1048,19 +981,19 @@
 
   <!-- Lightbox Modal -->
   <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
-    <div class="lightbox-box" onclick="event.stopPropagation()">
-      <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-holder" onclick="event.stopPropagation()">
+      <button class="lightbox-exit" onclick="closeLightbox()">&times;</button>
       <img id="lightboxImage" src="" alt="عرض مكبر">
-      <div id="lightboxCaption" style="color:var(--gold-light); text-align:center; margin-top:12px; font-weight:700; font-size:1.05rem;"></div>
+      <div id="lightboxCaption" style="color:#FFFFFF; text-align:center; margin-top:12px; font-weight:600; font-size:1rem;"></div>
     </div>
   </div>
 
   <!-- Floating Direct CTAs (Call & WhatsApp) -->
-  <div class="floating-actions">
-    <a href="tel:0539980290" class="floating-btn phone" title="اتصال مباشر بحلول سكني">
+  <div class="floating-stack">
+    <a href="tel:0539980290" class="float-circle-btn call-btn" title="اتصال مباشر بحلول سكني">
       <svg class="icon" style="width:24px;height:24px;"><use href="#icon-phone"></use></svg>
     </a>
-    <a href="https://wa.me/966539980290" target="_blank" rel="noopener noreferrer" class="floating-btn whatsapp" title="تواصل فوري عبر واتساب">
+    <a href="https://wa.me/966539980290" target="_blank" rel="noopener noreferrer" class="float-circle-btn chat-btn" title="تواصل عبر واتساب">
       <svg class="icon" style="width:26px;height:26px;"><use href="#icon-whatsapp"></use></svg>
     </a>
   </div>
@@ -1070,15 +1003,15 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div class="brand-title" style="margin-bottom:14px;">حلول <span class="gold">سكني</span></div>
-          <p style="font-size:0.9rem; line-height:1.75;">
-            حلول سكني للشقق المخدومة – وجهتكم للإقامة الراقية والمريحة في محافظة الأحساء، الهفوف. جودة فندقية وتقييم 4.7 نجوم يعكس ثقة ضيوفنا.
+          <div class="brand-title" style="margin-bottom:12px;">حلول <span class="gold">سكني</span></div>
+          <p style="font-size:0.88rem; line-height:1.7;">
+            حلول سكني للشقق المخدومة – وجهتكم للإقامة المريحة في محافظة الأحساء، الهفوف. جودة فندقية وتقييم 4.7 نجوم يعكس ثقة ورضا نزلائنا.
           </p>
         </div>
 
         <div>
           <h5>روابط سريعة</h5>
-          <ul class="footer-links">
+          <ul class="footer-nav">
             <li><a href="#hero">الرئيسية</a></li>
             <li><a href="#units">الوحدات والأسعار</a></li>
             <li><a href="#landmarks">المعالم الحيوية</a></li>
@@ -1089,34 +1022,34 @@
         </div>
 
         <div>
-          <h5>باقات الوحدات</h5>
-          <ul class="footer-links">
+          <h5>الوحدات السكنية</h5>
+          <ul class="footer-nav">
             <li><a href="javascript:void(0)" onclick="selectUnitAndBook('double', 220, 'غرفة مزدوجة')">غرفة مزدوجة (220 ر.س)</a></li>
-            <li><a href="javascript:void(0)" onclick="selectUnitAndBook('suite', 240, 'جناح ديلوكس')">جناح ديلوكس وتراس (240 ر.س)</a></li>
-            <li><a href="javascript:void(0)" onclick="selectUnitAndBook('family', 420, 'شقة عائلية غرفتين')">شقة غرفتين وتراس (420 ر.س)</a></li>
+            <li><a href="javascript:void(0)" onclick="selectUnitAndBook('suite', 240, 'جناح ديلوكس')">جناح ديلوكس (240 ر.س)</a></li>
+            <li><a href="javascript:void(0)" onclick="selectUnitAndBook('family', 420, 'شقة غرفتين')">شقة غرفتين (420 ر.س)</a></li>
             <li><a href="javascript:void(0)" onclick="openBookingModal()">كود الخصم: SAKANI10</a></li>
           </ul>
         </div>
 
         <div>
-          <h5>معلومات التواصل الرسمية</h5>
-          <p style="font-size:0.88rem; margin-bottom:10px;">الأحساء، الهفوف - حي الحمراء الأول، شارع متعب بن عبدالله</p>
-          <p style="font-size:0.88rem; margin-bottom:10px;">
-            <svg class="icon" style="width:15px;height:15px;margin-left:4px;color:var(--gold-primary);"><use href="#icon-phone"></use></svg>
-            هاتف وواتساب: <a href="tel:0539980290" style="color:var(--gold-light);" dir="ltr">0539980290</a>
+          <h5>بيانات التواصل الرسمية</h5>
+          <p style="font-size:0.86rem; margin-bottom:8px;">الأحساء، الهفوف - حي الحمراء الأول، شارع متعب بن عبدالله</p>
+          <p style="font-size:0.86rem; margin-bottom:8px;">
+            <svg class="icon" style="width:14px;height:14px;margin-left:4px;color:var(--text-main);"><use href="#icon-phone"></use></svg>
+            هاتف وواتساب: <a href="tel:0539980290" style="color:var(--text-main); font-weight:600;" dir="ltr">0539980290</a>
           </p>
-          <p style="font-size:0.88rem; color:var(--accent-emerald);">خدمة الاستقبال والضيافة: 24 ساعة يومياً</p>
+          <p style="font-size:0.86rem; color:var(--accent-green); font-weight:600;">خدمة الاستقبال والضيافة: 24 ساعة يومياً</p>
         </div>
       </div>
 
-      <div class="footer-bottom">
+      <div class="footer-sub">
         <div>جميع الحقوق محفوظة &copy; <span id="yearSpan"></span> حلول سكني للشقق المخدومة.</div>
-        <div class="latin">HULOOL SAKANI SERVICED APARTMENTS — AL HOFUF</div>
+        <div class="latin">Hulool Sakani Serviced Apartments — Al Hofuf</div>
       </div>
     </div>
   </footer>
 
-  <!-- Interactive JavaScript Engine -->
+  <!-- JavaScript -->
   <script>
     document.getElementById('yearSpan').textContent = new Date().getFullYear();
 
@@ -1180,13 +1113,13 @@
 
       if (promoInput === 'SAKANI10') {
         discount = subtotal * 0.10;
-        feedbackEl.textContent = 'تم تفعيل خصم 10% بنجاح عبر كود SAKANI10';
-        feedbackEl.style.color = '#10B981';
+        feedbackEl.textContent = 'تم تطبيق خصم 10% بنجاح عبر SAKANI10';
+        feedbackEl.style.color = '#059669';
         discountRow.style.display = 'flex';
         document.getElementById('discountAmountDisplay').textContent = `- ${discount.toFixed(0)} ر.س`;
       } else if (promoInput !== '') {
         feedbackEl.textContent = 'كود غير صالح';
-        feedbackEl.style.color = '#EF4444';
+        feedbackEl.style.color = '#DC2626';
         discountRow.style.display = 'none';
       } else {
         feedbackEl.textContent = '';
