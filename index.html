@@ -92,7 +92,7 @@
     }
     .hero-bg-media {
       position: absolute; inset: 0;
-      background-image: url('images/0D22EB03-C62B-42E6-BC72-2F5173980AC9.png');
+      background-image: url('images/29DBE026-B3AA-4465-8C8F-91A0FEDF92CA.png');
       background-size: cover; background-position: center;
       transform: scale(1.02);
       transition: transform 10s ease;
@@ -411,6 +411,78 @@
       .footer-grid { grid-template-columns: 1fr; }
       .footer-sub { flex-direction: column; gap: 10px; text-align: center; }
     }
+
+    /* Room Specs Header & Capacity */
+    .room-specs-header {
+      display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 14px;
+    }
+    .spec-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 0.78rem; font-weight: 600; color: var(--text-muted);
+      background: var(--bg-cream); border: 1px solid var(--border-subtle);
+      padding: 4px 10px; border-radius: 6px;
+    }
+    .spec-badge svg { color: var(--gold-dark); }
+
+    /* Feature Pills (Replacing Unordered Lists) */
+    .feature-pills {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;
+    }
+    .feature-pill {
+      background: var(--gold-soft); border: 1px solid rgba(197, 168, 128, 0.25);
+      border-radius: 6px; padding: 6px 11px;
+      font-size: 0.8rem; font-weight: 500; color: var(--text-charcoal);
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .feature-pill svg {
+      width: 14px; height: 14px; color: var(--gold-dark); flex-shrink: 0;
+    }
+
+    /* Psychological Pricing with Strikethrough */
+    .pricing-container {
+      display: flex; flex-direction: column; gap: 2px;
+    }
+    .pricing-old-wrap {
+      display: flex; align-items: center; gap: 8px;
+    }
+    .price-strikethrough {
+      text-decoration: line-through; color: var(--text-light); font-size: 0.86rem; font-weight: 500;
+    }
+    .price-save-tag {
+      color: #059669; font-size: 0.75rem; font-weight: 600;
+      background: #DEF7EC; padding: 2px 7px; border-radius: 4px;
+    }
+    .pricing-current-wrap {
+      display: flex; align-items: baseline; gap: 4px;
+    }
+
+    /* Direct WhatsApp Booking Button */
+    .btn-direct-booking {
+      width: 100%;
+      background: var(--text-charcoal); color: #FFFFFF;
+      font-weight: 600; font-size: 0.95rem;
+      padding: 13px; border-radius: 8px; border: none;
+      cursor: pointer; transition: var(--transition);
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      text-decoration: none; margin-top: 14px;
+      box-shadow: 0 4px 12px rgba(26, 29, 32, 0.12);
+    }
+    .btn-direct-booking:hover {
+      background: var(--gold-dark); transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(158, 127, 85, 0.35);
+    }
+
+    /* Floating View Photos Button on Carousel */
+    .btn-view-photos {
+      position: absolute; bottom: 12px; left: 12px; z-index: 6;
+      background: rgba(26, 29, 32, 0.8); backdrop-filter: blur(6px);
+      color: #FFFFFF; border: 1px solid rgba(255, 255, 255, 0.22);
+      font-family: inherit; font-size: 0.74rem; font-weight: 600;
+      padding: 4px 10px; border-radius: 20px; cursor: pointer;
+      display: flex; align-items: center; gap: 5px; transition: var(--transition);
+    }
+    .btn-view-photos:hover { background: rgba(26, 29, 32, 0.96); transform: scale(1.05); }
+
   </style>
 </head>
 <body>
@@ -433,6 +505,11 @@
     <symbol id="icon-security" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm7 10c0 4.52-2.98 8.69-7 9.93-4.02-1.24-7-5.41-7-9.93V6.3l7-3.11 7 3.11V11z"/></symbol>
     <symbol id="icon-chevron-right" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></symbol>
     <symbol id="icon-chevron-left" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></symbol>
+    <symbol id="icon-user" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></symbol>
+    <symbol id="icon-users" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></symbol>
+    <symbol id="icon-camera" viewBox="0 0 24 24"><path d="M9.4 10.5l4.77-8.26C13.47 2.09 12.75 2 12 2 6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10c0-.75-.09-1.47-.24-2.17L14.5 16.5c-.83 1.44-2.38 2.5-4.22 2.5-2.76 0-5-2.24-5-5 0-1.84 1.06-3.39 2.5-4.22l1.62.72zm5.72 1.58l-5.6-3.23c.31-.53.75-.98 1.28-1.28l5.6 3.23c-.31.53-.75.98-1.28 1.28zm-3.12 4.92c-.53-.31-.98-.75-1.28-1.28l5.6-3.23c.31.53.75.98 1.28 1.28l-5.6 3.23z"/></symbol>
+    <symbol id="icon-snowflake" viewBox="0 0 24 24"><path d="M22 11h-4.17l3.24-3.24-1.41-1.42L15 11h-2V9l4.66-4.66-1.42-1.41L13 6.17V2h-2v4.17L7.76 2.93 6.34 4.34 11 9v2H9L4.34 6.34 2.93 7.76 6.17 11H2v2h4.17l-3.24 3.24 1.41 1.42L9 13h2v2l-4.66 4.66 1.42 1.41L11 17.83V22h2v-4.17l3.24 3.24 1.42-1.41L13 15v-2h2l4.66 4.66 1.41-1.42L17.83 13H22v-2z"/></symbol>
+    <symbol id="icon-plan" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 7h10v2H7zm0 4h10v2H7zm0 4h7v2H7z"/></symbol>
   </svg>
 
   <!-- 3. Clean Navbar (4 links + Direct Call) -->
@@ -506,8 +583,8 @@
         <span class="field-lbl"><svg class="icon" style="width:14px;height:14px;"><use href="#icon-bed"></use></svg> نوع الوحدة والنزلاء</span>
         <select id="barUnit" class="field-input">
           <option value="غرفة مزدوجة فاخرة (220 ر.س)">غرفة مزدوجة (22 م² - 220 ر.س)</option>
-          <option value="جناح ديلوكس مع تراس (240 ر.س)">جناح ديلوكس وتراس (40 م² - 240 ر.س)</option>
-          <option value="شقة غرفتي نوم وتراس ومطبخ (420 ر.س)">شقة عائلية غرفتين (90 م² - 420 ر.س)</option>
+          <option value="جناح ديلوكس فاخر (240 ر.س)">جناح ديلوكس فاخر (40 م² - 240 ر.س)</option>
+          <option value="شقة غرفتي نوم وصالة ومطبخ (420 ر.س)">شقة عائلية غرفتين وصالة (90 م² - 420 ر.س)</option>
         </select>
       </div>
 
@@ -518,22 +595,25 @@
     </div>
   </div>
 
-  <!-- 2. Units Section with Room Carousels & Direct WhatsApp Booking -->
+    <!-- 2. Units Section with Feature Pills, Psychological Pricing & Direct WhatsApp CTAs -->
   <section class="units-section" id="units">
     <div class="container">
       <div class="section-head">
         <span class="section-eyebrow">أجنحة ووحدات الإقامة</span>
         <h2 class="section-title">اختر مساحتك المناسبة للإقامة</h2>
-        <p class="section-desc">صور واقعية متعددة لكل وحدة توضح تفاصيل السرير والتراس ومساحة الجلوس قبل الحجز.</p>
+        <p class="section-desc">صور واقعية متعددة لكل وحدة، وميزات مفصلة وسعة واضحة مع ميزة الحجز المباشر بدون عمولات.</p>
       </div>
 
       <div class="rooms-grid">
         <!-- Room 1: Double Room -->
         <div class="room-card">
           <div class="carousel-container" id="carousel-1">
-            <span class="room-space-tag">22 م² | تراس خاص</span>
+            <button class="btn-view-photos" onclick="openLightboxFromCarousel(1)" title="استعراض كافة الصور">
+              <svg class="icon" style="width:13px;height:13px;"><use href="#icon-camera"></use></svg>
+              <span>استعراض كافة الصور (3)</span>
+            </button>
             <div class="carousel-track">
-              <div class="carousel-slide active"><img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="السرير الماستر والتسريحة المضاءة"></div>
+              <div class="carousel-slide active"><img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="السرير الماستر كينغ والتسريحة المضاءة"></div>
               <div class="carousel-slide"><img src="images/505F178C-6DD2-45F8-9AFB-9D60C2C8A90C.png" alt="شاشة 4K وجلسة الغرفة"></div>
               <div class="carousel-slide"><img src="images/0D22EB03-C62B-42E6-BC72-2F5173980AC9.png" alt="بهو الاستقبال والضيافة"></div>
             </div>
@@ -549,30 +629,52 @@
           <div class="room-info">
             <h3 class="room-name">غرفة مزدوجة فاخرة</h3>
             <div class="room-sub latin">Deluxe Double Room</div>
-            <ul class="room-specs">
-              <li class="room-spec-item"><svg class="icon"><use href="#icon-bed"></use></svg> 1 سرير مزدوج كبير جداً (King Size)</li>
-              <li class="room-spec-item"><svg class="icon"><use href="#icon-terrace"></use></svg> تراس خاص بإطلالة هادئة</li>
-              <li class="room-spec-item"><svg class="icon"><use href="#icon-bath"></use></svg> حمام خاص ومستلزمات عناية مجانية</li>
-              <li class="room-spec-item"><svg class="icon"><use href="#icon-tv"></use></svg> شاشة مسطحة ذكية ومكيف سبليت هادئ</li>
-            </ul>
-            <div class="room-footer">
-              <div><span class="room-price-val">220</span> <span class="room-price-unit">ر.س / ليلة</span></div>
-              <a href="https://wa.me/966539980290?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%88%D9%81%D8%B1%20%D8%BA%D8%B1%D9%81%D8%A9%20%D9%85%D8%B2%D8%AF%D9%88%D8%AC%D8%A9%20%D9%81%D8%A7%D8%AE%D8%B1%D8%A9%20%D8%A8%D8%B3%D8%B9%D8%B1%20220%20%D8%B1.%D8%B3" target="_blank" rel="noopener noreferrer" class="btn-book-room">
-                <svg class="icon" style="width:16px;height:16px;"><use href="#icon-whatsapp"></use></svg>
-                <span>حجز هذه الوحدة</span>
-              </a>
+
+            <div class="room-specs-header">
+              <span class="spec-badge"><svg class="icon" style="width:13px;height:13px;"><use href="#icon-plan"></use></svg> 22 م²</span>
+              <span class="spec-badge"><svg class="icon" style="width:13px;height:13px;"><use href="#icon-user"></use></svg> ضيفين (1-2 نزلاء)</span>
             </div>
+
+            <div class="feature-pills">
+              <span class="feature-pill"><svg class="icon"><use href="#icon-bed"></use></svg> سرير كينغ كبير جداً</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-security"></use></svg> عزل صوتي متقن</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-bath"></use></svg> حمام خاص ومستلزمات</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-tv"></use></svg> شاشة مسطحة ذكية</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-snowflake"></use></svg> مكيف سبليت هادئ</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-wifi"></use></svg> واي فاي فائق مجاني</span>
+            </div>
+
+            <div class="room-footer">
+              <div class="pricing-container">
+                <div class="pricing-old-wrap">
+                  <span class="price-strikethrough">245 ر.س</span>
+                  <span class="price-save-tag">وفر 10% بكود SAKANI10</span>
+                </div>
+                <div class="pricing-current-wrap">
+                  <span class="room-price-val">220</span>
+                  <span class="room-price-unit">ر.س / ليلة</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="https://wa.me/966539980290?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%88%D9%81%D8%B1%20(%D8%BA%D8%B1%D9%81%D8%A9%20%D9%85%D8%B2%D8%AF%D9%88%D8%AC%D8%A9%20%D9%81%D8%A7%D8%AE%D8%B1%D8%A9)%20%D8%A8%D8%B3%D8%B9%D8%B1%20220%20%D8%B1%D9%8A%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="btn-direct-booking">
+              <svg class="icon" style="width:18px;height:18px;"><use href="#icon-whatsapp"></use></svg>
+              <span>حجز مباشر عبر واتساب</span>
+            </a>
           </div>
         </div>
 
         <!-- Room 2: Junior Suite -->
         <div class="room-card">
           <div class="carousel-container" id="carousel-2">
-            <span class="room-space-tag">40 م² | صالة متصلة وتراس</span>
+            <button class="btn-view-photos" onclick="openLightboxFromCarousel(2)" title="استعراض كافة الصور">
+              <svg class="icon" style="width:13px;height:13px;"><use href="#icon-camera"></use></svg>
+              <span>استعراض كافة الصور (3)</span>
+            </button>
             <div class="carousel-track">
               <div class="carousel-slide active"><img src="images/42CAA853-472D-4804-9B7B-72DCA76923E1.png" alt="جناح ديلوكس المتكامل"></div>
               <div class="carousel-slide"><img src="images/505F178C-6DD2-45F8-9AFB-9D60C2C8A90C.png" alt="صالة الجلوس وشاشة 4K"></div>
-              <div class="carousel-slide active"><img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="السرير الماستر كينغ"></div>
+              <div class="carousel-slide"><img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="غرفة النوم الماستر كينغ"></div>
             </div>
             <button class="carousel-btn prev" onclick="moveCarousel(2, -1)" title="الصورة السابقة"><svg class="icon"><use href="#icon-chevron-right"></use></svg></button>
             <button class="carousel-btn next" onclick="moveCarousel(2, 1)" title="الصورة التالية"><svg class="icon"><use href="#icon-chevron-left"></use></svg></button>
@@ -584,33 +686,55 @@
           </div>
 
           <div class="room-info">
-            <h3 class="room-name">جناح ديلوكس مع تراس</h3>
+            <h3 class="room-name">جناح ديلوكس فاخر</h3>
             <div class="room-sub latin">Executive Junior Suite</div>
-            <ul class="room-specs">
-              <li class="room-spec-item"><svg class="icon"><use href="#icon-bed"></use></svg> سرير كينغ كبير جداً + جلسة صالة متصلة</li>
-              <li class="room-spec-item"><svg class="icon"><use href="#icon-terrace"></use></svg> تراس فسيح وجلسة استراحة خارجية</li>
-              <li class="room-spec-item"><svg class="icon"><use href="#icon-bath"></use></svg> حمام خاص متكامل وتجهيزات فندقية</li>
-              <li class="room-spec-item"><svg class="icon"><use href="#icon-tv"></use></svg> شاشة تلفزيون ذكية ومكيف سبليت ممتاز</li>
-            </ul>
-            <div class="room-footer">
-              <div><span class="room-price-val">240</span> <span class="room-price-unit">ر.س / ليلة</span></div>
-              <a href="https://wa.me/966539980290?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%88%D9%81%D8%B1%20%D8%AC%D9%86%D8%A7%D8%AD%20%D8%AF%D9%8A%D9%84%D9%88%D9%83%D8%B3%20%D8%A8%D8%B3%D8%B9%D8%B1%20240%20%D8%B1.%D8%B3" target="_blank" rel="noopener noreferrer" class="btn-book-room">
-                <svg class="icon" style="width:16px;height:16px;"><use href="#icon-whatsapp"></use></svg>
-                <span>حجز هذه الوحدة</span>
-              </a>
+
+            <div class="room-specs-header">
+              <span class="spec-badge"><svg class="icon" style="width:13px;height:13px;"><use href="#icon-plan"></use></svg> 40 م²</span>
+              <span class="spec-badge"><svg class="icon" style="width:13px;height:13px;"><use href="#icon-user"></use></svg> ضيفين + طفل</span>
             </div>
+
+            <div class="feature-pills">
+              <span class="feature-pill"><svg class="icon"><use href="#icon-bed"></use></svg> سرير كينغ كبير جداً</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-tv"></use></svg> جلسة صالة كنب متصلة</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-security"></use></svg> خصوصية وهدوء تام</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-bath"></use></svg> حمام فندقي مجهز</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-snowflake"></use></svg> مكيف سبليت حديث</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-car"></use></svg> موقف سيارة خاص</span>
+            </div>
+
+            <div class="room-footer">
+              <div class="pricing-container">
+                <div class="pricing-old-wrap">
+                  <span class="price-strikethrough">265 ر.س</span>
+                  <span class="price-save-tag">وفر 10% بكود SAKANI10</span>
+                </div>
+                <div class="pricing-current-wrap">
+                  <span class="room-price-val">240</span>
+                  <span class="room-price-unit">ر.س / ليلة</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="https://wa.me/966539980290?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%88%D9%81%D8%B1%20(%D8%AC%D9%86%D8%A7%D8%AD%20%D8%AF%D9%8A%D9%84%D9%88%D9%83%D8%B3%20%D9%85%D8%B9%20%D8%AA%D8%B1%D8%A7%D8%B3)%20%D8%A8%D8%B3%D8%B9%D8%B1%20240%20%D8%B1%D9%8A%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="btn-direct-booking">
+              <svg class="icon" style="width:18px;height:18px;"><use href="#icon-whatsapp"></use></svg>
+              <span>حجز مباشر عبر واتساب</span>
+            </a>
           </div>
         </div>
 
         <!-- Room 3: Family Apartment -->
         <div class="room-card">
           <div class="carousel-container" id="carousel-3">
-            <span class="room-space-tag">90 م² | غرفتان وصالة ومطبخ</span>
+            <button class="btn-view-photos" onclick="openLightboxFromCarousel(3)" title="استعراض كافة الصور">
+              <svg class="icon" style="width:13px;height:13px;"><use href="#icon-camera"></use></svg>
+              <span>استعراض كافة الصور (4)</span>
+            </button>
             <div class="carousel-track">
-              <div class="carousel-slide active"><img src="images/6DE2E9DB-5ECB-458D-B988-6DCC6171E280.png" alt="الغرفة العائلية المزدوجة"></div>
-              <div class="carousel-slide active"><img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="الغرفة الماستر كينغ"></div>
+              <div class="carousel-slide active"><img src="images/0D9C36E8-017A-43D7-AA25-4BABE94F6558.png" alt="غرفة السريرين المنفصلين والتسريحة المضيئة"></div>
+              <div class="carousel-slide"><img src="images/2862E02E-6748-44FA-B320-F906437C8C67.png" alt="المطبخ التحضيري الحقيقي مع طاولة الجزيرة والثلاجة"></div>
+              <div class="carousel-slide"><img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="الغرفة الماستر كينغ"></div>
               <div class="carousel-slide"><img src="images/D89278AE-FCAD-4939-98B1-DB233793F867.png" alt="صالة المعيشة العائلية"></div>
-              <div class="carousel-slide"><img src="images/2F68E139-902A-45B3-807F-A756E4AAA295.png" alt="المطبخ التحضيري الرخامي"></div>
             </div>
             <button class="carousel-btn prev" onclick="moveCarousel(3, -1)" title="الصورة السابقة"><svg class="icon"><use href="#icon-chevron-right"></use></svg></button>
             <button class="carousel-btn next" onclick="moveCarousel(3, 1)" title="الصورة التالية"><svg class="icon"><use href="#icon-chevron-left"></use></svg></button>
@@ -621,23 +745,41 @@
               <span class="carousel-dot" onclick="setCarousel(3, 3)"></span>
             </div>
           </div>
-
           <div class="room-info">
-            <h3 class="room-name">شقة غرفتي نوم وتراس ومطبخ</h3>
+            <h3 class="room-name">شقة غرفتي نوم وصالة ومطبخ</h3>
             <div class="room-sub latin">Two-Bedroom Family Apartment</div>
-            <ul class="room-specs">
-              <li class="room-spec-item"><svg class="icon"><use href="#icon-bed"></use></svg> غرفتان (غرفة ماستر كينغ + غرفة سريرين فرديين)</li>
-              <li class="room-spec-item"><svg class="icon"><use href="#icon-kitchen"></use></svg> مطبخ تحضيري متكامل مجهز بثلاجة ومايكرويف</li>
-              <li class="room-spec-item"><svg class="icon"><use href="#icon-terrace"></use></svg> تراس عائلي واسع وصالة معيشة فسيحة</li>
-              <li class="room-spec-item"><svg class="icon"><use href="#icon-security"></use></svg> عزل صوتي متقن وخصوصية عائلية تامة</li>
-            </ul>
-            <div class="room-footer">
-              <div><span class="room-price-val">420</span> <span class="room-price-unit">ر.س / ليلة</span></div>
-              <a href="https://wa.me/966539980290?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%88%D9%81%D8%B1%20%D8%B4%D9%82%D8%A9%20%D8%BA%D8%B1%D9%81%D8%AA%D9%8A%20%D9%86%D9%88%D9%85%20%D8%A8%D8%B3%D8%B9%D8%B1%20420%20%D8%B1.%D8%B3" target="_blank" rel="noopener noreferrer" class="btn-book-room">
-                <svg class="icon" style="width:16px;height:16px;"><use href="#icon-whatsapp"></use></svg>
-                <span>حجز هذه الوحدة</span>
-              </a>
+
+            <div class="room-specs-header">
+              <span class="spec-badge"><svg class="icon" style="width:13px;height:13px;"><use href="#icon-plan"></use></svg> 90 م²</span>
+              <span class="spec-badge"><svg class="icon" style="width:13px;height:13px;"><use href="#icon-users"></use></svg> عائلة (حتى 4-5 أشخاص)</span>
             </div>
+
+            <div class="feature-pills">
+              <span class="feature-pill"><svg class="icon"><use href="#icon-bed"></use></svg> غرفتان (كينغ + سريرين)</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-kitchen"></use></svg> مطبخ تحضيري وثلاجة</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-car"></use></svg> موقف خاص مجاني</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-tv"></use></svg> صالة معيشة مستقلة</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-security"></use></svg> خصوصية وعزل صوتي</span>
+              <span class="feature-pill"><svg class="icon"><use href="#icon-bath"></use></svg> حمام متكامل وتجهيزات</span>
+            </div>
+
+            <div class="room-footer">
+              <div class="pricing-container">
+                <div class="pricing-old-wrap">
+                  <span class="price-strikethrough">465 ر.س</span>
+                  <span class="price-save-tag">وفر 10% بكود SAKANI10</span>
+                </div>
+                <div class="pricing-current-wrap">
+                  <span class="room-price-val">420</span>
+                  <span class="room-price-unit">ر.س / ليلة</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="https://wa.me/966539980290?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%88%D9%81%D8%B1%20(%D8%B4%D9%82%D8%A9%20%D8%BA%D8%B1%D9%81%D8%AA%D9%8A%20%D9%86%D9%88%D9%85%20%D9%88%D8%AA%D8%B1%D8%A7%D8%B3%20%D9%88%D9%85%D8%B7%D8%A8%D8%AE)%20%D8%A8%D8%B3%D8%B9%D8%B1%20420%20%D8%B1%D9%8A%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="btn-direct-booking">
+              <svg class="icon" style="width:18px;height:18px;"><use href="#icon-whatsapp"></use></svg>
+              <span>حجز مباشر عبر واتساب</span>
+            </a>
           </div>
         </div>
       </div>
@@ -688,48 +830,63 @@
       </div>
 
       <div class="gallery-grid">
-        <div class="gallery-thumb span-2" onclick="openLightbox(this.querySelector('img').src, 'الواجهة المعمارية واللوحة الرسمية لشقق حلول سكني')">
+        <!-- 1. Wide Panoramic Reception & Lobby (Span-2) -->
+        <div class="gallery-thumb span-2" onclick="openLightbox(this.querySelector('img').src, 'بهو ومكتب الاستقبال الفندقي البانورامي الواسع على مدار 24 ساعة')">
+          <img src="images/29DBE026-B3AA-4465-8C8F-91A0FEDF92CA.png" alt="بهو الاستقبال البانورامي">
+          <div class="gallery-overlay-txt">
+            <div><h5>بهو ومكتب الاستقبال البانورامي</h5><span>كاونتر مضاء ومساحات رخامية رحبة ترحب بضيوفنا 24/7</span></div>
+          </div>
+        </div>
+
+        <!-- 2. Exterior -->
+        <div class="gallery-thumb" onclick="openLightbox(this.querySelector('img').src, 'الواجهة المعمارية واللوحة الرسمية لشقق حلول سكني')">
           <img src="images/70B46A4F-FA11-4772-B68B-9DA437B54033.png" alt="الواجهة المعمارية">
           <div class="gallery-overlay-txt">
-            <div><h5>الواجهة المعمارية الرسمية</h5><span>شارع متعب بن عبدالله بن عبدالعزيز، حي الحمراء الأول</span></div>
+            <div><h5>الواجهة المعمارية الرسمية</h5><span>حي الحمراء الأول، شارع متعب بن عبدالله</span></div>
           </div>
         </div>
 
-        <div class="gallery-thumb" onclick="openLightbox(this.querySelector('img').src, 'كاونتر وبهو الاستقبال الفندقي المضاء 24 ساعة')">
-          <img src="images/9EE96980-172E-4E73-9510-2D33E048F9FF.png" alt="كاونتر الاستقبال">
-          <div class="gallery-overlay-txt">
-            <div><h5>كاونتر الاستقبال</h5><span>ترحيب واستقبال على مدار 24 ساعة</span></div>
-          </div>
-        </div>
-
+        <!-- 3. Luxury Lobby Lounge -->
         <div class="gallery-thumb" onclick="openLightbox(this.querySelector('img').src, 'بهو الضيافة الفاخر وأرقى جلسات الاستراحة')">
-          <img src="images/0D22EB03-C62B-42E6-BC72-2F5173980AC9.png" alt="بهو الضيافة والاستراحة">
+          <img src="images/0D22EB03-C62B-42E6-BC72-2F5173980AC9.png" alt="بهو الضيافة">
           <div class="gallery-overlay-txt">
-            <div><h5>بهو الضيافة والاستراحة الفاخر</h5><span>أثاث مريح وأرفف مضيئة تعكس الفخامة</span></div>
+            <div><h5>بهو الضيافة الفاخر</h5><span>أثاث مريح وأرفف مضيئة تعكس الفخامة</span></div>
           </div>
         </div>
 
+        <!-- 4. Real Open Kitchenette with Island & Fridge (Span-2) -->
+        <div class="gallery-thumb span-2" onclick="openLightbox(this.querySelector('img').src, 'المطبخ التحضيري المفتوح الفاخر مع طاولة الجزيرة والثلاجة الكبيرة')">
+          <img src="images/2862E02E-6748-44FA-B320-F906437C8C67.png" alt="المطبخ التحضيري المفتوح">
+          <div class="gallery-overlay-txt">
+            <div><h5>المطبخ التحضيري المتكامل مع طاولة الجزيرة</h5><span>مجهز بثلاجة كبيرة، خزائن خشبية، ومساحة إعداد طعام عائلية</span></div>
+          </div>
+        </div>
+
+        <!-- 5. Twin Bedroom with Circular LED Mirror -->
+        <div class="gallery-thumb" onclick="openLightbox(this.querySelector('img').src, 'الغرفة العائلية المزدوجة بسريرين مفردين والتسريحة الدائرية المضاءة والدولاب')">
+          <img src="images/0D9C36E8-017A-43D7-AA25-4BABE94F6558.png" alt="الغرفة العائلية بسريرين والتسريحة">
+          <div class="gallery-overlay-txt">
+            <div><h5>الغرفة العائلية المزدوجة</h5><span>سريران مفردان، تسريحة بإضاءة LED، ودولاب ملابس خشبي</span></div>
+          </div>
+        </div>
+
+        <!-- 6. Master King Bedroom -->
         <div class="gallery-thumb" onclick="openLightbox(this.querySelector('img').src, 'غرفة النوم الماستر كينغ والتسريحة المضيئة والدولاب الزجاجي')">
           <img src="images/F131AF08-DB8C-42F3-8D68-EE7B758D7616.png" alt="غرفة النوم الماستر">
           <div class="gallery-overlay-txt">
-            <div><h5>غرفة النوم الماستر</h5><span>مرآة دائرية بإضاءة LED ودولاب زجاجي</span></div>
+            <div><h5>غرفة النوم الماستر كينغ</h5><span>مرآة دائرية بإضاءة LED ودولاب زجاجي داخلي</span></div>
           </div>
         </div>
 
+        <!-- 7. Deluxe Connected Suite -->
         <div class="gallery-thumb" onclick="openLightbox(this.querySelector('img').src, 'أجنحة الديلوكس الفسيحة بسرير كينغ وجلسة صالة متصلة')">
           <img src="images/42CAA853-472D-4804-9B7B-72DCA76923E1.png" alt="جناح ديلوكس متكامل">
           <div class="gallery-overlay-txt">
-            <div><h5>جناح ديلوكس متكامل</h5><span>مساحة 40 م² تضم السرير وجلسة الصالة</span></div>
+            <div><h5>جناح ديلوكس متكامل (40 م²)</h5><span>مساحة رحبة تجمع السرير وجلسة الصالة وطاولة القهوة</span></div>
           </div>
         </div>
 
-        <div class="gallery-thumb" onclick="openLightbox(this.querySelector('img').src, 'الغرفة العائلية المزدوجة بسريرين مفردين')">
-          <img src="images/6DE2E9DB-5ECB-458D-B988-6DCC6171E280.png" alt="الغرفة العائلية المزدوجة">
-          <div class="gallery-overlay-txt">
-            <div><h5>الغرفة العائلية المزدوجة</h5><span>سريران مفردان بمفارش فندقية نقية</span></div>
-          </div>
-        </div>
-
+        <!-- 8. Suite Living Room & 4K TV -->
         <div class="gallery-thumb" onclick="openLightbox(this.querySelector('img').src, 'صالة الجلوس الفاخرة وشاشة 4K الذكية')">
           <img src="images/505F178C-6DD2-45F8-9AFB-9D60C2C8A90C.png" alt="صالة الجلوس وشاشة 4K">
           <div class="gallery-overlay-txt">
@@ -737,17 +894,11 @@
           </div>
         </div>
 
-        <div class="gallery-thumb" onclick="openLightbox(this.querySelector('img').src, 'المطبخ التحضيري الرخامي الفاخر وثلاجة العرض')">
-          <img src="images/2F68E139-902A-45B3-807F-A756E4AAA295.png" alt="المطبخ التحضيري الرخامي">
-          <div class="gallery-overlay-txt">
-            <div><h5>المطبخ التحضيري الرخامي</h5><span>رخام فاخر، مايكرويف، وركن قهوة</span></div>
-          </div>
-        </div>
-
+        <!-- 9. Family Living Room -->
         <div class="gallery-thumb" onclick="openLightbox(this.querySelector('img').src, 'صالة المعيشة العائلية الفسيحة والكنب المزدوج')">
           <img src="images/D89278AE-FCAD-4939-98B1-DB233793F867.png" alt="صالة المعيشة العائلية">
           <div class="gallery-overlay-txt">
-            <div><h5>صالة المعيشة العائلية</h5><span>مساحة فسيحة تتسع للعائلات بأجواء دافئة</span></div>
+            <div><h5>صالة المعيشة العائلية الفسيحة</h5><span>مساحة فسيحة تتسع للعائلات بأجواء دافئة</span></div>
           </div>
         </div>
       </div>
@@ -972,6 +1123,15 @@
     function setCarousel(id, index) {
       carouselStates[id] = index;
       updateCarouselView(id);
+    }
+
+
+    function openLightboxFromCarousel(carouselId) {
+      const container = document.getElementById(`carousel-${carouselId}`);
+      const activeSlide = container.querySelector('.carousel-slide.active');
+      const img = activeSlide ? activeSlide.querySelector('img') : container.querySelector('img');
+      const roomTitle = container.closest('.room-card').querySelector('.room-name').textContent;
+      openLightbox(img.src, `${roomTitle} - تفاصيل الوحدة الحقيقية`);
     }
 
     // Lightbox Controller
